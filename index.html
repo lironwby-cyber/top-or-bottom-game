@@ -2,139 +2,312 @@
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#f7f2ff">
 <title>טופ או בוטום · 18+</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&family=Secular+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800;900&family=Secular+One&display=swap" rel="stylesheet">
 <style>
-:root{--z1:#ff8a00;--z2:#e8173d;--z3:#6a0dad;--gold:#c9a227;--bg:#160b1f}
+:root{
+  --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;
+  --ink:#2b1d3a;--mut:#5b4d6e;--line:#e7def2;--panel:#fff;--soft:#f5f0fb;
+  --acc:#7c3aed;--acc2:#c026d3;--accDk:#5b21b6;
+  --z1a:#ffd88a;--z1b:#ffb347;--z1t:#3a1d00;
+  --z2a:#ffb0c8;--z2b:#ff7aa2;--z2t:#45001d;
+  --z3a:#d6c2ff;--z3b:#a98af7;--z3t:#1e0b45;
+  --gold:#f7c948;--danger:#d61f3c;
+  --p0:#22c3ee;--p1:#ffc21a;--r:20px;
+  --pride:linear-gradient(90deg,#e40303,#ff8c00,#ffed00,#008026,#004dff,#750787);
+}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;background:var(--bg);color:#fff;font-family:Heebo,Assistant,Arial,sans-serif;min-height:100%}
-button{font-family:inherit;cursor:pointer;border:0;border-radius:14px;padding:12px 18px;font-weight:800;font-size:16px}
-.btn{background:linear-gradient(135deg,var(--z1),var(--z2));color:#fff}
-.btn2{background:#2c1b3a;color:#fff;border:1px solid #5a3b70}
-.btn3{background:#fff;color:#111}
-.screen{display:none;max-width:560px;margin:0 auto;padding:16px}
-.screen.on{display:block}
-.logo{font-family:"Secular One",Heebo;font-size:56px;line-height:.9;text-align:center;background:linear-gradient(135deg,var(--z1),var(--z2),#b15cff);-webkit-background-clip:text;background-clip:text;color:transparent;margin:28px 0 10px}
-.logo small{font-size:24px}
+html{font-size:clamp(17px,4.5vw,20px)}
+html,body{margin:0;min-height:100%;color:var(--ink);font-family:Heebo,Assistant,Arial,sans-serif}
+html{background:#f7f2ff}
+body{background:linear-gradient(165deg,#fff3f7 0%,#f7f2ff 45%,#eef8fb 100%);min-height:100vh;line-height:1.5}
+b{font-weight:800}
+button{font-family:inherit;cursor:pointer;border:0;border-radius:16px;padding:var(--s3) var(--s4);min-height:48px;font-weight:800;font-size:1.1rem;line-height:1.25;color:#fff;transition:transform .12s,filter .15s,opacity .2s,box-shadow .2s}
+button:active{transform:scale(.97)}
+button:disabled{opacity:.45;cursor:default}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #a78bfa;outline-offset:2px}
+.btn{background:linear-gradient(135deg,var(--acc),var(--acc2));box-shadow:0 6px 16px rgba(124,58,237,.28)}
+.btn2{background:#fff;color:var(--ink);border:1.5px solid #d8cbe9;box-shadow:0 2px 6px rgba(60,30,90,.06)}
+.btn3{background:var(--soft);color:var(--ink);border:1.5px solid #d8cbe9}
+.screen{display:none;max-width:600px;margin:0 auto;padding:var(--s4) var(--s4) calc(96px + env(safe-area-inset-bottom))}
+.screen.on{display:block;animation:fade .3s}
+body.inroom .screen{padding-top:56px}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.logo{font-family:"Secular One",Heebo;font-size:3.4rem;line-height:.95;text-align:center;color:var(--accDk);margin:var(--s5) 0 var(--s2)}
+.logo small{font-size:.5em;color:#c026d3}
+.pride{height:6px;border-radius:6px;background:var(--pride);width:120px;margin:0 auto var(--s4);opacity:.9}
 .center{text-align:center}
-.box{background:#22142e;border:1px solid #3e2752;border-radius:18px;padding:16px;margin:12px 0;line-height:1.5}
-label{display:block;margin:10px 0 4px;font-weight:600}
-input,select{width:100%;padding:12px;border-radius:12px;border:1px solid #5a3b70;background:#120818;color:#fff;font-size:16px;font-family:inherit}
-.row{display:flex;gap:10px}.row>*{flex:1}
-.hud{display:flex;gap:8px;align-items:stretch;margin-bottom:10px}
-.pl{flex:1;border-radius:14px;padding:8px 10px;background:#22142e;border:2px solid transparent;font-size:14px}
-.pl.turn{border-color:#fff;box-shadow:0 0 14px rgba(255,255,255,.35)}
-.pl .nm{font-weight:800;font-size:16px;display:flex;align-items:center;gap:6px}
-.dot{width:14px;height:14px;border-radius:50%;display:inline-block;border:2px solid #fff}
-.role{font-size:12px;padding:2px 8px;border-radius:10px;background:#000;display:inline-block;margin-top:4px}
-.role.top{background:var(--gold);color:#111}
-.board{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;direction:ltr}
-.sq{aspect-ratio:1/1.05;border-radius:10px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;font-weight:800;direction:rtl;opacity:.92}
-.sq.z1{background:var(--z1)}.sq.z2{background:var(--z2)}.sq.z3{background:var(--z3)}
-.sq.tF{background:linear-gradient(135deg,var(--gold),var(--z3))}
-.sq .n{position:absolute;top:2px;right:5px;font-size:10px;opacity:.85}
-.sq .ic{font-size:20px;line-height:1.1}
-.sq .pw{position:absolute;bottom:3px;left:3px;display:flex;gap:2px}
-.pawn{width:16px;height:16px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 4px rgba(0,0,0,.5);transition:all .3s}
-.startrow{display:flex;justify-content:space-between;align-items:center;margin:8px 2px;font-size:13px;color:#cbb}
-.controls{display:flex;gap:10px;margin-top:12px;align-items:center}
-.die{width:64px;height:64px;border-radius:14px;background:#fff;color:#111;font-size:40px;display:flex;align-items:center;justify-content:center;font-weight:900;flex:0 0 64px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:var(--s4);margin:var(--s3) 0;line-height:1.55;font-size:1rem;box-shadow:0 6px 20px rgba(60,30,90,.07)}
+.box ul{margin:var(--s2) 0;padding-inline-start:1.2em}.box li{margin:var(--s1) 0}
+.h2{font-size:1.25rem;font-weight:900;margin:0 0 var(--s2)}
+label{display:block;margin:var(--s3) 0 var(--s2);font-weight:700;font-size:1rem}
+input,select,textarea{width:100%;min-height:48px;padding:var(--s3);border-radius:14px;border:1.5px solid #d8cbe9;background:#fff;color:var(--ink);font-size:1.05rem;font-family:inherit}
+input::placeholder,textarea::placeholder{color:#6f6382}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(124,58,237,.18)}
+.chk{display:flex;align-items:center;gap:var(--s3);min-height:48px;font-weight:600;cursor:pointer}
+.chk input{width:26px;height:26px;min-height:0;flex:0 0 26px;margin:0;accent-color:var(--acc)}
+.row{display:flex;gap:var(--s3)}.row>*{flex:1;min-width:0}
+.small{font-size:.9rem;color:var(--mut)}
+.full{width:100%}
+.mt{margin-top:var(--s3)}
+/* mode picker */
+.mbtn{width:100%;margin:var(--s2) 0;padding:var(--s4);font-size:1.3rem;line-height:1.25;text-align:right;display:flex;align-items:center;gap:var(--s4);border-radius:var(--r);background:#fff;color:var(--ink);border:1px solid var(--line);border-inline-start:6px solid var(--mc);box-shadow:0 6px 18px rgba(60,30,90,.08)}
+.mbtn .mi{font-size:1.7rem;flex:0 0 auto;width:2.2em;height:2.2em;border-radius:50%;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--mc) 16%,#fff)}
+.mbtn .mt2{display:block;font-weight:900}.mbtn small{display:block;font-size:.95rem;font-weight:500;color:var(--mut);margin-top:2px}
+.mbtn.prideB{border-inline-start:0;position:relative;overflow:hidden;padding-inline-start:22px}
+.mbtn.prideB:before{content:"";position:absolute;inset-block:0;right:0;width:6px;background:linear-gradient(180deg,#e40303,#ff8c00,#ffed00,#008026,#004dff,#750787)}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+.mgrid .mbtn{margin:0;flex-direction:column;text-align:center;gap:var(--s2);padding:var(--s3);font-size:1.1rem}
+.mgrid .mbtn.prideB{padding-inline-start:var(--s3)}
+.secT{font-size:1rem;font-weight:800;color:var(--mut);margin:var(--s5) var(--s1) var(--s2);display:flex;align-items:center;gap:var(--s2)}
+.secT:after{content:"";flex:1;height:1px;background:#ddd2ea}
+.mpBtns{display:flex;gap:var(--s3)}.mpBtns button{flex:1;font-size:1.15rem;padding:var(--s4) var(--s3)}
+/* HUD */
+.hud{display:flex;gap:var(--s3);margin:var(--s2) 0 var(--s3)}
+.pl{flex:1;min-width:0;border-radius:18px;padding:var(--s3);background:#fff;border:2px solid var(--line);position:relative;transition:all .3s;box-shadow:0 4px 14px rgba(60,30,90,.06)}
+.pl.turn{border-color:var(--pc);box-shadow:0 0 0 4px color-mix(in srgb,var(--pc) 28%,transparent),0 6px 18px rgba(60,30,90,.1)}
+.pl .nm{font-weight:900;font-size:1.25rem;display:flex;align-items:center;gap:var(--s2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.av{width:1.7em;height:1.7em;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:900;color:#1b1226;font-size:.85em;flex:0 0 auto;box-shadow:0 2px 5px rgba(0,0,0,.18);border:2px solid #fff}
+.pl .meta{font-size:.95rem;color:var(--mut);margin-top:var(--s1)}
+.role{font-size:1rem;font-weight:800;padding:2px 12px;border-radius:999px;background:#efe7fa;color:#4c1d95;display:inline-block;margin-top:var(--s2)}
+.role.top{background:#fff1c2;color:#6b4500}
+.turnTag{position:absolute;top:-13px;left:var(--s3);background:var(--pc);color:#1b1226;font-size:.85rem;font-weight:900;padding:1px 10px;border-radius:999px;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+/* BOARD */
+.bArea{position:relative;container-type:inline-size;background:#fff;border:1px solid var(--line);border-radius:22px;padding:var(--s2);box-shadow:0 10px 30px rgba(60,30,90,.1)}
+.board{display:grid;grid-template-columns:repeat(6,1fr);gap:1.2cqw;direction:ltr}
+.zhead{grid-column:1/-1;direction:rtl;display:flex;align-items:center;gap:var(--s2);font-weight:900;font-size:clamp(15px,4.2cqw,21px);padding:2px var(--s1);color:var(--zt)}
+.zhead:after{content:"";flex:1;height:3px;border-radius:3px;background:linear-gradient(90deg,transparent,var(--zc))}
+.zhead.z1{--zc:#ffb347;--zt:#8a3d00}.zhead.z2{--zc:#ff7aa2;--zt:#a3123f}.zhead.z3{--zc:#a98af7;--zt:#5b21b6}
+.sq{aspect-ratio:1;border-radius:2.6cqw;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;direction:rtl;font-weight:800;overflow:hidden;
+  box-shadow:0 .6cqw 1.4cqw rgba(60,30,90,.16),inset 0 1px 0 rgba(255,255,255,.6),inset 0 -.7cqw 0 rgba(0,0,0,.06);transition:box-shadow .3s,transform .3s}
+.sq:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.35),transparent 50%);pointer-events:none}
+.sq.z1{background:linear-gradient(160deg,var(--z1a),var(--z1b));color:var(--z1t)}
+.sq.z2{background:linear-gradient(160deg,var(--z2a),var(--z2b));color:var(--z2t)}
+.sq.z3{background:linear-gradient(160deg,var(--z3a),var(--z3b));color:var(--z3t)}
+.sq.tS{background:linear-gradient(160deg,#fff4c7,var(--gold));color:#4a3000}
+.sq.tF{background:linear-gradient(160deg,#fff4c7,#f7c948);color:#4a3000;box-shadow:0 0 0 .8cqw #fff,0 0 0 1.4cqw #f7c948,0 .6cqw 1.4cqw rgba(60,30,90,.2)}
+.sq.tG{outline:.6cqw dashed rgba(43,29,58,.55);outline-offset:-1.4cqw}
+.sq.tL{box-shadow:0 .6cqw 1.4cqw rgba(60,30,90,.16),inset 0 0 0 .7cqw #16a34a}
+.sq .n{position:absolute;top:.7cqw;right:.8cqw;font-size:clamp(13px,4cqw,19px);font-weight:900;line-height:1;background:rgba(255,255,255,.8);color:var(--ink);border-radius:999px;padding:.4cqw 1.1cqw;min-width:1.6em;text-align:center}
+.sq .ic{font-size:clamp(20px,6.6cqw,34px);line-height:1;margin-top:2.4cqw}
+.sq .lb{font-size:clamp(12px,3.5cqw,17px);line-height:1.1;margin-top:.6cqw;font-weight:900;letter-spacing:-.2px}
+.sq.here{transform:translateY(-.6cqw)}
+.startPad{margin-top:1.6cqw;height:12cqw;border-radius:2.6cqw;border:2px dashed #cdbfe0;display:flex;align-items:center;justify-content:flex-end;padding:0 3cqw;font-weight:900;font-size:clamp(15px,4.2cqw,21px);color:var(--mut);background:var(--soft)}
+#tokens{position:absolute;inset:0;pointer-events:none}
+.tok{position:absolute;width:var(--ts,30px);height:var(--ts,30px);margin:calc(var(--ts,30px)/-2) 0 0 calc(var(--ts,30px)/-2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;color:#1b1226;font-size:calc(var(--ts,30px)*.56);border:3px solid #fff;box-shadow:0 3px 8px rgba(30,10,50,.45);transition:left .17s ease-out,top .17s ease-out;z-index:3}
+.tok.cur{animation:pulse 1.4s infinite}
+.tok.hop{animation:hop .17s}
+@keyframes pulse{0%,100%{box-shadow:0 3px 8px rgba(30,10,50,.45),0 0 0 0 rgba(124,58,237,.6)}50%{box-shadow:0 3px 8px rgba(30,10,50,.45),0 0 0 9px rgba(124,58,237,0)}}
+@keyframes hop{50%{transform:translateY(-35%) scale(1.12)}}
+.controls{display:flex;gap:var(--s3);margin-top:var(--s4);align-items:stretch}
+.die{width:76px;min-height:76px;border-radius:18px;background:#fff;border:1.5px solid var(--line);color:var(--ink);font-size:2.6rem;display:flex;align-items:center;justify-content:center;font-weight:900;flex:0 0 76px;box-shadow:0 6px 16px rgba(60,30,90,.12)}
 .die.roll{animation:shake .5s}
 @keyframes shake{0%{transform:rotate(0)}25%{transform:rotate(25deg) scale(1.1)}50%{transform:rotate(-20deg)}75%{transform:rotate(12deg) scale(1.05)}100%{transform:rotate(0)}}
-.log{font-size:13px;color:#d7c6e2;margin-top:10px;min-height:20px}
-.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;padding:16px;z-index:10}
+#rollBtn{flex:1;font-size:1.3rem}
+.log{font-size:1.05rem;color:var(--mut);margin-top:var(--s3);text-align:center}.log:empty{display:none}
+.bar{display:flex;gap:var(--s3);margin-top:var(--s3)}.bar>*{flex:1;font-size:1rem;padding:var(--s3) var(--s2)}
+/* CARD MODAL */
+.modal{position:fixed;inset:0;background:rgba(43,29,58,.5);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);display:none;align-items:center;justify-content:center;padding:var(--s3);z-index:16}
 .modal.on{display:flex}
-.card{width:100%;max-width:360px;background:#fff;color:#111;border-radius:22px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.6);animation:pop .35s}
+body:has(.safe.on) .modal{padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+body:has(.safe.on) #cardEl{height:min(calc(100dvh - 100px),700px)}
+body:has(.safe.on) .card{max-height:calc(100dvh - 100px)}
+.card{width:100%;max-width:440px;background:#fff;color:var(--ink);border-radius:26px;overflow:hidden;box-shadow:0 20px 50px rgba(43,29,58,.35);animation:pop .35s;display:flex;flex-direction:column;max-height:calc(100dvh - 24px)}
+#cardEl{height:min(calc(100dvh - 24px),700px)}
 @keyframes pop{from{transform:scale(.7) rotateY(80deg);opacity:0}to{transform:none;opacity:1}}
-.card .band{color:#fff;text-align:center;font-weight:800;padding:10px}
-.card .body{padding:16px 18px 18px;text-align:center}
-.tbadge{display:inline-block;color:#fff;border-radius:20px;padding:4px 14px;font-weight:800}
-.who{font-size:13px;color:#666;margin-top:8px}
-.acc{color:#8e24aa;font-weight:800;font-size:14px;margin-top:6px}
-.ctext{font-size:20px;line-height:1.45;font-weight:600;margin:16px 0;min-height:90px;display:flex;align-items:center;justify-content:center}
-.timer{font-size:30px;font-weight:900;margin:6px 0}
-.hg{display:inline-block}
-.hg.run{animation:flip 2s infinite}
+.card .band{color:#fff;text-align:center;font-weight:900;padding:var(--s3) var(--s4);font-size:1.25rem;flex:0 0 auto}
+.card .body{padding:var(--s4);text-align:center;flex:1 1 auto;display:flex;flex-direction:column;min-height:0;overflow:auto}
+#cardEl .body{overflow:hidden}
+.tbadge{display:inline-block;align-self:center;color:#fff;border-radius:999px;padding:var(--s1) var(--s4);font-weight:900;font-size:1.05rem}
+.who{font-size:1.1rem;color:var(--ink);margin-top:var(--s3);background:var(--soft);border-radius:14px;padding:var(--s2) var(--s3);line-height:1.5}
+.acc{color:#6b21a8;font-weight:900;font-size:1.05rem;margin-top:var(--s2)}
+.ctext{font-weight:700;line-height:1.35;margin:var(--s3) 0;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#1f1430}
+.ctext.fit{flex:1 1 auto;min-height:90px}
+.ctext .fi{width:100%}
+.nt{display:inline-block;background:var(--c);color:#1b1226;border-radius:.4em;padding:0 .3em;font-weight:900;line-height:1.25;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.timer{font-size:2rem;font-weight:900;margin:2px 0;flex:0 0 auto}
+.timer button{font-size:1rem;vertical-align:middle;min-height:44px;padding:var(--s2) var(--s4)}
+.hg{display:inline-block}.hg.run{animation:flip 2s infinite}
 @keyframes flip{0%,80%{transform:rotate(0)}100%{transform:rotate(180deg)}}
-.cbtns{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
-.cbtns button{flex:1 1 30%;font-size:15px;padding:12px 8px}
-.small{font-size:12px;color:#aaa}
+.cbtns{display:flex;flex-wrap:wrap;gap:var(--s2);justify-content:center;flex:0 0 auto}
+.cbtns button{flex:1 1 30%;font-size:1.1rem;padding:var(--s3) var(--s2)}
+.cbtns .btn{flex-basis:100%;font-size:1.3rem}
+.cnote{font-size:.9rem;color:var(--mut);margin-top:var(--s2);flex:0 0 auto}
 .win{text-align:center}
-.fant{background:linear-gradient(135deg,#fff7d6,#ffe39a);color:#3a2a00;border-radius:16px;padding:14px;margin:10px 0;font-weight:700;cursor:pointer;border:3px solid transparent}
-.fant.sel{border-color:var(--z2)}
-.safe{position:fixed;bottom:12px;left:12px;background:#c00;color:#fff;border-radius:30px;padding:10px 14px;font-size:14px;z-index:5;display:none}
+.fant{background:#fff8e1;color:#4a3000;border-radius:18px;padding:var(--s4);margin:var(--s3) 0;font-weight:800;font-size:1.15rem;cursor:pointer;border:2px solid #f7d774;text-align:right;box-shadow:0 4px 14px rgba(60,30,90,.06)}
+.fant.sel{border-color:var(--acc);box-shadow:0 0 0 4px rgba(124,58,237,.25)}
+.safe{position:fixed;bottom:calc(16px + env(safe-area-inset-bottom));left:16px;background:var(--danger);color:#fff;border-radius:999px;padding:var(--s3) var(--s5);font-size:1.15rem;font-weight:900;z-index:20;display:none;box-shadow:0 6px 18px rgba(214,31,60,.4),0 0 0 3px #fff}
 .safe.on{display:block}
-details summary{cursor:pointer;font-weight:800}
-.rules h2{font-size:17px;color:#ffb36b;margin:14px 0 4px}
-.rules ul,.rules ol{padding-inline-start:20px;margin:0}
-.mbtn{width:100%;margin:8px 0;padding:16px;font-size:19px;line-height:1.3}.mbtn small{font-size:13px;font-weight:600;opacity:.9}
-.rainbow{background:linear-gradient(90deg,#e40303,#ff8c00,#d4b000,#008026,#004dff,#750787)!important}
-.penopt{display:block;width:100%;margin:6px 0;text-align:right;background:#f4eef8;color:#2a0f3a;font-size:16px;padding:12px 14px}
-.penopt small{display:block;font-weight:500;font-size:12px;color:#6b5a78}
-.wheelWrap{position:relative;width:260px;height:260px;margin:10px auto}
-.wheel{width:260px;height:260px;border-radius:50%;border:6px solid #2a0f3a;position:relative;transition:transform 3.2s cubic-bezier(.17,.67,.2,1);background:conic-gradient(#e8173d 0 90deg,#1f6feb 90deg 180deg,#12a150 180deg 270deg,#ff8a00 270deg 360deg)}
-.wheel span{position:absolute;left:50%;top:50%;width:100px;margin-left:-50px;margin-top:-14px;text-align:center;color:#fff;font-weight:800;font-size:13px;line-height:1.1;text-shadow:0 1px 2px rgba(0,0,0,.5)}
-.pointer{position:absolute;top:-8px;left:50%;margin-left:-14px;width:0;height:0;border-left:14px solid transparent;border-right:14px solid transparent;border-top:26px solid #fff;z-index:2;filter:drop-shadow(0 2px 2px #000)}
+details summary{cursor:pointer;font-weight:900;font-size:1.1rem;min-height:44px;display:flex;align-items:center}
+.rules{font-size:1rem}
+.rules h2{font-size:1.2rem;color:#a3123f;margin:var(--s4) 0 var(--s1)}
+.rules ul,.rules ol{padding-inline-start:1.3em;margin:0}
+.rulesBox{max-width:560px;max-height:86vh;overflow:auto;background:#fff;color:var(--ink);border-radius:22px;padding:var(--s5) var(--s4);width:100%;box-shadow:0 20px 50px rgba(43,29,58,.35)}
+.penopt{display:block;width:100%;margin:var(--s2) 0;text-align:right;background:var(--soft);color:var(--ink);font-size:1.2rem;padding:var(--s3) var(--s4);border-radius:16px;border:1.5px solid var(--line)}
+.penopt small{display:block;font-weight:500;font-size:.9rem;color:var(--mut);margin-top:2px}
+.wheelWrap{container-type:inline-size;position:relative;width:min(270px,68vw);aspect-ratio:1;margin:var(--s3) auto}
+.wheel{width:100%;height:100%;border-radius:50%;border:6px solid #fff;position:relative;transition:transform 3.2s cubic-bezier(.17,.67,.2,1);background:conic-gradient(#d61f3c 0 90deg,#2563eb 90deg 180deg,#15803d 180deg 270deg,#c2410c 270deg 360deg);box-shadow:0 0 0 2px var(--line),0 8px 24px rgba(60,30,90,.2)}
+.wheel span{position:absolute;left:50%;top:50%;width:42%;margin-left:-21%;margin-top:-1.2em;text-align:center;color:#fff;font-weight:900;font-size:.95rem;line-height:1.15;text-shadow:0 1px 2px rgba(0,0,0,.35);transition:transform 3.2s cubic-bezier(.17,.67,.2,1)}
+.pointer{position:absolute;top:-10px;left:50%;margin-left:-15px;width:0;height:0;border-left:15px solid transparent;border-right:15px solid transparent;border-top:28px solid var(--ink);z-index:2}
+.wleg{font-size:.95rem;color:var(--ink);margin:var(--s1) 0;display:flex;flex-wrap:wrap;justify-content:center;gap:var(--s1) var(--s3)}.wleg span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}.wleg i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.wres{font-size:1.2rem;font-weight:800;min-height:1.5em;margin:var(--s2) 0}
+/* party */
+.pchips{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:var(--s2)}
+.pchip{border-radius:16px;padding:var(--s2) var(--s3);background:#fff;border:2px solid var(--line);transition:all .3s;box-shadow:0 3px 10px rgba(60,30,90,.05)}
+.pchip.turn{border-color:var(--acc);box-shadow:0 0 0 4px rgba(124,58,237,.18)}
+.pchip .nm{font-weight:900;font-size:1.15rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;align-items:center;gap:var(--s2)}
+.pchip .st{font-size:.95rem;color:var(--mut);white-space:nowrap}
+.pturn{font-size:1.5rem;text-align:center;font-weight:500}
+.pturn b{font-size:1.15em}
+#pDraw{width:100%;font-size:1.5rem;padding:var(--s5)}
+/* multiplayer */
+.codeBig{font-family:"Secular One",Heebo;font-size:3.6rem;letter-spacing:.18em;text-align:center;direction:ltr;color:var(--accDk);background:var(--soft);border:2px dashed #c4b2df;border-radius:20px;padding:var(--s1) 0 var(--s1) .18em;margin:var(--s2) 0;user-select:all}
+#jCode{font-family:"Secular One",Heebo;font-size:2.4rem;letter-spacing:.3em;text-align:center;direction:ltr;text-transform:uppercase}
+.opt{display:flex;gap:var(--s3);align-items:flex-start;background:#fff;border:2px solid var(--line);border-radius:16px;padding:var(--s3);margin:var(--s2) 0;cursor:pointer;font-weight:500}
+.opt input{width:24px;height:24px;min-height:0;flex:0 0 24px;margin-top:3px;accent-color:var(--acc)}
+.opt b{font-size:1.1rem;display:block}
+.opt:has(input:checked){border-color:var(--acc);background:#f6f0ff}
+.step{display:flex;align-items:center;gap:var(--s2);font-weight:900;font-size:1.1rem;margin:var(--s5) 0 var(--s2)}
+.step i{font-style:normal;width:1.7em;height:1.7em;border-radius:50%;background:var(--acc);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.9em}
+.plist{display:flex;flex-direction:column;gap:var(--s2);margin-top:var(--s2)}
+.plist div{display:flex;align-items:center;gap:var(--s3);font-size:1.1rem;font-weight:700;background:var(--soft);border-radius:12px;padding:var(--s2) var(--s3);min-height:44px}
+.plist .tag{margin-inline-start:auto;font-size:.85rem;font-weight:800;padding:1px 10px;border-radius:999px}
+.tag.on{background:#dcfce7;color:#14532d}.tag.off{background:#eee8f3;color:#5b4d6e}
+.dotOn{width:12px;height:12px;border-radius:50%;background:#16a34a;flex:0 0 12px}
+.dotOff{width:12px;height:12px;border-radius:50%;background:#9a8fae;flex:0 0 12px}
+.roomBar{position:fixed;top:calc(8px + env(safe-area-inset-top));right:50%;transform:translateX(50%);z-index:15;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:var(--s2) var(--s4);font-size:.9rem;font-weight:800;display:none;max-width:94vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 4px 14px rgba(60,30,90,.12);min-height:40px;cursor:pointer}
+.roomBar.on{display:block}
+.waitBar{display:none;text-align:center;font-size:1.05rem;font-weight:700;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:var(--s2) var(--s3);margin:0 0 var(--s3)}
+body.client .waitBar{display:block}
+body.locked .modal.on .card:after{content:var(--lockmsg,"");display:block;text-align:center;font-weight:800;padding:0 var(--s3) var(--s3);color:var(--mut);font-size:.95rem;flex:0 0 auto}
+body.client .hostonly{display:none!important}
+body.locked [data-mir] button,body.locked [data-mir] .fant,body.locked button[data-mir]{filter:grayscale(.7);opacity:.5}
+.toast{position:fixed;top:calc(56px + env(safe-area-inset-top));left:50%;transform:translateX(-50%) translateY(-20px);background:var(--ink);color:#fff;font-weight:800;font-size:1rem;padding:var(--s3) var(--s5);border-radius:999px;box-shadow:0 8px 24px rgba(43,29,58,.3);opacity:0;transition:all .3s;z-index:30;pointer-events:none;max-width:90vw;text-align:center}
+.toast.on{opacity:1;transform:translateX(-50%)}
+@media (max-height:700px){.ctext.fit{min-height:60px}.card .body{padding:var(--s3)}.card .band{padding:var(--s2) var(--s4)}.cbtns button{min-height:44px;padding:var(--s2)}.who{margin-top:var(--s2)}}
+@media (max-width:370px){.screen{padding-left:var(--s3);padding-right:var(--s3)}}
+@media (min-width:700px){html{font-size:19px}}
 </style>
 </head>
 <body>
+<div class="roomBar" id="roomBar" onclick="roomInfo()"></div>
+<div class="toast" id="toast"></div>
 
 <!-- age gate -->
 <section class="screen on" id="sGate">
-  <div class="logo">טופ<br><small>או</small><br>בוטום</div>
-  <div class="box center"><b style="font-size:22px">🔞 תוכן למבוגרים בלבד</b><br>משחק מיני ומפורש לזוגות גברים בגירים, ששניהם רוצים לשחק.<br>כניסה רק אם שניכם בני 18 ומעלה.</div>
-  <div class="row"><button class="btn" onclick="gateOk()">שנינו בני 18+ וזה בהסכמה</button><button class="btn2" onclick="location.href='https://www.google.com'">יציאה</button></div>
+  <div class="logo">טופ<br><small>או</small><br>בוטום</div><div class="pride"></div>
+  <div class="box center"><div class="h2">🔞 תוכן למבוגרים בלבד</div>משחק מיני ומפורש לגברים בגירים, שכולם רוצים לשחק.<br>כניסה רק אם כל המשתתפים בני 18 ומעלה.</div>
+  <div class="row"><button class="btn" onclick="gateOk()">כולנו בני 18+ וזה בהסכמה</button><button class="btn2" style="flex:0 0 32%" onclick="location.href='https://www.google.com'">יציאה</button></div>
 </section>
-
 
 <!-- mode -->
 <section class="screen" id="sMode">
-  <div class="logo" style="font-size:44px">טופ<br><small>או</small><br>בוטום</div>
-  <div class="box center">בחרו מצב משחק</div>
-  <button class="btn mbtn" onclick="coupleSetup(false)">💑 זוגי<br><small>משחק לוח לוהט לשניים</small></button>
-  <button class="btn mbtn" style="background:linear-gradient(135deg,#ff8a00,#0f9d9a)" onclick="coupleSetup(true)">💞 זוגי + הרחבה<br><small>60 קלפים לוהטים חדשים ו-40 קלפי זוגיות</small></button>
-  <button class="btn mbtn" style="background:linear-gradient(135deg,#ff2d95,#1f6feb)" onclick="partySetup('regular')">🎉 מסיבה<br><small>פלרטטני ומצחיק, 3–10 חברים</small></button>
-  <button class="btn mbtn rainbow" onclick="partySetup('bold')">🔥 מסיבה נועזת<br><small>חצוף ונועז במיוחד, 3–12 חברים</small></button>
+  <div class="logo" style="font-size:2.8rem">טופ <small>או</small> בוטום</div><div class="pride"></div>
+  <div class="secT">📱 כל אחד מהטלפון שלו</div>
+  <div class="mpBtns"><button class="btn" onclick="hostScreen()">📡 פתח משחק</button><button class="btn2" onclick="joinScreen()">🔑 הצטרף לחדר</button></div>
+  <div class="secT">📲 משחק על מכשיר אחד</div>
+  <button class="mbtn" style="--mc:#e11d48" onclick="coupleSetup(false)"><span class="mi">💑</span><span class="mt2">זוגי<small>משחק לוח לוהט לשניים</small></span></button>
+  <button class="mbtn" style="--mc:#0d9488" onclick="coupleSetup(true)"><span class="mi">💞</span><span class="mt2">זוגי + הרחבה<small>60 קלפים לוהטים חדשים ו־40 קלפי זוגיות</small></span></button>
+  <button class="mbtn" style="--mc:#2563eb" onclick="partySetup('regular')"><span class="mi">🎉</span><span class="mt2">מסיבה<small>פלרטטני ומצחיק, 3–10 חברים</small></span></button>
+  <button class="mbtn prideB" style="--mc:#9333ea" onclick="partySetup('bold')"><span class="mi">🔥</span><span class="mt2">מסיבה נועזת<small>חצוף ונועז במיוחד, 3–12 חברים</small></span></button>
+</section>
+
+<!-- host room -->
+<section class="screen" id="sHost">
+  <div class="logo" style="font-size:2.3rem">📡 פתיחת משחק</div><div class="pride"></div>
+  <div id="hostPre">
+    <div class="box">
+      <label for="hName">השם שלך</label><input id="hName" maxlength="14" placeholder="שם">
+      <label class="chk"><input type="checkbox" id="hPlays" checked> גם אני משחק</label>
+      <label>איך מנהלים את החדר?</label>
+      <label class="opt"><input type="radio" name="rtype" value="host" checked><span><b>🎙️ מנחה</b>אתה מנהל: שולף קלפים ומעביר תורות. כל השאר רואים הכל בזמן אמת בטלפון שלהם.</span></label>
+      <label class="opt"><input type="radio" name="rtype" value="all"><span><b>🙌 כולם משחקים</b>כל שחקן זורק, שולף ולוחץ ״בוצע״ מהטלפון שלו, כשמגיע התור שלו.</span></label>
+    </div>
+    <button class="btn full" id="hCreate" onclick="hostCreate()">צור חדר 🚀</button>
+    <button class="btn2 full mt" onclick="show('sMode')">חזרה</button>
+  </div>
+  <div id="hostLobby" style="display:none">
+    <div class="step"><i>1</i> שולחים לחברים את הקוד</div>
+    <div class="box center" style="margin-top:0"><div class="codeBig" id="hCode">----</div>
+      <div class="small">בטלפון שלהם: פותחים את האתר ← ״הצטרף לחדר״ ← מקלידים את הקוד</div>
+      <button class="btn2 full mt" onclick="shareRoom()">🔗 שתף קישור להצטרפות</button></div>
+    <div class="step"><i>2</i> מחכים שכולם יתחברו <span class="small" id="hCount"></span></div>
+    <div class="box" style="margin-top:0"><div class="plist" id="hList"></div><div class="small mt" id="hType"></div></div>
+    <div class="step"><i>3</i> בוחרים מצב ומתחילים</div>
+    <div class="mgrid">
+    <button class="mbtn" style="--mc:#e11d48" onclick="coupleSetup(false)"><span class="mi">💑</span><span class="mt2">זוגי<small>2 שחקנים</small></span></button>
+    <button class="mbtn" style="--mc:#0d9488" onclick="coupleSetup(true)"><span class="mi">💞</span><span class="mt2">זוגי + הרחבה<small>2 שחקנים</small></span></button>
+    <button class="mbtn" style="--mc:#2563eb" onclick="partySetup('regular')"><span class="mi">🎉</span><span class="mt2">מסיבה<small>3–10 חברים</small></span></button>
+    <button class="mbtn prideB" style="--mc:#9333ea" onclick="partySetup('bold')"><span class="mi">🔥</span><span class="mt2">מסיבה נועזת<small>3–12 חברים</small></span></button>
+    </div>
+    <button class="btn2 full" style="margin-top:var(--s5)" onclick="closeRoom()">✖ סגור את החדר</button>
+  </div>
+</section>
+
+<!-- join -->
+<section class="screen" id="sJoin">
+  <div class="logo" style="font-size:2.3rem">🔑 הצטרפות</div><div class="pride"></div>
+  <div class="box">
+    <label for="jCode">קוד החדר</label><input id="jCode" maxlength="4" autocomplete="off" autocapitalize="characters" placeholder="ABCD">
+    <label for="jName">השם שלך</label><input id="jName" maxlength="14" placeholder="שם"><div class="small" style="margin-top:var(--s2)">המארח יראה את השם הזה ברשימה, וכך המשחק יידע מתי תורך.</div>
+  </div>
+  <button class="btn full" id="jBtn" onclick="joinRoom()">הצטרף 🎉</button>
+  <div class="small center mt" id="jMsg"></div>
+  <button class="btn2 full mt" onclick="leaveRoom()">חזרה</button>
+</section>
+
+<!-- client waiting -->
+<section class="screen" id="sWait">
+  <div class="logo" style="font-size:2.3rem">✅ אתה בחדר</div><div class="pride"></div>
+  <div class="box center"><div class="small">חדר</div><div class="codeBig" id="wCode">----</div><div id="wType" class="small"></div></div>
+  <div class="box"><div class="h2">👥 מי בחדר</div><div class="plist" id="wList"></div></div>
+  <div class="box center" style="font-size:1.15rem">⏳ מחכים שהמארח יבחר מצב ויתחיל…</div>
+  <button class="btn2 full" onclick="leaveRoom()">✖ יציאה מהחדר</button>
 </section>
 
 <!-- party setup -->
 <section class="screen" id="sPSetup">
-  <div class="logo" style="font-size:36px" id="pTitle">🎉 מסיבה</div>
-  <div class="box"><label id="pNamesLbl">שמות השחקנים, אחד בכל שורה</label>
-  <textarea id="pNames" rows="6" style="width:100%;padding:12px;border-radius:12px;border:1px solid #5a3b70;background:#120818;color:#fff;font-size:16px;font-family:inherit" placeholder="שם בכל שורה"></textarea>
-  <div id="spiceWrap"><label>רמת פלפל</label><select id="pSpice"><option value="2">הכל: 🌶️ + 🌶️🌶️</option><option value="1">רק 🌶️ פיקנטי (חימום)</option><option value="3">רק 🌶️🌶️ נועז + מיני-משחקים, חוקים ועונשים</option></select></div>
-  <label style="display:flex;align-items:center;gap:10px;margin-top:14px"><input type="checkbox" id="pNoAlc" style="width:24px;height:24px;flex:0 0 24px"> <span>🚫🥃 מצב בלי אלכוהול <span class="small">(במקום שוט: צ׳ייסר חריף, לימון או משקה מגעיל שהקבוצה מרכיבה)</span></span></label></div>
-  <div class="box"><b>חוקי הזהב:</b><ul style="margin:6px 0;padding-inline-start:20px">
+  <div class="logo" style="font-size:2.3rem" id="pTitle">🎉 מסיבה</div>
+  <div class="box"><label id="pNamesLbl" for="pNames">שמות השחקנים, אחד בכל שורה</label>
+  <textarea id="pNames" rows="6" placeholder="שם בכל שורה"></textarea>
+  <div id="spiceWrap"><label for="pSpice">רמת פלפל</label><select id="pSpice"><option value="2">הכל: 🌶️ + 🌶️🌶️</option><option value="1">רק 🌶️ פיקנטי (חימום)</option><option value="3">רק 🌶️🌶️ נועז + מיני־משחקים, חוקים ועונשים</option></select></div>
+  <label class="chk" style="align-items:flex-start;margin-top:var(--s4)"><input type="checkbox" id="pNoAlc" style="margin-top:3px"> <span><b>🚫🥃 מצב בלי אלכוהול</b><br><span class="small">במקום שוט: צ׳ייסר חריף, לימון או משקה מגעיל שהקבוצה מרכיבה</span></span></label></div>
+  <div class="box"><div class="h2">חוקי הזהב</div><ul>
   <li>מה שנאמר בחדר נשאר בחדר. לא מצלמים בלי הסכמה.</li>
   <li>לא מוציאים אף אחד מהארון, ובלי שמות של אנשים שאינם בחדר.</li>
   <li>אין מגע מיני בין שחקנים בגלל קלף.</li>
   <li>אפשר לדלג על כל קלף: 3 פאסים חינם, ואחר כך בוחרים 🎯 עונש מהתפריט. <b>אופציונלי</b>: תמיד אפשר מים או משימה חלופית.</li>
   <li>״אדום״ = עוברים לקלף הבא, בלי שאלות.</li></ul></div>
   <details class="box rules"><summary>📜 חוקים מלאים</summary><div class="prulesBody"></div></details>
-  <button class="btn" style="width:100%" onclick="partyStart()">יאללה, מסיבה 🎉</button>
+  <button class="btn full" onclick="partyStart()">יאללה, מסיבה 🎉</button>
+  <button class="btn2 full mt" onclick="backMenu()">חזרה</button>
 </section>
 
 <!-- party game -->
 <section class="screen" id="sParty">
-  <div class="logo" style="font-size:30px;margin:10px 0" id="pGameTitle">🎉 מסיבה</div>
-  <div id="pPlayers" style="display:flex;flex-wrap:wrap;gap:6px"></div>
-  <div class="box" id="pRule" style="display:none;border-color:#c9a227"></div>
-  <div class="box center" id="pTurn" style="font-size:20px"></div>
-  <button class="btn rainbow" style="width:100%;font-size:20px;padding:20px" id="pDraw" onclick="partyDraw()">שלוף קלף 🃏</button>
-  <div class="log center" id="pLog"></div>
-  <div class="row" style="margin-top:10px"><button class="btn2" onclick="openPen(P.turn,null)">🎯 עונשים</button><button class="btn2" onclick="document.getElementById('pRulesModal').classList.add('on')">📜 חוקים</button><button class="btn2" onclick="partyEnd()">🏁 סיום</button></div>
+  <div class="logo" style="font-size:1.9rem;margin:8px 0 12px" id="pGameTitle">🎉 מסיבה</div>
+  <div class="waitBar" id="pWait"></div>
+  <div class="pchips" id="pPlayers"></div>
+  <div class="box" id="pRule" style="display:none;border:2px solid var(--gold);background:#fffaf0;font-size:1.1rem"></div>
+  <div class="box pturn" id="pTurn"></div>
+  <div data-mir><button class="btn" id="pDraw" onclick="partyDraw()">שלוף קלף 🃏</button></div>
+  <div class="log" id="pLog"></div>
+  <div class="bar"><button class="btn2" data-mir id="pPenBtn" onclick="openPen(P.turn,null)">🎯 עונשים</button><button class="btn2" onclick="openPRules()">📜 חוקים</button><button class="btn2 hostonly" onclick="if(confirm('לסיים את הערב ולראות תוצאות?'))partyEnd()">🏁 סיום</button></div>
 </section>
 <section class="screen win" id="sPEnd">
-  <div class="logo" style="font-size:40px">👑 סוף הערב</div>
-  <div class="box" id="pStats"></div>
+  <div class="logo" style="font-size:2.6rem">👑 סוף הערב</div>
+  <div class="box" id="pStats" style="font-size:1.1rem"></div>
   <div class="box">עכשיו החדר בוחר יחד את ״הקווין של הערב״, מי שהעז הכי הרבה.</div>
-  <button class="btn" style="width:100%" onclick="show('sMode')">חזרה לתפריט</button>
+  <button class="btn full hostonly" onclick="backMenu()">חזרה לתפריט</button>
 </section>
-<div class="modal" id="pRulesModal" onclick="if(event.target===this)this.classList.remove('on')"><div class="box rules" style="max-width:520px;max-height:85vh;overflow:auto;background:#22142e"><div class="prulesBody"></div><button class="btn" style="width:100%;margin-top:12px" onclick="document.getElementById('pRulesModal').classList.remove('on')">סגור</button></div></div>
-<div class="modal" id="penModal"><div class="card" id="penEl" style="max-width:400px"></div></div>
+<div class="modal" id="pRulesModal" onclick="if(event.target===this)this.classList.remove('on')"><div class="rulesBox rules"><div class="prulesBody"></div><button class="btn full mt" onclick="document.getElementById('pRulesModal').classList.remove('on')">סגור</button></div></div>
+<div class="modal" id="penModal"><div class="card" id="penEl" data-mir style="max-width:440px"></div></div>
 <template id="tplRegular"><h2>🎉 מסיבה · 18+ · 3–10 חברים</h2>
 <p>גרסת המסיבה הרגילה: פלרטטנית, חצופה ומצחיקה, פחות מפורשת מ״מסיבה נועזת״. בה: שאלות על דייטים, קראשים, פרייד ותרבות גאה, ״מי הכי סביר״, ״אף פעם לא״, אתגרים, מיני-משחקים, חוקים וקלפי 🎯 עונש. 89 קלפים.</p>
 <h2>חוקי הזהב</h2>
@@ -194,18 +367,18 @@ details summary{cursor:pointer;font-weight:800}
 
 <!-- setup -->
 <section class="screen" id="sSetup">
-  <div class="logo" style="font-size:40px">טופ או בוטום</div>
+  <div class="logo" style="font-size:2.4rem">טופ או בוטום</div><div class="pride"></div>
   <div class="box">
-    <div class="row"><div><label>שחקן 1 (המארח, מתחיל)</label><input id="n1" placeholder="שם" maxlength="14"></div>
-    <div><label>שחקן 2</label><input id="n2" placeholder="שם" maxlength="14"></div></div>
-    <label>מי הטופ בהתחלה? (המארח בוחר)</label>
+    <div class="row"><div><label for="n1">שחקן 1 (מתחיל)</label><input id="n1" placeholder="שם" maxlength="14"></div>
+    <div><label for="n2">שחקן 2</label><input id="n2" placeholder="שם" maxlength="14"></div></div>
+    <label for="firstTop">מי הטופ בהתחלה?</label>
     <select id="firstTop"><option value="0">שחקן 1</option><option value="1">שחקן 2</option></select>
-    <label>רמת התחלה</label>
+    <label for="startZone">רמת התחלה</label>
     <select id="startZone"><option value="0">מההתחלה: חימום 🔥</option><option value="12">ישר ללוהט 🔥🔥</option></select>
   </div>
   <div class="box">
-    <b>לפני שמתחילים, בקול:</b>
-    <ul style="margin:6px 0;padding-inline-start:20px">
+    <div class="h2">לפני שמתחילים, בקול:</div>
+    <ul>
       <li>מילת ביטחון: <b>״אדום״</b> עוצרת הכל, <b>״צהוב״</b> מאטה.</li>
       <li>לכל אחד <b>3 פאסים</b>. סירוב בלי פאס = 2 משבצות אחורה.</li>
       <li>כל אחד אומר גבול אחד שהוא לא עושה הלילה. חדירה רק אם סיכמתם.</li>
@@ -250,32 +423,37 @@ details summary{cursor:pointer;font-weight:800}
 <h2>ניצחון</h2>
 <p>מי שמגיע ראשון ל<b>״סיום״</b> (לא צריך מספר מדויק בקובייה) מנצח, שולף 2 קלפי <b>פנטזיה</b> ובוחר אחד. המפסיד מגשים אותו, הלילה או בתאריך שקובעים עכשיו. חפיסה נגמרה? מערבבים את הקלפים שכבר שוחקו ומשחקים אותם שוב. משחק נמשך בערך שעה וחצי עד שעתיים.</p>
 <h2>💞 זוגי + הרחבה</h2><p>במצב הזה מתווספים 60 קלפים לוהטים חדשים ו-40 קלפי זוגיות. בקלף זוגיות שניכם עונים בתורות ומקשיבים עד הסוף. רובם בחימום, וכמה עמוקים יותר בהמשך הלוח.</p></details>
-  <button class="btn" style="width:100%" onclick="startGame()">יאללה, מתחילים 🔥</button>
+  <button class="btn full" onclick="startGame()">יאללה, מתחילים 🔥</button>
+  <button class="btn2 full mt" onclick="backMenu()">חזרה</button>
 </section>
 
 <!-- game -->
 <section class="screen" id="sGame">
+  <div class="waitBar" id="gWait"></div>
   <div class="hud" id="hud"></div>
-  <div class="board" id="board"></div>
-  <div class="startrow"><span id="startPawns"></span><span>🚀 התחלה: משבצת 1 בפינה הימנית התחתונה, ומשם למעלה עד 🏁</span></div>
-  <div class="controls">
+  <div class="bArea" id="bArea">
+    <div class="board" id="board"></div>
+    <div class="startPad" id="startPad">🚀 התחלה</div>
+    <div id="tokens"></div>
+  </div>
+  <div class="controls" data-mir>
     <div class="die" id="die">🎲</div>
-    <button class="btn" style="flex:1;font-size:18px;padding:18px" id="rollBtn" onclick="roll()">זרוק קובייה</button>
+    <button class="btn" id="rollBtn" onclick="roll()">זרוק קובייה</button>
   </div>
   <div class="log" id="log"></div>
-  <div class="row" style="margin-top:10px"><button class="btn2" onclick="openRules()">📜 חוקים</button><button class="btn2" onclick="if(confirm('להתחיל משחק חדש?'))newGame()">↺ משחק חדש</button></div>
+  <div class="bar"><button class="btn2" onclick="openRules()">📜 חוקים</button><button class="btn2 hostonly" onclick="if(confirm('להתחיל משחק חדש?'))newGame()">↺ משחק חדש</button></div>
 </section>
 
 <!-- win -->
 <section class="screen win" id="sWin">
-  <div class="logo" style="font-size:44px">👑 <span id="winName"></span><br><small>ניצח!</small></div>
+  <div class="logo" style="font-size:2.6rem">👑 <span id="winName"></span><br><small>ניצח!</small></div>
   <div class="box">המנצח בוחר אחת משתי פנטזיות. המפסיד מגשים אותה, הלילה או בתאריך שקובעים עכשיו.</div>
-  <div id="fants"></div>
-  <button class="btn" style="width:100%" onclick="newGame()">עוד סיבוב?</button>
+  <div id="fants" data-mir></div>
+  <button class="btn full hostonly" onclick="newGame()">עוד סיבוב?</button>
 </section>
 
-<div class="modal" id="modal"><div class="card" id="cardEl"></div></div>
-<div class="modal" id="rulesModal" onclick="if(event.target===this)this.classList.remove('on')"><div class="box rules" style="max-width:520px;max-height:85vh;overflow:auto;background:#22142e"><h2>לפני שמתחילים: 18+ והסכמה</h2>
+<div class="modal" id="modal"><div class="card" id="cardEl" data-mir></div></div>
+<div class="modal" id="rulesModal" onclick="if(event.target===this)this.classList.remove('on')"><div class="rulesBox rules"><h2>לפני שמתחילים: 18+ והסכמה</h2>
 <ul>
 <li>המשחק מיועד לבגירים בני 18 ומעלה בלבד, ששניהם רוצים לשחק.</li>
 <li><b>מילת ביטחון:</b> <b>״אדום״</b> עוצרת הכל מיד, בלי שאלות. <b>״צהוב״</b> פירושה ״להאט, משהו פה לא בדיוק בשבילי״. קבעו אותן בקול לפני הזריקה הראשונה.</li>
@@ -312,56 +490,109 @@ details summary{cursor:pointer;font-weight:800}
 </ul>
 <h2>ניצחון</h2>
 <p>מי שמגיע ראשון ל<b>״סיום״</b> (לא צריך מספר מדויק בקובייה) מנצח, שולף 2 קלפי <b>פנטזיה</b> ובוחר אחד. המפסיד מגשים אותו, הלילה או בתאריך שקובעים עכשיו. חפיסה נגמרה? מערבבים את הקלפים שכבר שוחקו ומשחקים אותם שוב. משחק נמשך בערך שעה וחצי עד שעתיים.</p>
-<h2>💞 זוגי + הרחבה</h2><p>במצב הזה מתווספים 60 קלפים לוהטים חדשים ו-40 קלפי זוגיות. בקלף זוגיות שניכם עונים בתורות ומקשיבים עד הסוף. רובם בחימום, וכמה עמוקים יותר בהמשך הלוח.</p><button class="btn" style="width:100%;margin-top:12px" onclick="document.getElementById('rulesModal').classList.remove('on')">סגור</button></div></div>
-<div class="safe" id="safe" onclick="safeWord()">🛑 אדום</div>
-
+<h2>💞 זוגי + הרחבה</h2><p>במצב הזה מתווספים 60 קלפים לוהטים חדשים ו-40 קלפי זוגיות. בקלף זוגיות שניכם עונים בתורות ומקשיבים עד הסוף. רובם בחימום, וכמה עמוקים יותר בהמשך הלוח.</p><button class="btn full mt" onclick="document.getElementById('rulesModal').classList.remove('on')">סגור</button></div></div>
+<button class="safe" id="safe" onclick="safeWord()">🛑 אדום</button>
 <script>
 const DATA = {"zones": {"1": "חימום", "2": "לוהט", "3": "בלי גבולות"}, "types": {"task": "משימה", "truth": "אמת", "control": "שליטה", "toy": "אביזר", "luck": "מזל", "fantasy": "פנטזיה", "pass": "פאס", "rule": "חוקים"}, "cards": [{"z": 1, "t": "task", "x": "נשק אותו לאט מהאוזן ועד עצם הבריח. אסור לגעת לו בשפתיים, גם אם הוא מתחנן.", "s": 60}, {"z": 1, "t": "task", "x": "תוריד לו את החולצה רק עם השיניים והשפתיים. הידיים שלך מאחורי הגב כל הזמן."}, {"z": 1, "t": "task", "x": "עיסוי כתפיים וגב. בסוף מגיעה לו נשיקה אחת, במקום שהכי בא לך.", "s": 90}, {"z": 1, "t": "task", "x": "שב עליו בפישוק, עם הבגדים, ותסתכלו אחד לשני בעיניים בלי לזוז. מי שצוחק ראשון מוריד פריט.", "s": 60}, {"z": 1, "t": "task", "x": "לחש לו באוזן שלושה דברים שאתה הולך לעשות לו הלילה. בפירוט ובלי לחסוך במילים."}, {"z": 1, "t": "task", "x": "נשיקה עמוקה של דקה שלמה. הוא מוביל, אתה רק נענה.", "s": 60}, {"z": 1, "t": "task", "x": "תריח אותו: צוואר, חזה ומפשעה מעל הבגדים. תגיד לו בקול מה זה עושה לך."}, {"z": 1, "t": "task", "x": "סטריפטיז: תוריד פריט לבוש אחד, לאט. הוא בוחר את השיר ומחליט אם זה היה מספיק סקסי. אם לא, עוד פריט."}, {"z": 1, "t": "truth", "x": "מה הדבר הראשון בגוף שלו שמשך אותך? תראה עליו בדיוק איפה."}, {"z": 1, "t": "truth", "x": "מה היה הסקס הכי טוב שלכם עד היום? מה בדיוק הוא עשה שם שעבד עליך?"}, {"z": 1, "t": "truth", "x": "איזה חלק בגוף שלו אתה הכי אוהב לנשק, ואיזה עוד לא נישקת מספיק?"}, {"z": 1, "t": "truth", "x": "משהו שהוא לבש או עשה פעם, הדליק אותך, ולא סיפרת לו?"}, {"z": 1, "t": "truth", "x": "טופ, בוטום, ורס או ״תלוי בערב״? ומה הכי מסקרן אותך בתפקיד ההפוך?"}, {"z": 1, "t": "truth", "x": "איפה, חוץ מהמיטה, הכי בא לך לתפוס אותו? הספה, המקלחת, המטבח, האוטו…"}, {"z": 1, "t": "control", "x": "הטופ מצביע על איבר בגוף שלו, והבוטום מנשק אותו שם. כך עד שהחול נגמר. הבוטום לא מדבר.", "s": 60}, {"z": 1, "t": "control", "x": "הבוטום עומד בלי לזוז. הטופ מסתובב סביבו ונוגע בכל מקום חוץ מבין הרגליים. מי שזז מוריד פריט.", "s": 60}, {"z": 1, "t": "control", "x": "הטופ בוחר פריט לבוש שהבוטום מוריד, ואת הקצב. הבוטום מוריד אותו בדיוק כמו שהטופ מכתיב."}, {"z": 1, "t": "control", "x": "עד שהחול נגמר הבוטום עונה ״כן, בוס״ על כל הוראה. לטופ יש שלוש הוראות, ושתיים מהן חייבות להיות נשיקות.", "s": 60}, {"z": 1, "t": "toy", "a": "כיסוי עיניים", "x": "תכסה לו את העיניים ותנשק אותו בחמישה מקומות שונים. הוא צריך לנחש איפה הייתה הנשיקה הראשונה. טעה? הוא מוריד פריט."}, {"z": 1, "t": "toy", "a": "קוביית קרח", "x": "קוביית קרח בפה, ותעביר אותה מהשפתיים שלו עד הטבור בלי ידיים.", "s": 60}, {"z": 1, "t": "toy", "a": "נוצה / מברשת", "x": "תעביר לו נוצה לאט לאורך הגב והירכיים. על כל אנחה נוספות עוד 15 שניות.", "s": 60}, {"z": 1, "t": "toy", "a": "טוש גוף / אודם", "x": "תכתוב עליו מילה אחת שמתארת מה הוא בשבילך הלילה, איפה שבא לך. הוא לא רואה עד סוף המשחק."}, {"z": 2, "t": "task", "x": "תוריד לו את המכנסיים. תנשק את הירכיים הפנימיות מהברך ולמעלה, ותעצור שנייה לפני.", "s": 60}, {"z": 2, "t": "task", "x": "ליקוק ונשיכות עדינות בפטמות, עשרים שניות לכל צד. הוא סופר בקול, ואם הוא מתבלבל מתחילים מההתחלה."}, {"z": 2, "t": "task", "x": "יד אחת עליו מעל התחתונים, דקה שלמה. אסור להכניס את היד פנימה, גם אם הוא מבקש יפה.", "s": 60}, {"z": 2, "t": "task", "x": "פלג גוף עליון בחוץ, לשניכם. חזה אל חזה, מפשעה אל מפשעה. תתנשקו ותתחככו לאט.", "s": 60}, {"z": 2, "t": "task", "x": "תשכב עליו מאחור, בתחתונים, ותנשק לו את העורף והכתפיים. האגן שלך זז לאט, והוא לא מורשה להסתובב.", "s": 60}, {"z": 2, "t": "task", "x": "שתי נשיכות קטנות בתחת שלו, ואחריהן ליטוף ארוך כדי שיירגע. הוא מחליט אם מגיעה עוד אחת."}, {"z": 2, "t": "task", "x": "תיגע בעצמך מולו, בתוך התחתונים. הוא רק מסתכל ואסור לו לגעת. גם לא בעצמו.", "s": 30}, {"z": 2, "t": "task", "x": "תיקח את היד שלו ותראה לו בדיוק איך אתה אוהב שנוגעים בך: לחץ, קצב, מקום.", "s": 60}, {"z": 2, "t": "truth", "x": "איזו פנטזיה עוד לא העזת להציע לו? עכשיו זה הזמן."}, {"z": 2, "t": "truth", "x": "איך אתה הכי אוהב שמוצצים לך? פה, ידיים, קצב, עיניים. תאר לו את זה כמו מתכון."}, {"z": 2, "t": "truth", "x": "מה המקום הכי מסוכן או מטורף שעשית בו סקס? ואיפה היית רוצה לעשות את זה איתו?"}, {"z": 2, "t": "truth", "x": "יש סצנה מסרט או מפורנו שהיית רוצה לשחזר איתו? תאר אותה."}, {"z": 2, "t": "truth", "x": "איזו מילה או משפט שהוא אומר במיטה גומרים אותך? תבקש שיגיד אותם עכשיו."}, {"z": 2, "t": "truth", "x": "איזה צליל שלו בזמן סקס הכי מחרמן אותך? תחקה אותו."}, {"z": 2, "t": "control", "x": "הבוטום על הברכיים, ידיים מאחורי הגב. הטופ מחליט מה הבוטום מנשק ומלקק, ובאיזה קצב.", "s": 60}, {"z": 2, "t": "control", "x": "הטופ שוכב. הבוטום מפשיט אותו עד הסוף, פריט אחרי פריט, ומנשק כל פיסת עור שנחשפת.", "s": 90}, {"z": 2, "t": "control", "x": "הטופ מחזיק את הבוטום בעורף ומוביל נשיקה. הבוטום לא מוביל, לא נוגע, רק מקבל.", "s": 60}, {"z": 2, "t": "control", "x": "הבוטום אומר בדיוק מה הוא רוצה עכשיו, במילים מפורשות ובלי מילים מכובסות. הטופ מחליט אם הוא מקבל את זה."}, {"z": 2, "t": "toy", "a": "אזיקים / עניבה", "x": "תקשור לו את הידיים, רפוי מספיק כדי שיוכל להשתחרר. עד שהחול נגמר הוא רק מקבל.", "s": 60}, {"z": 2, "t": "toy", "a": "שמן עיסוי", "x": "עיסוי שמן לתחת ולירכיים. תתקרב לאט למרכז ותתרחק שוב. אל תיתן לו את מה שהוא רוצה. עדיין לא.", "s": 90}, {"z": 2, "t": "toy", "a": "סוכריית מנטה", "x": "מנטה בפה, ואז תלקק לו את הפטמות ואת הצוואר. אחרי זה תנשוף עליהן. תיהנה מהצמרמורת."}, {"z": 2, "t": "toy", "a": "כיסוי עיניים + שמן", "x": "הוא עם כיסוי עיניים, ואתה מעסה אותו בשמן עם חלק בגוף שאינו הידיים. הוא צריך לנחש עם מה.", "s": 60}, {"z": 3, "t": "task", "x": "תמצוץ לו. הוא קובע את הקצב, ואתה קובע מתי עוצרים.", "s": 60}, {"z": 3, "t": "task", "x": "69 לדקה וחצי. מי שגונח בקול ראשון חוזר משבצת אחת אחורה.", "s": 90}, {"z": 3, "t": "task", "x": "רימינג. לא בא לכם? אז נשיקות וליקוקים על התחת ובין הירכיים, כמה שיותר קרוב.", "s": 60}, {"z": 3, "t": "task", "x": "הרבה ג׳ל ואצבע אחת, לאט, תוך כדי נשיקה. הוא אומר ״עוד״ או ״עצור״, ואתה מקשיב.", "s": 60}, {"z": 3, "t": "task", "x": "אדג׳ינג: תביא אותו עד הקצה ותעצור, פעמיים. אסור לו לגמור. עדיין."}, {"z": 3, "t": "task", "x": "תעמוד מאחוריו מול מראה ותיגע בו. הוא חייב להסתכל על עצמו כל הזמן.", "s": 60}, {"z": 3, "t": "task", "x": "יד אחת עליו ויד אחת עליך, באותו קצב. מי שמאט ראשון מפסיד צעד.", "s": 60}, {"z": 3, "t": "task", "x": "תבחר תנוחה: כפית, דוגי או רכיבה. דקה בתנוחה הזאת, עם חדירה או בלעדיה, לפי מה שסיכמתם. קונדום וג׳ל מוכנים ליד.", "s": 60}, {"z": 3, "t": "truth", "x": "מה הדבר הכי מלוכלך שחשבת עליו כשהסתכלת עליו היום?"}, {"z": 3, "t": "truth", "x": "שלישייה, צעצוע, מקום ציבורי, צילום: מה מזה היית מנסה איתו, ומה לעולם לא?"}, {"z": 3, "t": "truth", "x": "תאר את הסקס המושלם שלכם הלילה, מהנשיקה הראשונה ועד שהוא גומר. שלב אחרי שלב."}, {"z": 3, "t": "truth", "x": "מה הוא עושה לך שהכי מהר גורם לך לגמור? תגיד לו בדיוק."}, {"z": 3, "t": "truth", "x": "איזה צעצוע היית רוצה שתקנו ביחד, ואיך הוא ישתמש בו עליך?"}, {"z": 3, "t": "truth", "x": "על מה אתה מפנטז כשאתה מאונן בלי פורנו? הוא שומע את הגרסה המלאה."}, {"z": 3, "t": "control", "x": "לבוטום אסור לגמור עד שהטופ מרשה. עד שהחול נגמר הטופ עושה לו מה שבא לו, בגבולות שסיכמתם.", "s": 90}, {"z": 3, "t": "control", "x": "הטופ שוכב על הגב והבוטום רוכב עליו, עם חדירה או בלעדיה, לפי מה שסיכמתם. הטופ קובע את הקצב עם הידיים על המותניים.", "s": 90}, {"z": 3, "t": "control", "x": "הטופ קובע תנוחה, והבוטום לא זז ממנה בזמן שהטופ חוקר אותו עם הפה והידיים.", "s": 60}, {"z": 3, "t": "control", "x": "הטופ אומר לבוטום מה הוא הולך לעשות לו. לפני כל דבר הבוטום חייב לבקש יפה. בלי ״בבקשה״, אין כלום.", "s": 90}, {"z": 3, "t": "toy", "a": "אזיקים + כיסוי עיניים", "x": "הוא קשור ועם כיסוי עיניים. עד שהחול נגמר רק הפה שלך עובד, והוא לא יודע איפה תפגע עכשיו.", "s": 90}, {"z": 3, "t": "toy", "a": "ג׳ל", "x": "הרבה ג׳ל ושתי ידיים, רק עליו. תגרום לו להתנשם, ותעצור רגע לפני.", "s": 60}, {"z": 3, "t": "toy", "a": "צעצוע", "x": "תשתמש עליו בצעצוע שהוא הכי אוהב. אין צעצוע? שתי אצבעות, הרבה ג׳ל והמון סבלנות.", "s": 90}, {"z": 3, "t": "toy", "a": "קרח", "x": "קרח בפה ומציצה של 20 שניות, ואז פה חם ועוד 20 שניות. ככה עד שהחול נגמר.", "s": 60}, {"z": 0, "t": "luck", "x": "עלייה! התקדם 3 משבצות."}, {"z": 0, "t": "luck", "x": "ירידה! חזור 3 משבצות, אבל קודם הוא מנשק אותך איפה שהוא בוחר."}, {"z": 0, "t": "luck", "x": "קיבלת פאס נוסף. שמור אותו לרגע הנכון."}, {"z": 0, "t": "luck", "x": "גנב! לוקח לו פאס אחד. (אם אין לו, הוא מוריד פריט.)"}, {"z": 0, "t": "luck", "x": "החלפה מיידית: מעכשיו אתה הטופ."}, {"z": 0, "t": "luck", "x": "צ׳ייסר! שניכם שותים, או נשיקה של 10 שניות במקום."}, {"z": 0, "t": "luck", "x": "קפוא! הוא מפספס את התור הבא ובזמן הזה מעסה לך את הרגליים."}, {"z": 0, "t": "luck", "x": "שניכם מורידים פריט לבוש. אין יותר מה להוריד? הוא בוחר איפה לנשק אותך."}, {"z": 0, "t": "luck", "x": "שוחד: תן לו נשיקה במקום שהוא בוחר, והתקדם 2 משבצות."}, {"z": 0, "t": "luck", "x": "מראה: את המשימה מהתור הקודם עושים עכשיו בתפקידים הפוכים."}, {"z": 4, "t": "fantasy", "x": "שירות מלא: עשרים דקות שכולן שלך. אתה רק שוכב ומקבל, והמפסיד עובד."}, {"z": 4, "t": "fantasy", "x": "הבוס של הלילה: עד הבוקר אתה הטופ, בלי החלפות ובלי ויכוחים."}, {"z": 4, "t": "fantasy", "x": "הסוף שלך: אתה בוחר את התנוחה, את הקצב, ואיפה זה נגמר."}, {"z": 4, "t": "fantasy", "x": "פנטזיה סודית: תכתוב פנטזיה על פתק. המפסיד מגשים אותה בתוך שבוע, בגבולות שסיכמתם."}, {"z": 4, "t": "fantasy", "x": "מקלחת מפנקת: הוא הסבון והוא הספוג, ואתה רק נהנה."}, {"z": 4, "t": "fantasy", "x": "השכמה: מחר בבוקר הוא מעיר אותך בדרך שאתה בוחר עכשיו."}], "board": ["start", "C", "C", "H", "C", "S", "C", "L", "C", "U", "C", "D", "C", "G", "C", "S", "C", "L", "C", "H", "C", "D", "C", "U", "C", "G", "C", "S", "C", "L", "C", "D", "C", "S", "C", "L", "F"]};
 const EXP = [{"z": 1, "t": "task", "x": "תוריד לו את הגרביים ותעסה לו את כפות הרגליים. אחר כך נשיקה בקרסול, ולאט למעלה עד הברך.", "s": 60}, {"z": 1, "t": "task", "x": "תנשק אותו בכל מקום בפנים חוץ מהשפתיים. הוא יכול להתחנן, ואתה לא נכנע.", "s": 45}, {"z": 1, "t": "task", "x": "תפתח לו כפתור אחד בחולצה אחרי כל נשיקה בצוואר. נגמרו הכפתורים? החולצה יורדת."}, {"z": 1, "t": "task", "x": "תעמוד מאחוריו עם הידיים על המותניים שלו ותנשום לו חם על העורף. חוץ מזה, אסור לגעת.", "s": 30}, {"z": 1, "t": "task", "x": "סלואו צמוד על שיר שהוא בוחר. הידיים שלך רק מתחת לחולצה שלו.", "s": 90}, {"z": 1, "t": "task", "x": "תלחש לו באוזן את המחמאה הכי גסה שאתה מסוגל להגיד בלי להסמיק."}, {"z": 1, "t": "task", "x": "תנשוך לו בעדינות את השפה התחתונה, ומשם נשיקה של חצי דקה.", "s": 30}, {"z": 1, "t": "truth", "x": "מה עבר לך בראש כשראית אותו עירום בפעם הראשונה?"}, {"z": 1, "t": "truth", "x": "איזה בגד שלו הכי מדליק אותך, ומה היית עושה לו כשהוא לובש אותו?"}, {"z": 1, "t": "truth", "x": "מה התחלת לרצות במיטה רק מאז שאתם ביחד?"}, {"z": 1, "t": "truth", "x": "באיזה רגע רגיל ביום פתאום בא לך לקפוץ עליו?"}, {"z": 1, "t": "truth", "x": "מה הוא עושה עם הידיים שגורם לך לרעוד?"}, {"z": 1, "t": "control", "x": "הבוטום מוריד לטופ את החולצה ומחכה בלי לזוז. הטופ מחליט מתי מותר לגעת.", "s": 60}, {"z": 1, "t": "control", "x": "הטופ סופר לאט מ-10 עד 0. על כל מספר הבוטום מוריד לו פריט או מנשק אותו במקום חדש."}, {"z": 1, "t": "control", "x": "הבוטום שוכב על הבטן. הטופ כותב לו מילה באצבע על הגב, והבוטום מנחש. טעה? נשיקה במקום שהטופ בוחר.", "s": 60}, {"z": 1, "t": "control", "x": "הבוטום אומר ״תודה״ אחרי כל נגיעה של הטופ. שכח? מתחילים מהתחלה.", "s": 60}, {"z": 1, "t": "toy", "x": "הוא עם כיסוי עיניים. תטעים אותו שלושה דברים מהמטבח, מהשפתיים שלך. הוא מנחש מה זה.", "a": "כיסוי עיניים"}, {"z": 1, "t": "toy", "x": "קוביית קרח לאורך עמוד השדרה, מלמטה למעלה, והפה שלך מחמם מיד אחריה.", "s": 60, "a": "קרח"}, {"z": 1, "t": "toy", "x": "נוצה על הצוואר, מאחורי האוזניים ועל השפתיים. אם הוא צוחק, הוא מוריד פריט.", "s": 45, "a": "נוצה"}, {"z": 1, "t": "toy", "x": "תעסה לו כפות ידיים ואצבעות בשמן, אחת אחרי השנייה. בסוף אחת מהן נכנסת לך לפה.", "s": 60, "a": "שמן עיסוי"}, {"z": 2, "t": "task", "x": "תוריד לו את התחתונים עם השיניים. הידיים שלך נשארות מאחורי הגב."}, {"z": 2, "t": "task", "x": "נשיקות ונשיכות קטנות לאורך קו המכנסיים, מצד לצד. אסור לרדת יותר נמוך.", "s": 60}, {"z": 2, "t": "task", "x": "כפית, אתה מאחור. יד אחת שלך משחקת לו בפטמה, השנייה על הבטן, ולא יורדת.", "s": 60}, {"z": 2, "t": "task", "x": "תיגע בו מעל הבגדים בדיוק כמו שאתה נוגע בעצמך כשאתה לבד.", "s": 60}, {"z": 2, "t": "task", "x": "שב עליו בפישוק, בתחתונים, ותזוז לאט. עיניים בעיניים כל הזמן.", "s": 60}, {"z": 2, "t": "task", "x": "תלקק לאורך הירך הפנימית מהברך עד קו התחתונים. צד אחד, ואז השני.", "s": 60}, {"z": 2, "t": "task", "x": "תשאיר לו על החזה סימן קטן, במקום שרק אתם רואים."}, {"z": 2, "t": "truth", "x": "באיזה חלק בגוף שלך הכי בא לך שהוא יתעסק הלילה?"}, {"z": 2, "t": "truth", "x": "איזו פנטזיה עליו רצה לך בראש כשהוא לא בבית?"}, {"z": 2, "t": "truth", "x": "מה היה הסקס הכי טוב שלכם מחוץ למיטה?"}, {"z": 2, "t": "truth", "x": "מה היית רוצה שהוא יגיד לך באמצע? תגיד את המילים בדיוק."}, {"z": 2, "t": "truth", "x": "מה הכי בא לך לנסות כבוטום? ומה כטופ?"}, {"z": 2, "t": "control", "x": "הבוטום עומד עם הידיים על הקיר. הטופ נצמד אליו מאחור ועושה מה שבא לו, מעל התחתונים.", "s": 60}, {"z": 2, "t": "control", "x": "הטופ מוביל את היד של הבוטום על הגוף שלו: לאן, ובאיזה קצב.", "s": 60}, {"z": 2, "t": "control", "x": "הבוטום מתחנן בקול, במילים מפורשות, למה שהוא רוצה. הטופ נותן את זה רק אם השתכנע."}, {"z": 2, "t": "control", "x": "הטופ שוכב, והבוטום מנשק אותו מכפות הרגליים ועד הצוואר. דילג על משהו? חוזר.", "s": 90}, {"z": 2, "t": "toy", "x": "הידיים שלו קשורות מעל הראש. אתה מוריד לו את מה שנשאר, לאט, ומנשק כל מקום שנחשף.", "s": 90, "a": "אזיקים"}, {"z": 2, "t": "toy", "x": "מנטה בפה, ותנשק לו את הבטן ואת הירכיים הפנימיות. אחרי זה נשיפה.", "s": 60, "a": "סוכריית מנטה"}, {"z": 2, "t": "toy", "x": "תסמן עליו עם האודם שלושה מקומות שתנשק עד סוף המשחק. אל תשכח אף אחד.", "a": "אודם / טוש גוף"}, {"z": 2, "t": "toy", "x": "תעמדו מול מראה, אתה מאחוריו. אתה מפשיט אותו לאט, והוא חייב להסתכל.", "s": 60, "a": "מראה"}, {"z": 3, "t": "task", "x": "מציצה, הכי לאט שאפשר. כל פעם שהוא נאנח, מאטים עוד.", "s": 60}, {"z": 3, "t": "task", "x": "תשכב על הגב, והוא יושב לך על הפנים. הוא קובע את הקצב.", "s": 60}, {"z": 3, "t": "task", "x": "ג׳ל ושתי ידיים עליו, ותוך כדי אתה מתאר בקול מה אתה עושה ומה תעשה אחר כך.", "s": 60}, {"z": 3, "t": "task", "x": "תביא אותו עד הקצה שלוש פעמים, ובכל פעם תעצור. בפעם הרביעית הוא מחליט."}, {"z": 3, "t": "task", "x": "פה ויד ביחד, ואתה מסתכל לו בעיניים כל הזמן. הוא מוריד מבט? מתחילים מחדש.", "s": 60}, {"z": 3, "t": "task", "x": "תנוחה שעוד לא ניסיתם, לדקה. עם חדירה או בלעדיה, לפי מה שסיכמתם, עם קונדום וג׳ל.", "s": 60}, {"z": 3, "t": "task", "x": "דוגי, עם או בלי חדירה לפי מה שסיכמתם. יד אחת שלך מושכת אותו אליך בעדינות מהכתף.", "s": 60}, {"z": 3, "t": "truth", "x": "מה הכי מטריף אותך כשהוא בתוכך, או כשאתה בתוכו?"}, {"z": 3, "t": "truth", "x": "מה הפנטזיה הכי מלוכלכת שלך עליו שעוד לא אמרת בקול? עכשיו, בפירוט."}, {"z": 3, "t": "truth", "x": "איפה הכי בא לך שהוא יגמור?"}, {"z": 3, "t": "truth", "x": "מה היה הסקס הכי פרוע שלכם, ומה היית מוסיף לו בפעם הבאה?"}, {"z": 3, "t": "truth", "x": "איזו מילה שלו מביאה אותך לקצה? תבקש שיגיד אותה עכשיו."}, {"z": 3, "t": "control", "x": "הטופ מחליט אם, מתי ואיך הבוטום גומר הלילה. עד שהחול נגמר הבוטום רק מתקרב לשם.", "s": 90}, {"z": 3, "t": "control", "x": "הבוטום על הברכיים. הטופ מחזיק לו את הראש ומוביל את הקצב, בגבולות שסיכמתם. שתי טפיחות על הירך = ״צהוב״.", "s": 60}, {"z": 3, "t": "control", "x": "הטופ בוחר תנוחה ומכתיב לבוטום מה להגיד בזמן שהוא זז. מילה לא נכונה? מאטים.", "s": 90}, {"z": 3, "t": "control", "x": "הבוטום על הבטן והטופ מעליו, עם חדירה או בלעדיה לפי מה שסיכמתם. הטופ לוחש לו כל מה שהוא עושה.", "s": 90}, {"z": 3, "t": "toy", "x": "צעצוע והפה שלך עליו, ביחד. הוא אומר מתי לעצור.", "s": 90, "a": "צעצוע"}, {"z": 3, "t": "toy", "x": "הוא קשור. ג׳ל ושתי ידיים, ואתה מביא אותו עד הקצה ועוצר. פעמיים.", "s": 90, "a": "אזיקים + ג׳ל"}, {"z": 3, "t": "toy", "x": "הוא עם כיסוי עיניים, ואתה מחליף בין פה, יד וקרח. הוא מנחש מה כל אחד.", "s": 60, "a": "כיסוי עיניים + קרח"}, {"z": 3, "t": "toy", "x": "תלביש לו קונדום עם הפה. לא מצליח? עם הידיים, לאט, ועיניים בעיניים.", "a": "קונדום"}, {"z": 1, "t": "rel", "x": "איך באמת נפגשתם? כל אחד מספר את הגרסה שלו, ובודקים איפה הן לא מסתדרות."}, {"z": 1, "t": "rel", "x": "מה חשבת עליו בדייט הראשון? בכנות."}, {"z": 1, "t": "rel", "x": "מתי הבנת שזה רציני?"}, {"z": 1, "t": "rel", "x": "מה הזיכרון הכי מצחיק שלכם ביחד?"}, {"z": 1, "t": "rel", "x": "איזה רגע קטן מהשבוע האחרון שימח אותך בזכותו?"}, {"z": 1, "t": "rel", "x": "איזה דבר שהוא עושה בבית אתה הכי מעריך, ואף פעם לא אמרת לו?"}, {"z": 1, "t": "rel", "x": "תגיד לו שלושה דברים שאתה אוהב בו ואין להם קשר לגוף."}, {"z": 1, "t": "rel", "x": "מה השגרה הכי אהובה עליך שלכם? הקפה של הבוקר, הסדרה, הטיול עם הכלב…"}, {"z": 1, "t": "rel", "x": "מה הדבר הכי מעצבן שהוא עושה, שבסתר אתה דווקא אוהב?"}, {"z": 1, "t": "rel", "x": "מה הייתה החופשה הכי טובה שלכם, ולאן טסים בפעם הבאה?"}, {"z": 1, "t": "rel", "x": "תכננו עכשיו דייט לשבוע הבא. כל אחד מוסיף פרט אחד."}, {"z": 1, "t": "rel", "x": "מה ״השיר שלכם״? אין? בוחרים אחד עכשיו."}, {"z": 1, "t": "rel", "x": "מה תעדיף: סופ״ש בצימר בגליל, או שלושה ימים בעיר באירופה?"}, {"z": 1, "t": "rel", "x": "מה תעדיף: ארוחת שישי אצל ההורים שלך, או אצל שלו?"}, {"z": 1, "t": "rel", "x": "מה תעדיף: לבשל ביחד, או להזמין משלוח ולראות סדרה?"}, {"z": 1, "t": "rel", "x": "איך המשפחה שלך הגיבה כשהכרת להם אותו? ומה היית רוצה שיהיה אחרת?"}, {"z": 1, "t": "rel", "x": "מי מהחברים הכי ״שלכם״, ולמה?"}, {"z": 1, "t": "rel", "x": "תחקה אותו כשהוא רעב. אחר כך הוא מחקה אותך כשאתה עייף."}, {"z": 1, "t": "rel", "x": "מה הדבר הכי רומנטי שהוא עשה בשבילך?"}, {"z": 1, "t": "rel", "x": "איזו מחמאה שלו נשארה איתך הכי הרבה זמן?"}, {"z": 1, "t": "rel", "x": "מה למדת ממנו, שלבד לא היית לומד?"}, {"z": 1, "t": "rel", "x": "על מה אתם הכי צוחקים ביחד? ספרו בדיחה פרטית."}, {"z": 1, "t": "rel", "x": "איזה הרגל שלך השתנה מאז שאתם ביחד?"}, {"z": 1, "t": "rel", "x": "מה התמונה הכי אהובה עליך שלכם? מצאו אותה עכשיו בטלפון."}, {"z": 1, "t": "rel", "x": "תתאר את הבית שלכם בעוד עשר שנים. איפה הוא, ומה יש בו?"}, {"z": 1, "t": "rel", "x": "חיית מחמד: אין, יש, או עוד אחת? ואיך יקראו לה?"}, {"z": 1, "t": "rel", "x": "מה הדבר הכי קטן שהוא יכול לעשות מחר כדי לשמח אותך?"}, {"z": 1, "t": "rel", "x": "תגיד לו תודה על משהו מסוים מהחודש האחרון."}, {"z": 1, "t": "rel", "x": "מה הפרייד הכי זכור שלכם ביחד, או זה שעוד לא עשיתם?"}, {"z": 1, "t": "rel", "x": "מה תעדיף: חתונה גדולה, טקס קטן עם החברים, או ״אנחנו לא צריכים טקס״?"}, {"z": 1, "t": "rel", "x": "מטלות הבית: מי עושה מה, ומה הייתם רוצים להחליף?"}, {"z": 1, "t": "rel", "x": "מה היית רוצה שנעשה ביחד לפחות פעם בחודש?"}, {"z": 2, "t": "rel", "x": "מה הריב הכי מטופש שהיה לכם, ואיך יצאתם ממנו?"}, {"z": 2, "t": "rel", "x": "מה אני עושה בריב שגורם לך להרגיש שלא מקשיבים לך? אני רק מקשיב, בלי להתגונן."}, {"z": 2, "t": "rel", "x": "מה עוזר לך להירגע כשאתה כועס עליי?"}, {"z": 2, "t": "rel", "x": "איך היית רוצה שאתמוך בך ביום קשה?"}, {"z": 2, "t": "rel", "x": "מה החלום שלך לחמש השנים הקרובות, ואיך אני יכול לעזור?"}, {"z": 3, "t": "rel", "x": "ממה אתה הכי מפחד בזוגיות שלנו? עונים בתורות, ורק מקשיבים."}, {"z": 3, "t": "rel", "x": "איזה דבר מהעבר (הארון, המשפחה, אקסים) עדיין משפיע עליך בקשר, ומה היה עוזר?"}, {"z": 3, "t": "rel", "x": "איזו הבטחה קטנה ואמיתית אתה רוצה שנבטיח אחד לשני היום?"}];
 let CARDS = DATA.cards;
 const ZN={1:"חימום",2:"לוהט",3:"בלי גבולות",0:"מזל",4:"פנטזיה"};
-const ZC={1:"#ff8a00",2:"#e8173d",3:"#6a0dad",0:"#12a150",4:"#c9a227"};
+const ZC={1:"linear-gradient(135deg,#c2410c,#9a3412)",2:"linear-gradient(135deg,#be123c,#9f1239)",3:"linear-gradient(135deg,#6d28d9,#5b21b6)",0:"linear-gradient(135deg,#15803d,#166534)",4:"linear-gradient(135deg,#a16207,#854d0e)"};
 const FL={1:"🔥",2:"🔥🔥",3:"🔥🔥🔥"};
-const TC={task:"#e8173d",truth:"#1f6feb",control:"#111",toy:"#8e24aa",luck:"#12a150",fantasy:"#b8860b",rel:"#0f9d9a"};
+const TC={task:"#be123c",truth:"#1d4ed8",control:"#2b1d3a",toy:"#7e22ce",luck:"#15803d",fantasy:"#854d0e",rel:"#0f766e"};
 const TI={task:"💋",truth:"❓",control:"⛓️",toy:"🎁",luck:"🎲",fantasy:"👑",rel:"💞"};
-const SQ={start:["🚀","התחלה"],C:["🃏","קלף"],S:["🔄","החלפה"],L:["🎲","מזל"],H:["🥃","צ׳ייסר"],U:["⬆️","עלייה"],D:["⬇️","ירידה"],G:["🚪","שער"],F:["🏁","סיום"]};
-const PC=["#00e5ff","#ffe600"];
+const SQ={start:["🚀","התחלה"],C:["🃏",""],S:["🔄","החלפה"],L:["🎲","מזל"],H:["🥃","צ׳ייסר"],U:["⬆️","עלייה"],D:["⬇️","ירידה"],G:["🚪","שער"],F:["🏁","סיום"]};
+const PC=["#22c3ee","#ffc21a"];
 const LUCK_FX=["fwd3","back3","gainpass","steal","metop","chaser","freeze","strip","fwd2","mirror"];
 let S=null;
 const $=id=>document.getElementById(id);
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function idxs(f){return CARDS.map((c,i)=>[c,i]).filter(([c])=>f(c)).map(([,i])=>i)}
 function zoneOf(p){return p<=12?1:p<=24?2:3}
-function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');$('safe').classList.toggle('on',id==='sGame'||id==='sParty')}
+function curScreen(){const s=document.querySelector('.screen.on');return s?s.id:''}
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));$(id).classList.add('on');$('safe').classList.toggle('on',id==='sGame'||id==='sParty');window.scrollTo(0,0);if(id==='sGame')requestAnimationFrame(layoutTok)}
 function save(){try{localStorage.setItem('tob_state',JSON.stringify(S))}catch(e){}}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function initial(n){const s=String(n).trim();return esc(Array.from(s)[0]||'?')}
+function nt(name,color){return `<span class="nt" style="--c:${color}">${esc(name)}</span>`}
+function toast(t){const e=$('toast');e.textContent=t;e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('on'),2600)}
+
 function gateOk(){try{localStorage.setItem('tob_age','1')}catch(e){};
-  try{const st=JSON.parse(localStorage.getItem('tob_state')||'null');if(st&&!st.over&&confirm('להמשיך את המשחק הקודם?')){S=st;CARDS=S.exp?DATA.cards.concat(EXP):DATA.cards;show('sGame');render();return}}catch(e){}
+  if(MP.role)return;
+  const qp=new URLSearchParams(location.search).get('room');
+  if(qp){joinScreen(qp);return}
+  if(hostResume())return;
+  if(clientResume())return;
+  if(resumeLocal())return;
   show('sMode')}
-function newGame(){try{localStorage.removeItem('tob_state')}catch(e){};S=null;show('sMode')}
+function resumeLocal(){
+  try{const st=JSON.parse(localStorage.getItem('tob_state')||'null');if(st&&!st.over&&confirm('להמשיך את המשחק הזוגי הקודם?')){S=st;CARDS=S.exp?DATA.cards.concat(EXP):DATA.cards;COUPLE_EXP=!!S.exp;resetTok();show('sGame');render();return true}}catch(e){}
+  try{const pt=JSON.parse(localStorage.getItem('tob_pstate')||'null');if(pt&&!pt.over&&pt.deck&&pt.deck.length&&confirm('להמשיך את המסיבה הקודמת?')){P=pt;PKIND=P.kind;fillPRules(PKIND);$('pGameTitle').textContent=PTITLE[PKIND]+(P.noAlc?' · 🚫🥃':'');show('sParty');pRender();return true}}catch(e){}
+  return false}
+function backMenu(){show(MP.role==='host'?'sHost':'sMode')}
+function newGame(){try{localStorage.removeItem('tob_state')}catch(e){};S=null;backMenu()}
 function startGame(){
   const n1=$('n1').value.trim()||'שחקן 1', n2=$('n2').value.trim()||'שחקן 2';
   const sp=+$('startZone').value;
   S={exp:COUPLE_EXP,names:[n1,n2],pos:[sp,sp],pass:[3,3],top:+$('firstTop').value,turn:0,skip:[0,0],
      decks:{1:shuffle(idxs(c=>c.z===1)),2:shuffle(idxs(c=>c.z===2)),3:shuffle(idxs(c=>c.z===3)),0:shuffle(idxs(c=>c.z===0))},
-     last:null,log:'🥃 מוזגים 2 צ׳ייסרים (או מתנשקים), ו'+n1+' זורק ראשון.',over:false};
-  save();show('sGame');render();
+     last:null,log:'🥃 מוזגים 2 צ׳ייסרים (או מתנשקים), ו'+esc(n1)+' זורק ראשון.',over:false};
+  save();resetTok();show('sGame');render();mpAssign();
 }
 function draw(z){if(!S.decks[z].length)S.decks[z]=shuffle(idxs(c=>c.z===z));return S.decks[z].shift()}
-function render(){
-  const other=1-S.turn;
-  $('hud').innerHTML=[0,1].map(i=>`<div class="pl ${S.turn===i?'turn':''}"><div class="nm"><span class="dot" style="background:${PC[i]}"></span>${esc(S.names[i])}</div>
-   <div>✋ פאסים: <b>${S.pass[i]}</b> · משבצת ${S.pos[i]}</div><span class="role ${S.top===i?'top':''}">${S.top===i?'👑 טופ':'🫦 בוטום'}</span>${S.skip[i]?' <span class="small">⏸ מדלג</span>':''}</div>`).join('');
-  let h='';const rows=[];
-  for(let r=0;r<6;r++){let a=[];for(let k=1;k<=6;k++)a.push(r*6+k);if(r%2)a.reverse();rows.push(a)}
-  rows.reverse();
-  for(const row of rows)for(const i of row){const k=DATA.board[i];const pw=[0,1].filter(p=>S.pos[p]===i).map(p=>`<span class="pawn" style="background:${PC[p]}"></span>`).join('');
-    h+=`<div class="sq z${zoneOf(i)} t${k}"><span class="n">${i}</span><span class="ic">${SQ[k][0]}</span><span>${SQ[k][1]}</span><span class="pw">${pw}</span></div>`}
-  $('board').innerHTML=h;
-  $('startPawns').innerHTML=[0,1].filter(p=>S.pos[p]===0).map(p=>`<span class="pawn" style="display:inline-block;background:${PC[p]}"></span>`).join(' ')||'';
-  $('rollBtn').textContent='זרוק קובייה: '+S.names[S.turn];
-  $('log').innerHTML=S.log||'';
+
+/* ---------- board ---------- */
+function buildBoard(){
+  const b=$('board');if(b.dataset.built)return;
+  const rows=[];for(let r=0;r<6;r++){let a=[];for(let k=1;k<=6;k++)a.push(r*6+k);if(r%2)a.reverse();rows.push(a)}
+  rows.reverse();let h='';
+  const heads={0:[3,'🔥🔥🔥 בלי גבולות · 25–36'],2:[2,'🔥🔥 לוהט · 13–24'],4:[1,'🔥 חימום · 1–12']};
+  rows.forEach((row,ri)=>{if(heads[ri])h+=`<div class="zhead z${heads[ri][0]}">${heads[ri][1]}</div>`;
+    for(const i of row){const k=DATA.board[i];h+=`<div class="sq z${zoneOf(i)} t${k}" data-i="${i}"><span class="n">${i}</span><span class="ic">${SQ[k][0]}</span>${SQ[k][1]?`<span class="lb">${SQ[k][1]}</span>`:''}</div>`}});
+  b.innerHTML=h;b.dataset.built='1';
 }
-function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+const shown=[null,null];const hopT=[null,null];
+function resetTok(){shown[0]=shown[1]=null;clearTimeout(hopT[0]);clearTimeout(hopT[1])}
+function tokEl(p){let t=$('tok'+p);if(!t){t=document.createElement('div');t.id='tok'+p;t.className='tok';$('tokens').appendChild(t)}return t}
+function layoutTok(){
+  if(!S||!$('sGame').classList.contains('on'))return;
+  const area=$('bArea');const sq1=area.querySelector('.sq');if(!sq1)return;const sz=sq1.offsetWidth;
+  for(const p of [0,1]){
+    const pos=shown[p]===null?S.pos[p]:shown[p];const t=tokEl(p);
+    t.style.background=PC[p];t.innerHTML=initial(S.names[p]);t.title=S.names[p];
+    t.style.setProperty('--ts',Math.round(Math.max(26,sz*.5))+'px');
+    const el=pos<=0?$('startPad'):area.querySelector(`.sq[data-i="${pos}"]`);if(!el)continue;
+    const other=shown[1-p]===null?S.pos[1-p]:shown[1-p];const same=other===pos;
+    let x,y;
+    if(pos<=0){x=el.offsetLeft+sz*(.55+p*.6);y=el.offsetTop+el.offsetHeight/2}
+    else{x=el.offsetLeft+el.offsetWidth*(same?(p?0.3:0.7):0.5);y=el.offsetTop+el.offsetHeight*(same?0.66:0.62)}
+    t.style.left=x+'px';t.style.top=y+'px';
+    t.classList.toggle('cur',S.turn===p&&!S.over);
+  }
+  area.querySelectorAll('.sq.here').forEach(e=>e.classList.remove('here'));
+  for(const p of [0,1]){const e=area.querySelector(`.sq[data-i="${shown[p]}"]`);if(e)e.classList.add('here')}
+}
+function placeTokens(){
+  for(const p of [0,1]){
+    const target=S.pos[p];
+    if(shown[p]===null||Math.abs(target-shown[p])>8){shown[p]=target;continue}
+    if(shown[p]===target)continue;
+    clearTimeout(hopT[p]);
+    const step=()=>{if(shown[p]===target)return;shown[p]+=target>shown[p]?1:-1;const t=tokEl(p);t.classList.remove('hop');void t.offsetWidth;t.classList.add('hop');layoutTok();if(shown[p]!==target)hopT[p]=setTimeout(step,180)};
+    step();
+  }
+  layoutTok();
+}
+window.addEventListener('resize',()=>{layoutTok();fitAll(true)});
+function render(){
+  buildBoard();
+  $('hud').innerHTML=[0,1].map(i=>{const top=S.top===i;return `<div class="pl ${S.turn===i?'turn':''}" style="--pc:${PC[i]}">${S.turn===i?'<span class="turnTag">🎲 התור</span>':''}<div class="nm"><span class="av" style="background:${PC[i]}">${initial(S.names[i])}</span>${esc(S.names[i])}</div>
+   <span class="role ${top?'top':''}">${top?'👑 טופ':'🫦 בוטום'}</span>
+   <div class="meta">✋ ${S.pass[i]} פאסים · 📍 ${S.pos[i]||'התחלה'}${S.skip[i]?' · ⏸ מדלג':''}</div></div>`}).join('');
+  $('rollBtn').innerHTML='🎲 זרוק: '+esc(S.names[S.turn]);
+  $('log').innerHTML=S.log||'';
+  placeTokens();
+}
 let busy=false;
 function roll(){
   if(busy||S.over)return;busy=true;
@@ -370,30 +601,34 @@ function roll(){
 }
 function move(v){
   const p=S.turn;const from=S.pos[p];let to=Math.min(36,from+v);
-  const z0=zoneOf(Math.max(from,1));
-  S.pos[p]=to;S.log=`${esc(S.names[p])} זרק ${v} → משבצת ${to}`;render();save();
-  setTimeout(()=>land(p,to,from),450);
+  S.pos[p]=to;S.log=`${esc(S.names[p])} זרק ${v} ← משבצת ${to}`;render();save();
+  setTimeout(()=>land(p,to,from),350+(to-from)*180);
 }
 function land(p,to,from){
   const k=DATA.board[to];
   if(k==='F'){return win(p)}
-  if(from<13&&to>=13&&k!=='G'&&to<25||from<25&&to>=25&&k!=='G'){/* passed a gate without landing */ return gatePassed(p,to)}
+  if(from<13&&to>=13&&k!=='G'&&to<25||from<25&&to>=25&&k!=='G'){return gatePassed(p,to)}
   if(k==='C')return showCard(p,draw(zoneOf(to)));
-  if(k==='G')return info('🚪 שער! אזור '+ZN[zoneOf(to)]+' '+FL[zoneOf(to)],'נכנסתם לאזור חם יותר. שניכם מורידים פריט לבוש, ואז שולפים קלף.','לשלוף קלף',()=>showCard(p,draw(zoneOf(to))));
-  if(k==='S'){S.top=1-S.top;render();return info('🔄 החלפה!','מעכשיו <b>'+esc(S.names[S.top])+'</b> הטופ ו<b>'+esc(S.names[1-S.top])+'</b> הבוטום.','לשלוף קלף',()=>showCard(p,draw(zoneOf(to))))}
+  if(k==='G')return info('🚪 שער! אזור '+ZN[zoneOf(to)]+' '+FL[zoneOf(to)],'נכנסתם לאזור חם יותר. '+nt(S.names[0],PC[0])+' ו־'+nt(S.names[1],PC[1])+' מורידים פריט לבוש, ואז שולפים קלף.','לשלוף קלף',()=>showCard(p,draw(zoneOf(to))));
+  if(k==='S'){S.top=1-S.top;render();return info('🔄 החלפה!','מעכשיו '+nt(S.names[S.top],PC[S.top])+' הטופ 👑<br>ו־'+nt(S.names[1-S.top],PC[1-S.top])+' הבוטום 🫦','לשלוף קלף',()=>showCard(p,draw(zoneOf(to))))}
   if(k==='L')return showCard(p,draw(0));
-  if(k==='H')return info('🥃 צ׳ייסר!','שניכם שותים, או נשיקה ארוכה של 10 שניות במקום.','סיימנו ✔',endTurn);
-  if(k==='U'){const t=Math.min(36,to+3);S.pos[p]=t;render();return info('⬆️ עלייה!','3 משבצות קדימה, למשבצת '+t+'.','לשלוף קלף',()=>t>=36?win(p):showCard(p,draw(zoneOf(t))))}
-  if(k==='D'){const t=Math.max(0,to-3);S.pos[p]=t;render();return info('⬇️ ירידה!','3 משבצות אחורה, למשבצת '+t+'.','לשלוף קלף',()=>showCard(p,draw(zoneOf(Math.max(t,1)))))}
+  if(k==='H')return info('🥃 צ׳ייסר!',nt(S.names[0],PC[0])+' ו־'+nt(S.names[1],PC[1])+' שותים, או נשיקה ארוכה של 10 שניות במקום.','סיימנו ✔',endTurn);
+  if(k==='U'){const t=Math.min(36,to+3);S.pos[p]=t;render();return info('⬆️ עלייה!',nt(S.names[p],PC[p])+' עולה 3 משבצות קדימה, למשבצת '+t+'.','לשלוף קלף',()=>t>=36?win(p):showCard(p,draw(zoneOf(t))))}
+  if(k==='D'){const t=Math.max(0,to-3);S.pos[p]=t;render();return info('⬇️ ירידה!',nt(S.names[p],PC[p])+' יורד 3 משבצות אחורה, למשבצת '+t+'.','לשלוף קלף',()=>showCard(p,draw(zoneOf(Math.max(t,1)))))}
   showCard(p,draw(zoneOf(to)));
 }
-function gatePassed(p,to){const z=zoneOf(to);info('🚪 עברתם שער: '+ZN[z]+' '+FL[z],'שניכם מורידים פריט לבוש.','המשך',()=>{const k=DATA.board[to];S.pos[p]=to;
-  if(k==='S'){S.top=1-S.top;render()} if(k==='L')return showCard(p,draw(0)); if(k==='H')return info('🥃 צ׳ייסר!','שניכם שותים, או נשיקה של 10 שניות.','סיימנו ✔',endTurn);
+function gatePassed(p,to){const z=zoneOf(to);info('🚪 עברתם שער: '+ZN[z]+' '+FL[z],nt(S.names[0],PC[0])+' ו־'+nt(S.names[1],PC[1])+' מורידים פריט לבוש.','המשך',()=>{const k=DATA.board[to];S.pos[p]=to;
+  if(k==='S'){S.top=1-S.top;render()} if(k==='L')return showCard(p,draw(0)); if(k==='H')return info('🥃 צ׳ייסר!',nt(S.names[0],PC[0])+' ו־'+nt(S.names[1],PC[1])+' שותים, או נשיקה של 10 שניות.','סיימנו ✔',endTurn);
   if(k==='U'||k==='D'){const t=Math.max(0,Math.min(36,to+(k==='U'?3:-3)));S.pos[p]=t;render();if(t>=36)return win(p)}
   showCard(p,draw(zoneOf(S.pos[p])))})}
 function info(title,html,btn,cb){
-  $('cardEl').innerHTML=`<div class="band" style="background:#2c1b3a">${title}</div><div class="body"><div class="ctext" style="font-size:19px">${html}</div><div class="cbtns"><button class="btn" id="infoBtn">${btn}</button></div></div>`;
+  $('cardEl').innerHTML=`<div class="band" style="background:linear-gradient(135deg,#6d28d9,#a21caf)">${title}</div><div class="body"><div class="ctext fit" data-max="46">${html}</div><div class="cbtns"><button class="btn" id="infoBtn">${btn}</button></div></div>`;
   $('modal').classList.add('on');$('infoBtn').onclick=()=>{$('modal').classList.remove('on');cb()};
+}
+/* add player names next to role words: "הטופ (דני)" */
+function withNames(txt){
+  if(!S)return txt;
+  return txt.replace(/(^|[\s״"(])([ושמ]?(?:ה|ל))(טופ|בוטום)(?=$|[\s.,?!:;״")])/g,(m,a,pre,r)=>{const i=r==='טופ'?S.top:1-S.top;return `${a}${pre}${r} ${nt('('+S.names[i]+')',PC[i])}`});
 }
 let timerI=null;
 function showCard(p,ci){
@@ -401,17 +636,19 @@ function showCard(p,ci){
   if(c.t!=='luck')S.last={ci,p};
   const z=c.z;const heat=FL[z]?FL[z]+' '+ZN[z]:ZN[z];
   let who;
-  if(c.t==='control')who=`👑 טופ: <b>${esc(S.names[S.top])}</b> · 🫦 בוטום: <b>${esc(S.names[1-S.top])}</b>`;
-  else if(c.t==='rel')who=`💞 <b>${esc(S.names[p])}</b> ו<b>${esc(S.names[o])}</b>: שניכם עונים, בתורות`;
-  else if(c.t==='luck')who=`${esc(S.names[p])} שלף`;
-  else who=`<b>${esc(S.names[p])}</b> מבצע · ״הוא״ = <b>${esc(S.names[o])}</b>`;
+  const P_=nt(S.names[p],PC[p]),O_=nt(S.names[o],PC[o]);
+  if(c.t==='control')who=`👑 טופ: ${nt(S.names[S.top],PC[S.top])} · 🫦 בוטום: ${nt(S.names[1-S.top],PC[1-S.top])}`;
+  else if(c.t==='rel')who=`💞 ${P_} ו־${O_}: שניכם עונים, בתורות`;
+  else if(c.t==='luck')who=`🎲 ${P_} שלף קלף מזל`;
+  else if(c.t==='truth')who=`🎯 ${P_} עונה · ״הוא״ = ${O_}`;
+  else who=`🎯 ${P_} מבצע · ״הוא/לו״ = ${O_}`;
   const secs=c.s||(c.t==='control'?60:0);
-  const tm=secs?`<div class="timer"><span class="hg" id="hg">⏳</span> <span id="tt">${secs}</span></div><button class="btn3" id="tBtn" style="margin-bottom:10px">הפוך שעון חול</button>`:'';
-  const passBtn=c.t!=='luck'?`<button class="btn2" id="pBtn" ${S.pass[p]?'':'disabled style="opacity:.4"'}>✋ פאס (${S.pass[p]})</button><button class="btn2" id="rBtn">🙅 מוותר (−2)</button>`:'';
+  const tm=secs?`<div class="timer"><span class="hg" id="hg">⏳</span> <span id="tt">${secs}</span> <button class="btn3" id="tBtn">הפוך שעון חול</button></div>`:'';
+  const passBtn=c.t!=='luck'?`<button class="btn2" id="pBtn" ${S.pass[p]?'':'disabled'}>✋ פאס (${S.pass[p]})</button><button class="btn2" id="rBtn">🙅 מוותר (−2)</button>`:'';
   $('cardEl').innerHTML=`<div class="band" style="background:${ZC[z]}">${heat}</div><div class="body">
    <span class="tbadge" style="background:${TC[c.t]}">${TI[c.t]} ${(DATA.types[c.t]||(c.t==='rel'?'זוגיות':c.t))}</span>
-   ${c.a?`<div class="acc">אביזר: ${esc(c.a)}</div>`:''}<div class="who">${who}</div>
-   <div class="ctext">${esc(c.x)}</div>${tm}
+   ${c.a?`<div class="acc">🎁 אביזר: ${esc(c.a)}</div>`:''}<div class="who">${who}</div>
+   <div class="ctext fit">${withNames(esc(c.x))}</div>${tm}
    <div class="cbtns"><button class="btn" id="dBtn">${c.t==='luck'?'אוקיי':'בוצע ✔'}</button>${passBtn}</div></div>`;
   $('cardEl').style.animation='none';void $('cardEl').offsetWidth;$('cardEl').style.animation='';
   $('modal').classList.add('on');save();
@@ -437,7 +674,7 @@ function applyLuck(p,ci){
   endTurn();
 }
 function endTurn(keepLog){
-  if(!keepLog&&!S.log.includes('→'))S.log='';
+  if(!keepLog&&!S.log.includes('←'))S.log='';
   let n=1-S.turn;
   if(S.skip[n]){S.skip[n]=0;S.log+=` · ⏸ ${esc(S.names[n])} מדלג על התור (ומעסה בינתיים 😉)`;n=1-n}
   S.turn=n;render();save();busy=false;
@@ -450,49 +687,87 @@ function win(p){
    `<div class="small" style="margin:8px 0">${esc(S.names[1-p])} מגשים את מה שנבחר. גבולות הערב עדיין בתוקף.</div>`;
   show('sWin');
 }
-function safeWord(){if(P&&$('sParty').classList.contains('on')){$('modal').classList.remove('on');clearInterval(timerI);P.log='🛑 אדום: עוברים לקלף הבא, בלי שאלות.';pNext();return}clearInterval(timerI);$('modal').classList.remove('on');busy=false;
+function safeWord(){
+  if(MP.role==='client'){mpSend({t:'safe'});toast('🛑 נשלח: אדום');return}
+  if(P&&$('sParty').classList.contains('on')){$('modal').classList.remove('on');$('penModal').classList.remove('on');clearInterval(timerI);P.log='🛑 אדום: עוברים לקלף הבא, בלי שאלות.';pNext();return}
+  clearInterval(timerI);$('modal').classList.remove('on');busy=false;
   info('🛑 אדום: עצרנו','הכל עוצר עכשיו. בודקים מה שלום אחד השני, שותים מים ומתחבקים. ממשיכים רק אם שניכם רוצים, אפשר גם מאזור חום נמוך יותר.','חוזרים למשחק',()=>{render()})}
 
 let COUPLE_EXP=false;
-function coupleSetup(exp){COUPLE_EXP=exp;CARDS=exp?DATA.cards.concat(EXP):DATA.cards;show('sSetup')}
+function coupleSetup(exp){COUPLE_EXP=exp;CARDS=exp?DATA.cards.concat(EXP):DATA.cards;
+  if(MP.role==='host'){const n=mpNames();$('n1').value=n[0]||'';$('n2').value=n[1]||'';if(n.length>2)toast('במצב זוגי משחקים רק 2 הראשונים')}
+  show('sSetup')}
+
+/* ---------- auto-fit text ---------- */
+function fitText(el,force){
+  if(!el.offsetParent)return;
+  let fi=el.firstElementChild;
+  if(!fi||!fi.classList.contains('fi')||el.childNodes.length!==1){fi=document.createElement('div');fi.className='fi';while(el.firstChild)fi.appendChild(el.firstChild);el.appendChild(fi)}
+  const key=fi.innerHTML.length+'|'+el.clientWidth+'x'+el.clientHeight;
+  if(!force&&el.dataset.key===key)return;
+  const max=+(el.dataset.max||54),min=+(el.dataset.min||17);let lo=min,hi=max;
+  const fits=()=>fi.offsetHeight<=el.clientHeight+1&&fi.scrollWidth<=el.clientWidth+1;
+  for(let i=0;i<10;i++){const m=(lo+hi)/2;fi.style.fontSize=m+'px';if(fits())lo=m;else hi=m}
+  fi.style.fontSize=Math.floor(lo)+'px';el.dataset.key=key;el.dataset.fs=Math.floor(lo);
+}
+function fitAll(force){document.querySelectorAll('.ctext.fit').forEach(e=>fitText(e,force))}
+let fitRaf=0;
+new MutationObserver(()=>{cancelAnimationFrame(fitRaf);fitRaf=requestAnimationFrame(()=>fitAll())}).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:['class']});
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{fitAll(true);layoutTok()});
+/* ---------- party ---------- */
 const PDECKS={bold:{"types": {"q": "שאלה נועזת", "ml": "מי הכי סביר", "hs": "כיסא חם", "nh": "אף פעם לא", "ch": "אתגר", "mg": "מיני-משחק", "ru": "חוק חדש", "pen": "עונש"}, "hints": {"q": "אתה עונה בכנות.", "ml": "כולם מצביעים על 3. מי שקיבל הכי הרבה קולות מסביר, או לוקח את העונש.", "hs": "אתה בכיסא החם, והחדר שואל.", "nh": "כל מי שכן עשה את זה: לגימה, שכטה או יד למעלה.", "ch": "אתה מבצע.", "mg": "משחקים כולם. מי שמפסיד לוקח את העונש.", "ru": "החוק תקף עד שנשלף החוק הבא.", "pen": "בוחרים עונש: הכל אופציונלי, ותמיד יש חלופה."}, "cards": [{"t": "q", "x": "מה ההודעה הכי מביכה ששלחת אי פעם בגריינדר?", "h": 1}, {"t": "q", "x": "מה הדייט הכי גרוע שהיה לך מאפליקציה? בלי שמות.", "h": 2}, {"t": "q", "x": "מתי הבנת לראשונה שאתה גיי? בן כמה היית ומה קרה?", "h": 2}, {"t": "q", "x": "איך יצאת מהארון מול אמא? את הגרסה האמיתית, לא את זאת שמספרים בארוחת שישי.", "h": 1}, {"t": "q", "x": "טופ, בוטום או ורס? ומה אתה עונה כשאתה רוצה לנצח בצ׳אט?", "h": 2}, {"t": "q", "x": "מה הדבר הכי מוזר שמישהו ביקש ממך בצ׳אט?", "h": 2}, {"t": "q", "x": "כמה הכי מהר עברת מ״היי״ ל״יש מקום?״?", "h": 1}, {"t": "q", "x": "איזה פטיש הכי קשה לך להודות בו? עכשיו זה הזמן.", "h": 2}, {"t": "q", "x": "מתי הכי כמעט נתפסת באמצע?", "h": 2}, {"t": "q", "x": "התאהבת פעם בסטרייט? איך זה נגמר?", "h": 1}, {"t": "q", "x": "מה בפרופיל שלך באפליקציה הוא קצת שקר? גובה, גיל, ״דיסקרטי״…", "h": 2}, {"t": "q", "x": "הסקס הכי טוב שהיה לך, בשלוש מילים בלבד.", "h": 2}, {"t": "q", "x": "הסקס הכי גרוע שהיה לך, בשלוש מילים בלבד.", "h": 1}, {"t": "q", "x": "מה המקום הכי מטורף שעשית בו סקס?", "h": 2}, {"t": "q", "x": "כמה אפליקציות היכרויות יש לך בטלפון ברגע זה? תראה לכולם את המסך.", "h": 2}, {"t": "q", "x": "מה חסר לך יותר החודש: דייט או היקאפ?", "h": 1}, {"t": "q", "x": "מה הטייפ שלך? ועם איזה טייפ אתה בסוף תמיד הולך?", "h": 2}, {"t": "q", "x": "היית בשלישייה? אם לא, היית רוצה? אם כן, איך היה באמת?", "h": 2}, {"t": "q", "x": "מה השקר הכי גדול שסיפרת כדי לברוח מדייט?", "h": 1}, {"t": "q", "x": "איזה רד פלאג אתה מפספס כל פעם מחדש?", "h": 2}, {"t": "q", "x": "גיסטת פעם מישהו שלא הגיע לו? ספר בלי שמות.", "h": 2}, {"t": "q", "x": "על מה אתה מסתכל ראשון בפרופיל? תהיה כן.", "h": 1}, {"t": "q", "x": "מה הדבר הכי מביך שקרה לך בפרייד?", "h": 2}, {"t": "q", "x": "מה מדליק אותך ואף אחד בחדר לא היה מנחש?", "h": 2}, {"t": "q", "x": "ספר על הנשיקה הראשונה שלך עם גבר.", "h": 1}, {"t": "q", "x": "איזו דמות מצוירת מהילדות הייתה ״הסימן הראשון״ שלך?", "h": 2}, {"t": "q", "x": "לאיזה ז׳אנר פורנו אתה חוזר שוב ושוב? רק הז׳אנר.", "h": 2}, {"t": "q", "x": "מה עשית רק כי ״זה פרייד, מה כבר יקרה״?", "h": 1}, {"t": "q", "x": "מה התקופה הכי ארוכה שלך בלי סקס? וכמה פעמים הכי הרבה ביום אחד?", "h": 2}, {"t": "q", "x": "משהו שאקס שלך עשה במיטה ואתה מתגעגע אליו. בלי שם.", "h": 2}, {"t": "q", "x": "יש לך תיקייה נסתרת בגלריה? מה הקטגוריה שלה?", "h": 1}, {"t": "q", "x": "שלחת פעם תמונה למישהו לא נכון? למי? (״לבוס״ זו תשובה לגיטימית)", "h": 2}, {"t": "q", "x": "מה השאלה הכי מביכה שאמא שלך שאלה על החיים שלך כגיי?", "h": 2}, {"t": "q", "x": "מה הכינוי הכי קרינג׳ שקראו לך במיטה?", "h": 1}, {"t": "q", "x": "אם כולנו היינו בריאליטי, עם מי מהחדר היית יוצא לדייט אחד במצלמה?", "h": 2}, {"t": "q", "x": "איזה אימוג׳י הכי מתאר את חיי המין שלך עכשיו?", "h": 2}, {"t": "q", "x": "מה קרה לך בצבא שעוד לא סיפרת לאף אחד? רק מה שמותר לספר 😅", "h": 1}, {"t": "q", "x": "באיזו סטיגמה בקהילה (גוף, גיל, ״נשיות״) גם אתה אשם? תודה ותסביר.", "h": 2}, {"t": "q", "x": "מתי אוננת בפעם האחרונה, ועל מה חשבת? בלי שמות של אנשים אמיתיים.", "h": 2}, {"t": "q", "x": "מה תעדיף: סקס מעולה בלי רגשות, או זוגיות מעולה עם סקס בינוני?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיגיע לפרייד עם יותר נצנצים מבגדים?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיתחתן ראשון?", "h": 2}, {"t": "ml", "x": "מי הכי סביר שיחזור לאקס בחודש הקרוב?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שייתפס עם גריינדר פתוח בחתונה של בן דוד?", "h": 2}, {"t": "ml", "x": "מי הכי סביר שיעשה קריירה כמלכת דראג?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיתאהב בסטרייט ש״רק מתנסה״?", "h": 2}, {"t": "ml", "x": "מי הכי סביר שישלח בטעות צילום מסך מהקבוצה הזאת למישהו לא נכון?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיעבור לברלין ״רק לשנה״ ולא יחזור?", "h": 2}, {"t": "ml", "x": "מי הכי סביר שיגיע אחרון למסיבה ויצא ראשון, עם מישהו?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיחזור לאותו אקס בפעם הרביעית?", "h": 2}, {"t": "ml", "x": "מי הכי סביר שידע בעל פה כוריאוגרפיה שלמה מהאירוויזיון?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיגיד ״אני לא כמו כל ההומואים״ ויהיה בדיוק כמו כולם?", "h": 2}, {"t": "ml", "x": "מי הכי סביר שיפתח OnlyFans בתוך שנה?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיעשה סצנה בבר בגלל שיר של דיווה?", "h": 2}, {"t": "ml", "x": "מי הכי סביר שיחסום מישהו באמצע שיחה?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיחזור מחוף הילטון עם מספר טלפון?", "h": 2}, {"t": "ml", "x": "מי הכי סביר שיגיד ״אני רק טופ״, ויתברר שממש לא?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיספר לקבוצה על הדייט בזמן שהדייט עוד בשירותים?", "h": 2}, {"t": "ml", "x": "מי הכי סביר שיכיר את החבר הבא שלו בתור לשירותים במסיבה?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיגור עם חתול ושלושה אקסים באותה קבוצת חברים?", "h": 2}, {"t": "ml", "x": "מי הכי סביר שישלח ״מה המצב?״ בשלוש לפנות בוקר?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיגיד לסבתא ״זה רק חבר״ גם אחרי חמש שנים?", "h": 2}, {"t": "hs", "x": "60 שניות, וכל החדר שואל רק על חיי המין שלך.", "s": 60, "h": 2}, {"t": "hs", "x": "60 שניות על האקסים שלך. בלי שמות.", "s": 60, "h": 2}, {"t": "hs", "x": "60 שניות על הפרופיל והצ׳אטים שלך באפליקציות, בלי לחשוף אף אחד אחר.", "s": 60, "h": 2}, {"t": "hs", "x": "90 שניות של שאלות כן/לא בלבד. כל שאלה מותרת.", "s": 90, "h": 2}, {"t": "hs", "x": "כל אחד בחדר שואל שאלה אחת, ואתה עונה בלי לחשוב. היסוס = פאס.", "s": 90, "h": 2}, {"t": "hs", "x": "60 שניות על היציאה שלך מהארון.", "s": 60, "h": 2}, {"t": "hs", "x": "60 שניות של שאלות ״מה הכי…״: הכי מביך, הכי מדליק, הכי מטורף.", "s": 60, "h": 2}, {"t": "hs", "x": "הפוך: אתה שואל שאלה נועזת אחת, וכל אחד בחדר עונה תוך 3 שניות.", "s": 60, "h": 2}, {"t": "nh", "x": "אף פעם לא שכבתי עם מישהו בלי לדעת איך קוראים לו.", "h": 1}, {"t": "nh", "x": "אף פעם לא מחקתי את גריינדר והורדתי אותו שוב באותו שבוע.", "h": 2}, {"t": "nh", "x": "אף פעם לא עשיתי סקס בחוף.", "h": 2}, {"t": "nh", "x": "אף פעם לא התחלתי עם מישהו במצעד הגאווה בירושלים.", "h": 2}, {"t": "nh", "x": "אף פעם לא שלחתי תמונה עירומה ביום הראשון של השיחה.", "h": 1}, {"t": "nh", "x": "אף פעם לא שכבתי עם חבר של חבר טוב.", "h": 2}, {"t": "nh", "x": "אף פעם לא הייתי בשלישייה.", "h": 2}, {"t": "nh", "x": "אף פעם לא התנשקתי עם מישהו שהגדיר את עצמו סטרייט.", "h": 2}, {"t": "nh", "x": "אף פעם לא הייתי בסאונה גאה.", "h": 1}, {"t": "nh", "x": "אף פעם לא העמדתי פנים שאני ורס.", "h": 2}, {"t": "nh", "x": "אף פעם לא יצאתי עם מישהו מבוגר ממני ב-15 שנה ויותר.", "h": 2}, {"t": "nh", "x": "אף פעם לא הלכתי לפגישה בלי שקיבלתי תמונת פנים.", "h": 2}, {"t": "nh", "x": "אף פעם לא שיקרתי על הגיל באפליקציה.", "h": 1}, {"t": "nh", "x": "אף פעם לא עשיתי סקס במקום העבודה.", "h": 2}, {"t": "nh", "x": "אף פעם לא הייתי עם גבר שהיה בזוגיות.", "h": 2}, {"t": "nh", "x": "אף פעם לא נכנסתי למקלחות בחדר כושר בשביל הנוף.", "h": 2}, {"t": "nh", "x": "אף פעם לא בכיתי בהופעת דראג.", "h": 1}, {"t": "nh", "x": "אף פעם לא הזמנתי מונית לבית של מישהו ב-4 לפנות בוקר.", "h": 2}, {"t": "nh", "x": "אף פעם לא נרדמתי באמצע סקס.", "h": 2}, {"t": "nh", "x": "אף פעם לא ראיתי את האקס באפליקציה ושלחתי לו ״היי״.", "h": 2}, {"t": "ch", "x": "תקריא בקול את ההודעה האחרונה ששלחת באפליקציית היכרויות. רק את שלך, בלי שמות.", "h": 1}, {"t": "ch", "x": "ווג של 20 שניות, על שיר שהחדר בוחר.", "h": 2}, {"t": "ch", "x": "ליפסינק דרמטי לפזמון של דיווה, לבחירת החדר.", "h": 1}, {"t": "ch", "x": "תכתוב ביו לגריינדר לשחקן שמשמאלך. הוא מחליט אם הוא שומר אותו.", "h": 2}, {"t": "ch", "x": "תגיד לכל אחד בחדר את שורת הפתיחה הכי זולה שלך. מי שצוחק מפסיד.", "h": 1}, {"t": "ch", "x": "תחקה את הקול שלך בשיא, 3 שניות. כן, כולם מסתכלים.", "h": 2}, {"t": "ch", "x": "תראה לחדר את התמונה האחרונה בגלריה. בא לך להסתיר? פאס.", "h": 1}, {"t": "ch", "x": "הליכת מסלול של דוגמן עד הדלת ובחזרה. החדר נותן ציון.", "h": 2}, {"t": "ch", "x": "תשחק את ״הקווין שנכנס לבר בפלורנטין בשתיים בלילה״.", "h": 1}, {"t": "ch", "x": "תן לכל אחד בחדר מחמאה סקסית (ומכבדת!) אחת.", "h": 2}, {"t": "ch", "x": "תתאר את סצנת הגייז בתל אביב בקול של קריין סרט טבע.", "h": 1}, {"t": "ch", "x": "תראה לחדר את הסטיקר הכי פרוע בוואטסאפ שלך.", "h": 2}, {"t": "ch", "x": "תכתוב ותקריא הודעת יציאה מהארון מזויפת ודרמטית במיוחד.", "h": 1}, {"t": "ch", "x": "תמחק אפליקציית היכרויות אחת עד סוף הערב.", "h": 2}, {"t": "ch", "x": "החדר בוחר אימוג׳י, והוא נכנס לשם שלך בוואטסאפ עד מחר.", "h": 1}, {"t": "ch", "x": "טוורק של 10 שניות. בלי תירוצים.", "h": 2}, {"t": "ch", "x": "תמציא שם דראג לכל אחד בחדר.", "h": 1}, {"t": "ch", "x": "תוריד את החולצה ותישאר בלעדיה עד התור הבא שלך. רק אם בא לך.", "h": 2}, {"t": "ch", "x": "סלפי פרייד קבוצתי בפוזה שאתה בוחר. לא מעלים בלי הסכמה של כולם.", "h": 1}, {"t": "ch", "x": "בדיחה גסה, בטון של מגיש מהדורת חדשות.", "h": 2}, {"t": "ch", "x": "נאום תודה של 30 שניות על פרס ״ההומו של השנה״.", "h": 1}, {"t": "ch", "x": "רוסט של 20 שניות. על עצמך.", "h": 2}, {"t": "mg", "x": "קטגוריות: מילים נרדפות לזין. סבב, ומי שנתקע מפסיד.", "s": 30, "h": 1}, {"t": "mg", "x": "קטגוריות: מסיבות, ברים ואירועים של הקהילה בישראל. מי שנתקע מפסיד.", "s": 30, "h": 1}, {"t": "mg", "x": "קטגוריות: שירים מהאירוויזיון. מי שנתקע מפסיד.", "s": 30, "h": 1}, {"t": "mg", "x": "שתי אמיתות ושקר אחד על חיי המין שלך. החדר מנחש מה השקר.", "s": 60, "h": 1}, {"t": "mg", "x": "״מה תעדיף?״ מהיר: מקלחת משותפת אחרי ספורט או ג׳קוזי בצימר? כל אחד עונה תוך 3 שניות.", "s": 30, "h": 1}, {"t": "mg", "x": "״טופ או בוטום?״: אתה מקריא 5 דברים (קפה, חתול, אייפון…), וכולם מצביעים ביחד ״טופ״ או ״בוטום״. המיעוט מפסיד.", "s": 60, "h": 1}, {"t": "mg", "x": "פרופיל עיוור: כל אחד כותב ביו על פתק, אתה מקריא, והחדר מנחש של מי.", "s": 120, "h": 1}, {"t": "mg", "x": "סבב סלנג: מילת סלנג גאה (אחותי, קווין, קאמפי…). מי שחוזר על מילה או נתקע מפסיד.", "s": 30, "h": 1}, {"t": "mg", "x": "חם-קר: מישהו חושב על פנטזיה, ואתה מנחש בשאלות כן/לא.", "s": 60, "h": 1}, {"t": "mg", "x": "ביקורת מסעדה: תתאר את הדייט האחרון שלך כמו מבקר מסעדות. החדר נותן כוכבים.", "s": 60, "h": 1}, {"t": "mg", "x": "סטטיסטיקה אנונימית: כולם עוצמים עיניים. אתה שואל שאלה נועזת, מי שכן מרים יד, ואתה מכריז רק כמה ידיים.", "s": 30, "h": 1}, {"t": "mg", "x": "בורסת שמות דראג: כל אחד ממציא לעצמו שם דראג תוך 10 שניות. החדר מצביע על המנצח.", "s": 30, "h": 1}, {"t": "ru", "x": "מי שאומר ״אחותי״ מפסיד. החוק תקף עד שנשלף החוק הבא.", "h": 1}, {"t": "ru", "x": "אסור להגיד ״כן״ או ״לא״. מי שנופל מפסיד.", "h": 1}, {"t": "ru", "x": "מי שבודק את הטלפון עונה על שאלה נועזת שהחדר בוחר.", "h": 1}, {"t": "ru", "x": "אתה המלכה עד החוק הבא. מי שפונה אליך פותח ב״הוד מעלתך״.", "h": 1}, {"t": "ru", "x": "כולם מדברים במבטא של קריין אירוויזיון עד החוק הבא.", "h": 1}, {"t": "ru", "x": "מעכשיו שותים רק ביד שמאל.", "h": 1}, {"t": "ru", "x": "מי שצוחק באמצע תשובה של מישהו אחר מפסיד.", "h": 1}, {"t": "ru", "x": "לפני כל שאלה מבקשים רשות: ״ברשותך, קווין…״.", "h": 1}, {"t": "pen", "x": "גלגל עונשים! אתה מסובב ומבצע את מה שיוצא. בלי אפליקציה? קובייה: 1–2 שוט · 3–4 אמת מביכה · 5 משימה מול כולם · 6 סטורי שהקבוצה מכתיבה.", "h": 1}, {"t": "pen", "x": "מרוץ בלונים: כולם מנפחים בלון עד שהוא מתפוצץ. מי שהבלון שלו מתפוצץ אחרון בוחר עונש.", "h": 1, "s": 60}, {"t": "pen", "x": "שורה! הקבוצה מחליטה מה זו שורה הפעם (שוטים, צ׳ייסרים או לימונים), ואתה בוחר מי עושה אותה איתך.", "h": 1}, {"t": "pen", "x": "חלוקה: תחלק 3 צ׳ייסרים (או לימונים) למי שבא לך. מי שקיבל שותה, או עונה על שאלה שאתה שואל.", "h": 1}, {"t": "pen", "x": "שוט בלי ידיים: אתה מאתגר שחקן אחד. מי שמצליח בלי לשפוך מעביר עונש למי שבא לו.", "h": 1}]},regular:{"types": {"q": "שאלה", "ml": "מי הכי סביר", "hs": "כיסא חם", "nh": "אף פעם לא", "ch": "אתגר", "mg": "מיני-משחק", "ru": "חוק חדש", "pen": "עונש"}, "hints": {"q": "אתה עונה בכנות.", "ml": "כולם מצביעים על 3. מי שקיבל הכי הרבה קולות מסביר, או בוחר עונש.", "nh": "כל מי שכן עשה את זה בוחר עונש קטן, או מרים יד.", "ch": "אתה מבצע.", "mg": "משחקים כולם. מי שמפסיד בוחר עונש.", "ru": "החוק תקף עד שנשלף החוק הבא.", "pen": "בוחרים עונש: הכל אופציונלי, ותמיד יש חלופה."}, "cards": [{"t": "q", "x": "מה שורת הפתיחה הכי טובה שעבדה עליך?", "h": 1}, {"t": "q", "x": "איזו דמות מסדרה הייתה הקראש הראשון שלך?", "h": 1}, {"t": "q", "x": "מה הדייט הכי מוזר שהיית בו?", "h": 1}, {"t": "q", "x": "מה הדבר הראשון שאתה שם לב אליו בגבר?", "h": 1}, {"t": "q", "x": "איזה אימוג׳י אתה הכי שולח כשאתה מפלרטט?", "h": 1}, {"t": "q", "x": "איזה שיר חייב להתנגן כדי שתעלה לרקוד על הבר?", "h": 1}, {"t": "q", "x": "מה הדבר הכי גאה שעשית השנה?", "h": 1}, {"t": "q", "x": "מה בביו שלך באפליקציה הכי ״מקושט״?", "h": 1}, {"t": "q", "x": "מה הלוק שאתה לובש כשאתה רוצה שישימו לב אליך?", "h": 1}, {"t": "q", "x": "התאהבת פעם בחבר טוב? מה עשית עם זה?", "h": 1}, {"t": "q", "x": "מה הדבר הכי רומנטי שמישהו עשה בשבילך?", "h": 1}, {"t": "q", "x": "מה הסיפור הכי מצחיק שלך מהפרייד?", "h": 1}, {"t": "q", "x": "אם היית מלכת דראג, מה היה השם שלך ועל איזה שיר היית עולה?", "h": 1}, {"t": "q", "x": "מה אתה הכי מתגעגע אליו אצל האקס? בלי שם.", "h": 1}, {"t": "q", "x": "איזה דייט היית מתכנן למישהו שממש בא לך להרשים?", "h": 1}, {"t": "q", "x": "מה התירוץ הכי מצחיק שבגללו ביטלת דייט?", "h": 1}, {"t": "q", "x": "איך הגיידאר שלך עובד? מה מסגיר?", "h": 1}, {"t": "q", "x": "למי שלחת לב לאחרונה, ועל מה? (״לאמא״ זו תשובה מקובלת)", "h": 1}, {"t": "q", "x": "מה הטייפ שלך, בשלוש מילים?", "h": 1}, {"t": "q", "x": "איפה הייתה הנשיקה הכי טובה שלך?", "h": 1}, {"t": "q", "x": "מה המחמאה הכי טובה שקיבלת על הגוף?", "h": 1}, {"t": "q", "x": "מה עשית כנער שהיה צריך להסגיר אותך, ואף אחד לא קלט?", "h": 1}, {"t": "q", "x": "מה היית אומר לעצמך בגיל 15?", "h": 1}, {"t": "q", "x": "מה הדבר הכי ״נוצץ״ שיש לך בארון?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיתאהב בברמן?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שישלח הודעה לאקס הלילה?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיגיע לפרייד בתחפושת הכי מטורפת?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיאמץ כלב עם אינסטגרם משלו?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיעזוב את המסיבה ראשון ״כי מחר עבודה״?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיהפוך לטיקטוקר?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיתחתן בצימר עם 300 אורחים?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיבכה בגמר האירוויזיון?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיפלרטט עם המלצר?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיבקש מהדיג׳יי עוד שיר של דיווה?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיאבד את הטלפון הלילה?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיכיר מישהו בחדר כושר?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיעשה טעות כתיב בהודעה פלרטטנית?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיתעורר מחר עם מספר חדש בטלפון?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שינהל את קבוצת הוואטסאפ של כולנו?", "h": 1}, {"t": "ml", "x": "מי הכי סביר שיביא חבר לדייט ״ליתר ביטחון״?", "h": 1}, {"t": "nh", "x": "אף פעם לא שלחתי הודעה לאקס באמצע הלילה.", "h": 1}, {"t": "nh", "x": "אף פעם לא התאהבתי בסטרייט.", "h": 1}, {"t": "nh", "x": "אף פעם לא רקדתי על בר.", "h": 1}, {"t": "nh", "x": "אף פעם לא יצאתי לדייט עיוור.", "h": 1}, {"t": "nh", "x": "אף פעם לא ביטלתי דייט ברגע האחרון.", "h": 1}, {"t": "nh", "x": "אף פעם לא סיפרתי לאמא על דייט.", "h": 1}, {"t": "nh", "x": "אף פעם לא עשיתי לייק בטעות לתמונה ישנה של מישהו.", "h": 1}, {"t": "nh", "x": "אף פעם לא פלרטטתי עם מישהו בחדר כושר.", "h": 1}, {"t": "nh", "x": "אף פעם לא עשיתי ליפסינק באוטו ברמזור.", "h": 1}, {"t": "nh", "x": "אף פעם לא הלכתי להופעת דראג.", "h": 1}, {"t": "nh", "x": "אף פעם לא שיקרתי על הגובה.", "h": 1}, {"t": "nh", "x": "אף פעם לא התנשקתי בפרייד עם מישהו שהכרתי באותו יום.", "h": 1}, {"t": "nh", "x": "אף פעם לא התחפשתי לדיווה בפורים.", "h": 1}, {"t": "nh", "x": "אף פעם לא יצאתי לדייט עם מישהו מהעבודה.", "h": 1}, {"t": "ch", "x": "ליפסינק לשיר שהקבוצה בוחרת.", "h": 1}, {"t": "ch", "x": "ווג של 15 שניות.", "h": 1}, {"t": "ch", "x": "תפלרטט עם השחקן מימינך במבטא צרפתי. רק מילים.", "h": 1}, {"t": "ch", "x": "תן מחמאה לכל אחד בחדר.", "h": 1}, {"t": "ch", "x": "תציג את עצמך כמו בפרומו של ריאליטי.", "h": 1}, {"t": "ch", "x": "תראה לנו איך אתה הולך במצעד הגאווה.", "h": 1}, {"t": "ch", "x": "תספר בדיחה בקול של קריין אירוויזיון.", "h": 1}, {"t": "ch", "x": "שיר אהבה של ארבע שורות, לבקבוק שעל השולחן.", "h": 1}, {"t": "ch", "x": "תראה את הסטיקר הכי מצחיק שלך.", "h": 1}, {"t": "ch", "x": "תצוגת אופנה עם פריט של מישהו אחר (אם הוא מסכים).", "h": 1}, {"t": "ch", "x": "סלפי בפוזה של שער מגזין.", "h": 1}, {"t": "ch", "x": "כניסה דרמטית לחדר, כמו דיווה.", "h": 1}, {"t": "ch", "x": "תמציא שם דראג לשחקן משמאלך.", "h": 1}, {"t": "ch", "x": "תזמזם שיר מהאירוויזיון, והחדר מנחש.", "h": 1}, {"t": "ch", "x": "20 שניות של ריקוד גו-גו.", "h": 1}, {"t": "ch", "x": "תקריא בקול דרמטי את ההודעה האחרונה ששלחת עם לב.", "h": 1}, {"t": "mg", "x": "קטגוריות: דיוות. סבב, ומי שנתקע מפסיד.", "s": 30, "h": 1}, {"t": "mg", "x": "קטגוריות: סדרות עם דמות גאה. מי שנתקע מפסיד.", "s": 30, "h": 1}, {"t": "mg", "x": "״מה תעדיף?״ מהיר: דייט על החוף או דייט בבר? כל אחד עונה תוך 3 שניות.", "s": 30, "h": 1}, {"t": "mg", "x": "טלפון שבור: משפט פלרטטני עובר מאוזן לאוזן. מי ששיבש הכי הרבה בוחר עונש.", "s": 60, "h": 1}, {"t": "mg", "x": "שתי אמיתות ושקר אחד על הדייטים שלך. החדר מנחש.", "s": 60, "h": 1}, {"t": "mg", "x": "נחש את השיר: אתה מזמזם, ומי שמנחש ראשון מחלק עונש.", "s": 30, "h": 1}, {"t": "mg", "x": "הצבעה: מי לבש את זה הכי טוב הערב? המנצח מחלק עונש.", "s": 30, "h": 1}, {"t": "mg", "x": "פרופיל עיוור: כל אחד כותב עובדה מצחיקה על פתק, ומנחשים של מי.", "s": 120, "h": 1}, {"t": "ru", "x": "מי שאומר ״אחותי״ מפסיד.", "h": 1}, {"t": "ru", "x": "מי שמזכיר אקס מפסיד.", "h": 1}, {"t": "ru", "x": "לפני כל משפט אומרים מחמאה.", "h": 1}, {"t": "ru", "x": "כולם מדברים במבטא של קריין אירוויזיון.", "h": 1}, {"t": "ru", "x": "מי שבודק את הטלפון מפסיד.", "h": 1}, {"t": "ru", "x": "מעכשיו שותים רק ביד שמאל.", "h": 1}, {"t": "pen", "x": "גלגל עונשים! אתה מסובב ומבצע את מה שיוצא. בלי אפליקציה? קובייה: 1–2 שוט · 3–4 אמת מביכה · 5 משימה מול כולם · 6 סטורי שהקבוצה מכתיבה.", "h": 1}, {"t": "pen", "x": "מרוץ בלונים: כולם מנפחים בלון עד שהוא מתפוצץ. מי שהבלון שלו מתפוצץ אחרון בוחר עונש.", "h": 1, "s": 60}, {"t": "pen", "x": "שורה! הקבוצה מחליטה מה זו שורה הפעם (שוטים, צ׳ייסרים או לימונים), ואתה בוחר מי עושה אותה איתך.", "h": 1}, {"t": "pen", "x": "חלוקה: תחלק 3 צ׳ייסרים (או לימונים) למי שבא לך. מי שקיבל שותה, או עונה על שאלה שאתה שואל.", "h": 1}, {"t": "pen", "x": "שוט בלי ידיים: אתה מאתגר שחקן אחד. מי שמצליח בלי לשפוך מעביר עונש למי שבא לו.", "h": 1}]}};
-const PTC={q:"#e8173d",ml:"#ff8a00",hs:"#c9a227",nh:"#12a150",ch:"#1f6feb",mg:"#8e24aa",ru:"#111",pen:"#ff2d95"};
+const PTC={q:"#be123c",ml:"#c2410c",hs:"#854d0e",nh:"#15803d",ch:"#1d4ed8",mg:"#7e22ce",ru:"#2b1d3a",pen:"#be185d"};
 const PTI={q:"🔥",ml:"❓",hs:"🪑",nh:"🙋",ch:"😈",mg:"🎮",ru:"👑",pen:"🎯"};
+const PCOL=["#22c3ee","#ffc21a","#4ade80","#f9a8d4","#fdba74","#c4b5fd","#5eead4","#fca5a5","#bef264","#93c5fd","#fed7aa","#e9d5ff"];
 let P=null, PKIND='regular';
 const PTITLE={bold:'🔥 מסיבה נועזת',regular:'🎉 מסיבה'};
 const PMAX={bold:12,regular:10};
+let rulesKind='';
+function fillPRules(kind){if(rulesKind===kind)return;rulesKind=kind;const r=$(kind==='bold'?'tplBold':'tplRegular').innerHTML;document.querySelectorAll('.prulesBody').forEach(e=>e.innerHTML=r)}
+function openPRules(){fillPRules(P?P.kind:PKIND);$('pRulesModal').classList.add('on')}
 function partySetup(kind){PKIND=kind;$('pTitle').textContent=PTITLE[kind];$('spiceWrap').style.display=kind==='bold'?'block':'none';
   $('pNamesLbl').textContent=`שמות השחקנים (3–${PMAX[kind]}), אחד בכל שורה`;
-  const r=$(kind==='bold'?'tplBold':'tplRegular').innerHTML;document.querySelectorAll('.prulesBody').forEach(e=>e.innerHTML=r);show('sPSetup')}
+  if(MP.role==='host')$('pNames').value=mpNames().join('\n');
+  fillPRules(kind);show('sPSetup')}
 function partyStart(){
   const PD=PDECKS[PKIND];
   const names=$('pNames').value.split(/\n|,/).map(s=>s.trim()).filter(Boolean).slice(0,PMAX[PKIND]);
   if(names.length<3){alert('צריך לפחות 3 שחקנים');return}
   const sp=PKIND==='bold'?+$('pSpice').value:2;
   const ids=PD.cards.map((c,i)=>[c,i]).filter(([c])=>sp===2||(sp===1?c.h===1:(c.h===2||['mg','ru','pen'].includes(c.t)))).map(([,i])=>i);
-  P={kind:PKIND,noAlc:$('pNoAlc').checked,names,pass:names.map(()=>3),pens:names.map(()=>0),done:names.map(()=>0),turn:0,deck:shuffle(ids),rule:null,log:'',total:ids.length};
+  P={kind:PKIND,noAlc:$('pNoAlc').checked,names,pass:names.map(()=>3),pens:names.map(()=>0),done:names.map(()=>0),turn:0,deck:shuffle(ids),rule:null,log:'',total:ids.length,over:false};
   $('pGameTitle').textContent=PTITLE[PKIND]+(P.noAlc?' · 🚫🥃':'');
-  show('sParty');pRender();
+  show('sParty');pRender();mpAssign();
 }
 function PDk(){return PDECKS[P.kind]}
+function pc(i){return PCOL[i%PCOL.length]}
+function pSave(){if(MP.role==='client')return;try{localStorage.setItem('tob_pstate',JSON.stringify(P))}catch(e){}}
 function pRender(){
-  $('pPlayers').innerHTML=P.names.map((n,i)=>`<div class="pl ${P.turn===i?'turn':''}" style="flex:0 0 auto;min-width:30%"><div class="nm">${esc(n)}</div><div class="small" style="color:#ddd">✋ ${P.pass[i]} · 🎯 ${P.pens[i]}</div></div>`).join('');
-  $('pTurn').innerHTML=`התור של <b>${esc(P.names[P.turn])}</b><div class="small">נשארו ${P.deck.length} מתוך ${P.total} קלפים</div>`;
+  $('pPlayers').innerHTML=P.names.map((n,i)=>`<div class="pchip ${P.turn===i?'turn':''}"><div class="nm"><span class="av" style="background:${pc(i)};width:1.5em;height:1.5em">${initial(n)}</span> ${esc(n)}</div><div class="st">✋ ${P.pass[i]} &nbsp;🎯 ${P.pens[i]} &nbsp;✔ ${P.done[i]}</div></div>`).join('');
+  $('pTurn').innerHTML=`התור של ${nt(P.names[P.turn],pc(P.turn))}<div class="small" style="margin-top:4px">נשארו ${P.deck.length} מתוך ${P.total} קלפים</div>`;
   $('pRule').style.display=P.rule?'block':'none';if(P.rule)$('pRule').innerHTML='👑 <b>חוק פעיל:</b> '+esc(P.rule);
   $('pLog').innerHTML=P.log;
+  $('pDraw').innerHTML='🃏 '+esc(P.names[P.turn])+', שלוף קלף';
+  pSave();
+}
+/* neighbours: "משמאלך" = next in turn order, "מימינך" = previous */
+function pWithNames(txt,p){
+  const n=P.names.length,nx=(p+1)%n,pv=(p-1+n)%n;
+  return txt.replace(/(ש?משמאלך)/g,`$1 ${nt('('+P.names[nx]+')',pc(nx))}`).replace(/(ש?מימינך)/g,`$1 ${nt('('+P.names[pv]+')',pc(pv))}`);
 }
 function partyDraw(){
   if(!P.deck.length)return partyEnd();
   const PD=PDk();const ci=P.deck.shift();const c=PD.cards[ci];const p=P.turn;
   if(c.t==='ru')P.rule=c.x;
-  const sp=P.kind==='bold'?'🌶️'.repeat(c.h):'';
-  const tm=c.s?`<div class="timer"><span class="hg" id="hg">⏱</span> <span id="tt">${c.s}</span></div><button class="btn3" id="tBtn" style="margin-bottom:10px">הפעל טיימר</button>`:'';
-  const wheelBtn=c.t==='pen'?`<button class="btn3" id="wBtn" style="margin-bottom:10px;width:100%">🎯 פתח תפריט עונשים / גלגל</button>`:'';
-  $('cardEl').innerHTML=`<div class="band" style="background:${PTC[c.t]}">${PTI[c.t]} ${PD.types[c.t]} ${sp}</div><div class="body">
-   <div class="who"><b>${esc(P.names[p])}</b> · ${esc(PD.hints[c.t])}</div><div class="ctext">${esc(alc(c.x))}</div>${tm}${wheelBtn}
-   <div class="cbtns"><button class="btn" id="dBtn">בוצע ✔</button><button class="btn2" id="pBtn" ${P.pass[p]?'':'disabled style="opacity:.4"'}>✋ פאס (${P.pass[p]})</button><button class="btn2" id="sBtn">🎯 עונש</button></div>
-   <div class="small" style="margin-top:8px;color:#777">עונשים אופציונליים: תמיד אפשר מים או משימה חלופית.</div></div>`;
-  $('modal').classList.add('on');
+  const sp=P.kind==='bold'?' '+'🌶️'.repeat(c.h):'';
+  const tm=c.s?`<div class="timer"><span class="hg" id="hg">⏱</span> <span id="tt">${c.s}</span> <button class="btn3" id="tBtn">הפעל טיימר</button></div>`:'';
+  const wheelBtn=c.t==='pen'?`<button class="btn3" id="wBtn" style="margin-bottom:8px;width:100%;flex:0 0 auto">🎯 פתח תפריט עונשים / גלגל</button>`:'';
+  $('cardEl').innerHTML=`<div class="band" style="background:${PTC[c.t]}">${PTI[c.t]} ${PD.types[c.t]}${sp}</div><div class="body">
+   <div class="who" style="margin-top:0">🎯 ${nt(P.names[p],pc(p))} · ${esc(PD.hints[c.t])}</div><div class="ctext fit">${pWithNames(esc(alc(c.x)),p)}</div>${tm}${wheelBtn}
+   <div class="cbtns"><button class="btn" id="dBtn">בוצע ✔</button><button class="btn2" id="pBtn" ${P.pass[p]?'':'disabled'}>✋ פאס (${P.pass[p]})</button><button class="btn2" id="sBtn">🎯 עונש</button></div>
+   <div class="cnote">עונשים אופציונליים: תמיד אפשר מים או משימה חלופית.</div></div>`;
+  $('cardEl').style.animation='none';void $('cardEl').offsetWidth;$('cardEl').style.animation='';
+  $('modal').classList.add('on');pSave();
   if(c.s){let left=c.s;$('tBtn').onclick=()=>{clearInterval(timerI);left=c.s;$('hg').classList.add('run');timerI=setInterval(()=>{left--;$('tt').textContent=left;if(left<=0){clearInterval(timerI);$('hg').classList.remove('run');$('tt').textContent='⌛ זמן!';try{navigator.vibrate&&navigator.vibrate([200,100,200])}catch(e){}}},1000)}}
   if(wheelBtn)$('wBtn').onclick=()=>openPen(p,null,c.x.startsWith('גלגל'));
   const close=()=>{clearInterval(timerI);$('modal').classList.remove('on')};
@@ -501,7 +776,6 @@ function partyDraw(){
   $('sBtn').onclick=()=>{close();openPen(p,()=>pNext())};
 }
 function alc(s){if(!P||!P.noAlc)return s;return s.replace(/חצי כוס/g,'חצי כוס מיץ').replace(/שוטים/g,'צ׳ייסרים חריפים').replace(/שוט/g,'צ׳ייסר חריף')}
-const SHOT=()=>P.noAlc?'צ׳ייסר חריף (טבסקו במים), פרוסת לימון, או משקה מגעיל שהקבוצה מרכיבה':'שוט';
 function penMenu(){
   const na=P.noAlc;
   return [
@@ -513,10 +787,11 @@ function penMenu(){
    ['alt','💧 חלופה','מים או משימה חלופית שהקבוצה בוחרת. בלי שאלות.']];
 }
 let penCb=null,penP=0;
+function penBand(t){return `<div class="band" style="background:#be185d">${t}</div>`}
 function openPen(p,cb,direct){
   penP=p;penCb=cb;
   if(direct)return showWheel();
-  $('penEl').innerHTML=`<div class="band" style="background:#ff2d95">🎯 ${esc(P.names[p])}: בחר עונש</div><div class="body">`+
+  $('penEl').innerHTML=penBand(`🎯 ${esc(P.names[p])}: בחר עונש`)+`<div class="body">`+
    penMenu().map(([k,a,b])=>`<button class="penopt" data-k="${k}">${a}<small>${b}</small></button>`).join('')+
    `<button class="btn2" style="width:100%;margin-top:6px" id="penClose">ביטול</button></div>`;
   $('penModal').classList.add('on');
@@ -524,17 +799,17 @@ function openPen(p,cb,direct){
   $('penClose').onclick=()=>{$('penModal').classList.remove('on');if(penCb){const f=penCb;penCb=null;f()}};
 }
 function penResult(title,txt){
-  $('penEl').innerHTML=`<div class="band" style="background:#ff2d95">${title}</div><div class="body"><div class="ctext">${txt}</div><button class="btn" id="penOk" style="width:100%">בוצע ✔</button></div>`;
+  $('penEl').innerHTML=penBand(title)+`<div class="body"><div class="who" style="margin-top:0">🎯 ${nt(P.names[penP],pc(penP))}</div><div class="ctext fit" data-max="40" style="height:34vh">${txt}</div><button class="btn" id="penOk" style="width:100%">בוצע ✔</button></div>`;
   $('penOk').onclick=()=>{$('penModal').classList.remove('on');P.pens[penP]++;P.log=`🎯 ${esc(P.names[penP])} לקח עונש: ${title}`;if(penCb){const f=penCb;penCb=null;f()}else pRender()};
 }
 function pickPen(k){
   const na=P.noAlc;
   if(k==='chaser'){const opts=na?['צ׳ייסר חריף (טבסקו במים)','פרוסת לימון','משקה מגעיל שהקבוצה מרכיבה (רק דברים אכילים)']:['שוט','חצי כוס','שוט הפתעה שהקבוצה מערבבת'];
-    $('penEl').innerHTML=`<div class="band" style="background:#ff2d95">🥃 צ׳ייסר לבחירה</div><div class="body">`+opts.map((o,i)=>`<button class="penopt" data-i="${i}">${o}</button>`).join('')+`</div>`;
+    $('penEl').innerHTML=penBand('🥃 צ׳ייסר לבחירה')+`<div class="body">`+opts.map((o,i)=>`<button class="penopt" data-i="${i}">${o}</button>`).join('')+`</div>`;
     document.querySelectorAll('.penopt').forEach(b=>b.onclick=()=>penResult('🥃 '+opts[+b.dataset.i],'לחיים! 🥂'));return}
   if(k==='wheel')return showWheel();
   if(k==='blow'){const opts=['לנפח בלון עד שהוא מתפוצץ',(na?'צ׳ייסר חריף':'שוט')+' בלי ידיים'];
-    $('penEl').innerHTML=`<div class="band" style="background:#ff2d95">🎈 אתגר נשיפה</div><div class="body">`+opts.map((o,i)=>`<button class="penopt" data-i="${i}">${o}</button>`).join('')+`</div>`;
+    $('penEl').innerHTML=penBand('🎈 אתגר נשיפה')+`<div class="body">`+opts.map((o,i)=>`<button class="penopt" data-i="${i}">${o}</button>`).join('')+`</div>`;
     document.querySelectorAll('.penopt').forEach(b=>b.onclick=()=>penResult('🎈 '+opts[+b.dataset.i],'כולם סופרים לאחור, ו… קדימה!'));return}
   if(k==='shachta')return penResult('💨 שכטה','אופציונלי לגמרי. לא בא לך? מים או משימה חלופית.');
   if(k==='row')return penResult('📏 לעשות שורה','הקבוצה מחליטה עכשיו מה זו שורה (למשל שורה של שוטים, צ׳ייסרים או לימונים), ואתה עושה אותה.'.replace(/שוטים/,na?'צ׳ייסרים חריפים':'שוטים'));
@@ -543,37 +818,249 @@ function pickPen(k){
 function showWheel(){
   const na=P.noAlc;
   const seg=[na?'צ׳ייסר חריף':'שוט','אמת מביכה','משימה מול כולם','סטורי שהקבוצה מכתיבה'];
-  const labels=seg.map((s,i)=>{const ang=i*90+45;return `<span style="transform:rotate(${ang}deg) translateY(-70px) rotate(${-ang}deg)">${s}</span>`}).join('');
-  $('penEl').innerHTML=`<div class="band" style="background:#ff2d95">🎡 גלגל עונשים: ${esc(P.names[penP])}</div><div class="body">
+  const lab=(ang,w)=>`rotate(${ang}deg) translateY(-25cqw) rotate(${-ang-w}deg)`;
+  const labels=seg.map((s,i)=>`<span style="transform:${lab(i*90+45,0)}">${s}</span>`).join('');
+  $('penEl').innerHTML=penBand(`🎡 גלגל עונשים: ${esc(P.names[penP])}`)+`<div class="body">
    <div class="wheelWrap"><div class="pointer"></div><div class="wheel" id="wheel">${labels}</div></div>
-   <div class="small" style="color:#444;margin:4px 0">${seg.map((s,i)=>`<span style="color:${['#e8173d','#1f6feb','#12a150','#ff8a00'][i]}">●</span> ${s}`).join(' &nbsp; ')}</div><div id="wRes" class="ctext" style="min-height:40px;margin:6px 0"></div><button class="btn" id="spin" style="width:100%">סובב! 🎡</button></div>`;
+   <div class="wleg">${seg.map((s,i)=>`<span><i style="background:${['#d61f3c','#2563eb','#15803d','#c2410c'][i]}"></i>${s}</span>`).join('')}</div><div id="wRes" class="wres"></div><button class="btn" id="spin" style="width:100%">סובב! 🎡</button></div>`;
   $('penModal').classList.add('on');
   $('spin').onclick=()=>{
     $('spin').disabled=true;const r=Math.floor(Math.random()*4);
     const deg=360*5+(360-(r*90+45))+(Math.random()*50-25);
     $('wheel').style.transform=`rotate(${deg}deg)`;
+    $('wheel').querySelectorAll('span').forEach((s,i)=>s.style.transform=lab(i*90+45,deg));
     setTimeout(()=>{let txt=seg[r];
       const PD=PDk();
       if(r===1){const qs=PD.cards.filter(c=>c.t==='q');txt+=': '+esc(qs[Math.floor(Math.random()*qs.length)].x)}
-      if(r===2){const cs=PD.cards.filter(c=>c.t==='ch');txt+=': '+esc(alc(cs[Math.floor(Math.random()*cs.length)].x))}
+      if(r===2){const cs=PD.cards.filter(c=>c.t==='ch');txt+=': '+pWithNames(esc(alc(cs[Math.floor(Math.random()*cs.length)].x)),penP)}
       if(r===3)txt+='. רק תוכן שאתה בסדר שיראו, בלי אנשים אחרים ובלי לחשוף אף אחד. לא בא לך? בוחרים עונש אחר.';
       if(r===0&&na)txt+=' (טבסקו במים, לימון, או משקה מגעיל)';
-      $('wRes').innerHTML='🎯 '+txt;$('spin').textContent='בוצע ✔';$('spin').disabled=false;
+      $('wRes').innerHTML='🎯 '+nt(P.names[penP],pc(penP))+' · '+txt;$('spin').textContent='בוצע ✔';$('spin').disabled=false;
       $('spin').onclick=()=>{$('penModal').classList.remove('on');P.pens[penP]++;P.log=`🎡 ${esc(P.names[penP])}: ${esc(seg[r])}`;if(penCb){const f=penCb;penCb=null;f()}else pRender()};
     },3300);
   };
 }
 function pNext(){P.turn=(P.turn+1)%P.names.length;pRender();if(!P.deck.length){P.log+=' · החפיסה נגמרה! 🏁';pRender()}}
 function partyEnd(){
-  $('modal').classList.remove('on');
-  const rows=P.names.map((n,i)=>`<div>${esc(n)}: ✔ ${P.done[i]} · ✋ נשארו ${P.pass[i]} · 🎯 ${P.pens[i]}</div>`).join('');
+  $('modal').classList.remove('on');$('penModal').classList.remove('on');P.over=true;pSave();
+  const rows=P.names.map((n,i)=>`<div style="margin:4px 0">${nt(n,pc(i))}: ✔ ${P.done[i]} · ✋ נשארו ${P.pass[i]} · 🎯 ${P.pens[i]}</div>`).join('');
   const best=P.names.map((n,i)=>[n,P.done[i]]).sort((a,b)=>b[1]-a[1])[0];
   $('pStats').innerHTML=rows+`<div style="margin-top:10px">🏆 המועמד לקווין: <b>${esc(best[0])}</b> (${best[1]} קלפים שבוצעו)</div>`;
   show('sPEnd');
 }
-
 function openRules(){$('rulesModal').classList.add('on')}
-try{if(localStorage.getItem('tob_age')==='1'){/* still show gate each visit for safety */}}catch(e){}
+/* ---------- multiplayer (PeerJS, host = source of truth) ---------- */
+const MP={role:null,peer:null,code:null,type:'host',conns:[],name:'',plays:true,hostConn:null,lastMsg:0,you:-1,joined:false,retryT:null,hbT:null,snapT:null,lastSent:'',players:[]};
+const PFX='tob-gay-v1-';
+const CODE_A='ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+function genCode(){let s='';for(let i=0;i<4;i++)s+=CODE_A[Math.floor(Math.random()*CODE_A.length)];return s}
+function norm(n){return String(n||'').trim().toLowerCase()}
+function cid(){let c=null;try{c=localStorage.getItem('tob_cid')}catch(e){};if(!c){c=Math.random().toString(36).slice(2,10);try{localStorage.setItem('tob_cid',c)}catch(e){}}return c}
+function loadPeer(){return window.Peer?Promise.resolve():new Promise((res,rej)=>{const urls=['https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js','https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js'];let i=0;
+  const t=()=>{if(i>=urls.length)return rej(new Error('load'));const s=document.createElement('script');s.src=urls[i++];s.onload=()=>res();s.onerror=t;document.head.appendChild(s)};t()})}
+function mpSend(m){const c=MP.hostConn;if(c&&c.open){try{c.send(m)}catch(e){}}}
+function roomBar(){const b=$('roomBar');document.body.classList.toggle('inroom',!!MP.role);if(!MP.role){b.classList.remove('on');return}
+  b.classList.add('on');
+  if(MP.role==='host'){const n=MP.conns.filter(c=>c.open).length;b.textContent=`📡 ${MP.code||'…'} · 👥 ${n+1} · ${MP.type==='host'?'🎙️ מנחה':'🙌 כולם'}`}
+  else b.innerHTML=`${MP.joined?'🟢':'🟠'} חדר ${esc(MP.code)} · אתה: ${esc(MP.name)}${MP.you<0&&MP.joined?' (צופה)':''}`;
+}
+function roomInfo(){if(MP.role==='host')toast('בחדר: '+[MP.name+' (מארח)'].concat(MP.conns.filter(c=>c.open).map(c=>c._name)).join(', '));else toast(MP.joined?'מחובר לחדר '+MP.code:'מתחבר…')}
+
+/* host */
+function hostScreen(){
+  if(MP.role==='host'){show('sHost');return}
+  try{const r=JSON.parse(localStorage.getItem('tob_room')||'null');if(r&&r.name)$('hName').value=r.name}catch(e){}
+  $('hostPre').style.display='';$('hostLobby').style.display='none';show('sHost')}
+async function hostCreate(resume){
+  const r=resume||{};
+  MP.name=(r.name||$('hName').value.trim()||'מארח');MP.plays=r.plays!==undefined?r.plays:$('hPlays').checked;
+  MP.type=r.type||(document.querySelector('input[name=rtype]:checked')||{}).value||'host';
+  $('hCreate').disabled=true;$('hCreate').textContent='פותח חדר…';
+  try{await loadPeer()}catch(e){$('hCreate').disabled=false;$('hCreate').textContent='צור חדר 🚀';alert('לא הצלחתי לטעון את רכיב החיבור. בדוק אינטרנט ונסה שוב.');return}
+  MP.role='host';document.body.classList.add('host');
+  openHostPeer(r.code||genCode(),0,!!r.code);
+}
+function openHostPeer(code,tries,resuming){
+  const peer=new Peer(PFX+code,{debug:0});
+  peer.on('open',()=>{MP.peer=peer;MP.code=code;
+    try{localStorage.setItem('tob_room',JSON.stringify({code,type:MP.type,name:MP.name,plays:MP.plays,ts:Date.now()}))}catch(e){}
+    $('hCode').textContent=code;$('hostPre').style.display='none';$('hostLobby').style.display='';$('hCreate').disabled=false;$('hCreate').textContent='צור חדר 🚀';
+    hostLobby();roomBar();
+    if(resuming)toast('החדר '+code+' פתוח שוב');
+    clearInterval(MP.hbT);MP.hbT=setInterval(hostBeat,3000);
+  });
+  peer.on('connection',c=>hostConn(c));
+  peer.on('disconnected',()=>{if(MP.role==='host'&&!peer.destroyed)setTimeout(()=>{try{peer.reconnect()}catch(e){}},1500)});
+  peer.on('error',e=>{
+    if(e.type==='unavailable-id'){try{peer.destroy()}catch(_){};
+      if(resuming&&tries<12){toast('פותח מחדש את החדר '+code+'…');setTimeout(()=>openHostPeer(code,tries+1,true),2500)}else openHostPeer(genCode(),0,false);return}
+    if(e.type==='browser-incompatible'){alert('הדפדפן הזה לא תומך במשחק מרובה מכשירים');return}
+    if(['network','server-error','socket-error','socket-closed'].includes(e.type))toast('בעיית רשת, מנסה להתחבר שוב…');
+  });
+}
+function hostResume(){
+  try{const r=JSON.parse(localStorage.getItem('tob_room')||'null');
+    if(r&&r.code&&Date.now()-r.ts<12*3600e3&&confirm(`לפתוח מחדש את חדר ${r.code}? החברים יתחברו אוטומטית.`)){
+      hostCreate(r).then(()=>{if(!resumeLocal())show('sHost')});return true}
+    if(r)localStorage.removeItem('tob_room');
+  }catch(e){}
+  return false}
+function closeRoom(){if(!confirm('לסגור את החדר? כל המחוברים ינותקו.'))return;
+  MP.conns.forEach(c=>{try{c.send({t:'closed'});}catch(e){}});
+  setTimeout(()=>{try{MP.peer.destroy()}catch(e){};},300);
+  clearInterval(MP.hbT);MP.role=null;MP.conns=[];document.body.classList.remove('host');try{localStorage.removeItem('tob_room')}catch(e){};roomBar();show('sMode')}
+function hostConn(c){
+  c.on('data',d=>{c._seen=Date.now();if(!d||typeof d!=='object')return;
+    if(d.t==='hello'){c._name=String(d.name||'אורח').slice(0,14);c._id=String(d.cid||'');
+      MP.conns=MP.conns.filter(x=>{if(x!==c&&x._id===c._id){try{x.close()}catch(e){};return false}return true});
+      if(!MP.conns.includes(c))MP.conns.push(c);
+      toast(d.re?`🔄 ${c._name} חזר`:`👋 ${c._name} הצטרף`);hostLobby();mpAssign();sendSnap(c,true);return}
+    if(d.t==='click')return hostClick(c,String(d.sel||''));
+    if(d.t==='safe'){toast('🛑 '+(c._name||'')+' אמר אדום');return safeWord()}
+  });
+  c.on('close',()=>{const was=MP.conns.includes(c);MP.conns=MP.conns.filter(x=>x!==c);if(was){toast(`📴 ${c._name||'שחקן'} התנתק`);hostLobby()}});
+  c.on('error',()=>{});
+}
+function hostBeat(){const now=Date.now();
+  MP.conns.forEach(c=>{if(c._seen&&now-c._seen>15000){try{c.close()}catch(e){}}else if(c.open){try{c.send({t:'ping'})}catch(e){}}});
+  MP.conns=MP.conns.filter(c=>!(c._seen&&now-c._seen>15000));
+  if(MP.peer&&MP.peer.disconnected&&!MP.peer.destroyed){try{MP.peer.reconnect()}catch(e){}}
+  roomBar();
+}
+function mpNames(){const a=[];if(MP.plays)a.push(MP.name);MP.conns.forEach(c=>{if(c._name&&!a.some(n=>norm(n)===norm(c._name)))a.push(c._name)});return a}
+function hostLobby(){
+  const live=MP.conns.filter(c=>c._name);if(!$('hList'))return;
+  $('hList').innerHTML=`<div><span class="dotOn"></span>${esc(MP.name)}<span class="tag on">מארח${MP.plays?'':' · לא משחק'}</span></div>`+
+    live.map(c=>`<div><span class="${c.open?'dotOn':'dotOff'}"></span>${esc(c._name)}<span class="tag ${c.open?'on':'off'}">${c.open?'מחובר':'מנותק'}</span></div>`).join('')+(live.length?'':'<div class="small">עוד אין אף אחד. שלח להם את הקוד 👆</div>');
+  $('hCount').textContent=`(${live.length+1} בחדר)`;
+  $('hType').textContent=MP.type==='host'?'🎙️ מצב מנחה: רק אתה לוחץ, כולם רואים.':'🙌 כולם משחקים: כל אחד לוחץ כשמגיע התור שלו. אתה תמיד יכול לעזור ולהזיז את המשחק.';
+  roomBar();broadcast(true);
+}
+function shareRoom(){const url=location.origin+location.pathname+'?room='+MP.code;
+  const txt=`בוא לשחק טופ או בוטום 🔥 קוד חדר: ${MP.code}`;
+  if(navigator.share)navigator.share({title:'טופ או בוטום',text:txt,url}).catch(()=>{});
+  else{try{navigator.clipboard.writeText(txt+'\n'+url);toast('הקישור הועתק 📋')}catch(e){prompt('העתק:',url)}}}
+function gameNames(){const s=curScreen();if((s==='sGame'||s==='sWin')&&S)return S.names;if((s==='sParty'||s==='sPEnd')&&P)return P.names;return mpNames()}
+function mpAssign(){if(MP.role!=='host')return;const names=gameNames();MP.conns.forEach(c=>{c._idx=names.findIndex(n=>norm(n)===norm(c._name))});broadcast(true)}
+function allowedIdx(){
+  if(MP.type==='host')return [];
+  const s=curScreen();
+  if(s==='sGame'&&S){if($('modal').classList.contains('on'))return [0,1];return busy?[]:[S.turn]}
+  if(s==='sWin'&&S)return [0,1];
+  if(s==='sParty'&&P){if($('penModal').classList.contains('on'))return [penP];return [P.turn]}
+  return []}
+function hostClick(c,sel){
+  if(!/^#[A-Za-z][\w-]*( > :nth-child\(\d+\))*$/.test(sel))return;
+  if(!allowedIdx().includes(c._idx)){try{c.send({t:'deny'})}catch(e){};return}
+  let el=null;try{el=document.querySelector(sel)}catch(e){return}
+  if(!el||!el.closest('[data-mir]')||!el.matches('button,.fant,.penopt')||el.disabled)return;
+  el.click();
+}
+function snap(){const s=curScreen();const game=['sGame','sParty','sWin','sPEnd'].includes(s);
+  return {t:'snap',scr:s,code:MP.code,type:MP.type,players:mpNames(),hostName:MP.name,
+   S:(s==='sGame'||s==='sWin')?S:null,P:(s==='sParty'||s==='sPEnd')?P:null,kind:P?P.kind:PKIND,
+   modal:game&&$('modal').classList.contains('on'),card:$('cardEl').innerHTML,pen:game&&$('penModal').classList.contains('on'),penH:$('penEl').innerHTML,
+   die:$('die').textContent,win:$('winName').textContent,fants:$('fants').innerHTML,pStats:$('pStats').innerHTML,ptitle:$('pGameTitle').textContent,allowed:allowedIdx()}}
+function sendSnap(c,force){if(!c.open)return;const s=snap();s.you=c._idx===undefined?-1:c._idx;s.yourName=c._name;try{c.send(s)}catch(e){}}
+function broadcast(now){if(MP.role!=='host')return;clearTimeout(MP.snapT);const go=()=>MP.conns.forEach(c=>sendSnap(c));if(now)go();else MP.snapT=setTimeout(go,70)}
+new MutationObserver(ms=>{if(MP.role!=='host'||!MP.conns.length)return;
+  if(ms.every(m=>{const t=m.target.nodeType===1?m.target:m.target.parentElement;return t&&(t.closest('#tokens')||t.closest('.toast')||t.closest('#roomBar'))}))return;
+  broadcast()}).observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['class','style','disabled']});
+
+/* client */
+function clientResume(){try{const j=JSON.parse(localStorage.getItem('tob_join')||'null');
+  if(j&&j.code&&Date.now()-j.ts<12*3600e3&&confirm(`לחזור לחדר ${j.code} בתור ${j.name}?`)){joinScreen(j.code);$('jName').value=j.name;joinRoom();return true}}catch(e){}return false}
+function joinScreen(code){
+  try{const j=JSON.parse(localStorage.getItem('tob_join')||'null');if(j){if(!code&&Date.now()-j.ts<12*3600e3)$('jCode').value=j.code;$('jName').value=j.name}}catch(e){}
+  if(code)$('jCode').value=String(code).toUpperCase().slice(0,4);
+  $('jMsg').textContent='';show('sJoin');setTimeout(()=>($('jCode').value?$('jName'):$('jCode')).focus(),100)}
+async function joinRoom(){
+  const code=$('jCode').value.trim().toUpperCase(),name=$('jName').value.trim();
+  if(code.length!==4){$('jMsg').textContent='הקוד הוא 4 תווים';return}
+  if(!name){$('jMsg').textContent='צריך שם';return}
+  $('jBtn').disabled=true;$('jMsg').textContent='מתחבר…';
+  try{await loadPeer()}catch(e){$('jBtn').disabled=false;$('jMsg').textContent='לא הצלחתי לטעון את רכיב החיבור. בדוק אינטרנט.';return}
+  MP.role='client';MP.code=code;MP.name=name;MP.joined=false;MP.everJoined=false;document.body.classList.add('client');
+  try{localStorage.setItem('tob_join',JSON.stringify({code,name,ts:Date.now()}))}catch(e){}
+  clientConnect();
+}
+function clientConnect(){
+  clearTimeout(MP.retryT);
+  if(MP.role!=='client')return;
+  const go=()=>{
+    if(MP.hostConn){try{MP.hostConn.close()}catch(e){}}
+    const c=MP.peer.connect(PFX+MP.code,{reliable:true});MP.hostConn=c;
+    const to=setTimeout(()=>{if(!c.open)clientRetry()},9000);
+    c.on('open',()=>{clearTimeout(to);c.send({t:'hello',name:MP.name,cid:cid(),re:MP.everJoined});MP.lastMsg=Date.now()});
+    c.on('data',d=>{MP.lastMsg=Date.now();if(!d||typeof d!=='object')return;
+      if(d.t==='snap'){if(!MP.joined){MP.joined=true;if(MP.everJoined)toast('🟢 חזרת לחדר');MP.everJoined=true;$('jBtn').disabled=false}clientApply(d)}
+      else if(d.t==='deny')toast('⏳ זה לא התור שלך');
+      else if(d.t==='closed'){toast('המארח סגר את החדר');leaveRoom(true)}
+    });
+    c.on('close',()=>{if(MP.role==='client'&&MP.hostConn===c)clientRetry()});
+    c.on('error',()=>{});
+  };
+  if(MP.peer&&!MP.peer.destroyed&&MP.peer.open)return go();
+  if(MP.peer){try{MP.peer.destroy()}catch(e){}}
+  const peer=new Peer({debug:0});MP.peer=peer;
+  peer.on('open',go);
+  peer.on('error',e=>{
+    if(e.type==='peer-unavailable'){if(!MP.everJoined){$('jMsg').textContent='לא נמצא חדר עם הקוד הזה. בדוק את הקוד.';$('jBtn').disabled=false;MP.role=null;document.body.classList.remove('client');roomBar();try{peer.destroy()}catch(_){};return}clientRetry();return}
+    if(['network','server-error','socket-error','socket-closed','disconnected'].includes(e.type))clientRetry();
+  });
+  peer.on('disconnected',()=>{if(MP.role==='client'){try{peer.reconnect()}catch(e){}}});
+  clearInterval(MP.hbT);MP.hbT=setInterval(()=>{if(MP.role!=='client')return;mpSend({t:'ping'});if(MP.joined&&Date.now()-MP.lastMsg>10000)clientRetry()},3000);
+}
+function clientRetry(){if(MP.role!=='client')return;if(MP.joined){MP.joined=false;toast('🟠 החיבור נפל, מתחבר מחדש…')}roomBar();
+  const w=MP.everJoined?'🟠 מתחבר מחדש לחדר…':'';['gWait','pWait'].forEach(i=>$(i).textContent=w);
+  clearTimeout(MP.retryT);MP.retryT=setTimeout(()=>{if(MP.peer&&(MP.peer.destroyed||MP.peer.disconnected)){try{MP.peer.destroy()}catch(e){};MP.peer=null}clientConnect()},2500)}
+function leaveRoom(silent){
+  if(MP.role==='client'){try{MP.hostConn&&MP.hostConn.close()}catch(e){};try{MP.peer&&MP.peer.destroy()}catch(e){};try{localStorage.removeItem('tob_join')}catch(e){}}
+  clearInterval(MP.hbT);clearTimeout(MP.retryT);MP.role=null;MP.joined=false;MP.hostConn=null;MP.peer=null;MP.you=-1;
+  document.body.classList.remove('client','locked');$('modal').classList.remove('on');$('penModal').classList.remove('on');S=null;P=null;roomBar();show('sMode')}
+function setHTML(id,h){const e=$(id);if(e._h!==h){e.innerHTML=h;e._h=h}}
+function applyPen(h){const e=$('penEl');if(e._h===h)return;
+  const ow=e.querySelector('#wheel');
+  if(ow&&h.includes('id="wheel"')){const t=document.createElement('div');t.innerHTML=h;const nw=t.querySelector('#wheel');
+    if(nw){ow.style.transform=nw.style.transform;const os=ow.querySelectorAll('span'),ns=nw.querySelectorAll('span');os.forEach((s,i)=>{if(ns[i])s.style.transform=ns[i].style.transform});
+      const r=t.querySelector('#wRes'),sp=t.querySelector('#spin');if(r)$('wRes').innerHTML=r.innerHTML;if(sp){$('spin').textContent=sp.textContent;$('spin').disabled=sp.disabled}e._h=h;return}}
+  e.innerHTML=h;e._h=h}
+function clientApply(s){
+  MP.you=typeof s.you==='number'?s.you:-1;MP.type=s.type;MP.code=s.code;MP.players=s.players||[];
+  const game=['sGame','sParty','sWin','sPEnd'].includes(s.scr);const tgt=game?s.scr:'sWait';
+  if(s.kind)fillPRules(s.kind);
+  if(s.S){const fresh=!S||S.names.join()!==s.S.names.join();S=s.S;CARDS=S.exp?DATA.cards.concat(EXP):DATA.cards;if(fresh)resetTok()}
+  if(s.P)P=s.P;
+  if(curScreen()!==tgt)show(tgt);
+  if(s.scr==='sGame'&&S)render();
+  if(s.scr==='sParty'&&P){pRender();$('pGameTitle').textContent=s.ptitle}
+  if(s.scr==='sWin'){$('winName').textContent=s.win;setHTML('fants',s.fants)}
+  if(s.scr==='sPEnd')setHTML('pStats',s.pStats);
+  if($('die').textContent!==s.die){$('die').textContent=s.die;const d=$('die');d.classList.remove('roll');void d.offsetWidth;d.classList.add('roll')}
+  setHTML('cardEl',s.card);$('modal').classList.toggle('on',!!s.modal);
+  applyPen(s.penH);$('penModal').classList.toggle('on',!!s.pen);
+  const can=(s.allowed||[]).includes(MP.you);document.body.classList.toggle('locked',!can);
+  let w='';const names=s.S?s.S.names:s.P?s.P.names:[];
+  if(game){if(s.type==='host')w=`🎙️ ${esc(s.hostName)} מנחה את המשחק. אתה רואה הכל בזמן אמת.`;
+    else if(can)w='✅ אתה יכול ללחוץ עכשיו';
+    else{const turn=s.S?s.S.turn:s.P?s.P.turn:-1;w=MP.you<0?'👀 אתה צופה (השם שלך לא ברשימת השחקנים)':`⏳ מחכים ל${esc(names[turn]||'')}`}}
+  ['gWait','pWait'].forEach(i=>$(i).innerHTML=w);
+  document.body.style.setProperty('--lockmsg',JSON.stringify(w.replace(/<[^>]+>/g,'')));
+  $('wCode').textContent=s.code;$('wType').textContent=s.type==='host'?'🎙️ מצב מנחה':'🙌 כולם משחקים';
+  $('wList').innerHTML=MP.players.map(n=>`<div><span class="dotOn"></span>${esc(n)}${norm(n)===norm(MP.name)?'<span class="tag on">אתה</span>':''}${norm(n)===norm(s.hostName)?'<span class="tag off">מארח</span>':''}</div>`).join('');
+  roomBar();
+}
+function selOf(el){const p=[];let n=el;while(n&&!n.id){const par=n.parentElement;if(!par)return null;p.unshift(`:nth-child(${[...par.children].indexOf(n)+1})`);n=par}return n?'#'+n.id+(p.length?' > '+p.join(' > '):''):null}
+window.addEventListener('click',e=>{
+  if(MP.role!=='client')return;
+  const el=e.target.closest&&e.target.closest('button,.fant,.penopt');if(!el)return;
+  if(!el.closest('[data-mir]'))return;
+  e.preventDefault();e.stopPropagation();
+  if(!MP.joined){toast('🟠 מתחבר…');return}
+  if(document.body.classList.contains('locked')){toast(MP.type==='host'?'🎙️ המנחה מנהל את המשחק':'⏳ זה לא התור שלך');return}
+  if(el.disabled)return;const sel=selOf(el);if(sel)mpSend({t:'click',sel});
+},true);
+document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible'&&MP.role==='client'&&Date.now()-MP.lastMsg>6000)clientRetry()});
 </script>
 </body>
 </html>
