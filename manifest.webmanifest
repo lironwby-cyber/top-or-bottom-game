@@ -1,18 +1,21 @@
 {
-  "name": "טופ או בוטום · 18+",
+  "name": "טופ או בוטום",
   "short_name": "טופ או בוטום",
-  "description": "משחק קלפים נועז לזוגות גברים ולמסיבות של הקהילה. 18+ בלבד.",
+  "description": "משחק קלפים שבודק כמה אתם נועזים, כמה ספונטניים וכמה רחוק תעזו ללכת. כל אחד בוחר בסוד את הרמה שלו, משאלות תמימות ועד משימות מסמיקות. תוכן מיני רק אם תבחרו בו. לזוגות ולמסיבות, 18+ בלבד.",
   "lang": "he",
   "dir": "rtl",
+  "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "orientation": "portrait",
-  "background_color": "#f7f2ff",
-  "theme_color": "#f7f2ff",
+  "orientation": "any",
+  "background_color": "#4c1d95",
+  "theme_color": "#5b21b6",
+  "categories": ["games", "entertainment"],
   "icons": [
     {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
     {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {"src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+    {"src": "icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any"}
   ]
 }
