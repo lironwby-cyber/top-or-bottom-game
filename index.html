@@ -304,6 +304,127 @@ body.paused:has(#sParty.on) .pauseOv{display:flex}
 @media (prefers-reduced-motion:reduce){.card{animation:fade .2s}.hbar i,.dots i{transition:none}}
 @media (max-height:700px){.onbS{padding:var(--s3) var(--s3) var(--s1)}.heat{margin-bottom:var(--s2)}}
 </style>
+<style>
+/* ---------- v5 fx: mascot moments (Topi & Boti) ---------- */
+.fxL{position:fixed;inset:0;z-index:80;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(43,29,58,.58);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);animation:fxFade .25s ease-out both;cursor:pointer;overflow:hidden;padding:24px}
+.fxL.out{animation:fxOut .22s ease-in forwards}
+.fxL .fxSkip{position:absolute;bottom:calc(18px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);white-space:nowrap;text-align:center;color:#fff;font-weight:700;font-size:.95rem;background:rgba(27,18,38,.78);border-radius:99px;padding:6px 16px}
+.fxStage{position:relative;width:min(86vw,360px);display:flex;flex-direction:column;align-items:center}
+.fxPic{width:min(62vw,250px);height:auto;filter:drop-shadow(0 14px 22px rgba(20,8,40,.35));transform-origin:50% 100%;animation:fxPop .7s cubic-bezier(.2,.9,.3,1.25) both}
+.fxTitle{font-family:"Secular One",Heebo,sans-serif;font-size:clamp(2.4rem,12vw,3.4rem);line-height:1;color:#fff;text-shadow:0 4px 0 #9d174d,0 8px 18px rgba(0,0,0,.35);margin-top:-6px;animation:fxStamp .55s .25s cubic-bezier(.2,.9,.3,1.4) both;white-space:nowrap}
+.fxBub{position:relative;background:#fff;color:#2b1d3a;font-weight:800;font-size:1.15rem;line-height:1.3;padding:12px 18px;border-radius:22px;box-shadow:0 8px 22px rgba(20,8,40,.25);margin-bottom:10px;max-width:92%;text-align:center;transform-origin:50% 100%;animation:fxBub .45s .45s cubic-bezier(.2,.9,.3,1.4) both}
+.fxBub:after{content:"";position:absolute;bottom:-9px;left:50%;margin-left:-10px;border:10px solid transparent;border-top-color:#fff;border-bottom:0}
+.fxBurst{position:absolute;left:50%;top:45%;width:0;height:0;pointer-events:none}
+.fxBurst i{position:absolute;font-style:normal;font-size:2.6rem;filter:drop-shadow(0 3px 4px rgba(0,0,0,.25));left:-.5em;top:-.5em;animation:fxFly 1.3s var(--d,0s) cubic-bezier(.15,.7,.4,1) both}
+@keyframes fxFade{from{opacity:0}to{opacity:1}}
+@keyframes fxOut{to{opacity:0}}
+@keyframes fxPop{0%{transform:translateY(60%) scale(.3,.3);opacity:0}35%{transform:translateY(0) scale(1.14,.86);opacity:1}52%{transform:scale(.92,1.1)}68%{transform:scale(1.04,.97)}84%{transform:scale(.99,1.01)}100%{transform:none}}
+@keyframes fxStamp{0%{transform:scale(2.6) rotate(-14deg);opacity:0}60%{transform:scale(.88) rotate(-3deg);opacity:1}100%{transform:scale(1) rotate(-4deg)}}
+@keyframes fxBub{0%{transform:scale(0);opacity:0}100%{transform:none;opacity:1}}
+@keyframes fxFly{0%{transform:translate(0,0) scale(.2) rotate(0);opacity:0}15%{opacity:1}100%{transform:translate(var(--x),var(--y)) scale(1.15) rotate(var(--r));opacity:0}}
+/* drumroll + spotlight */
+.fxL.drum{background:rgba(20,10,35,.82)}
+.fxSpot{position:absolute;top:-8%;left:50%;width:min(140vw,640px);height:96%;transform:translateX(-50%);transform-origin:50% 0;background:radial-gradient(ellipse 26% 100% at 50% 0,rgba(255,236,170,.55),rgba(255,236,170,.18) 55%,transparent 75%);animation:fxSweep 1.5s ease-in-out both;pointer-events:none}
+.fxL.drum .fxPic{animation:fxPop .5s cubic-bezier(.2,.9,.3,1.25) both,fxShake .09s .45s linear 10}
+.fxDr{color:#ffe7a8;font-weight:900;font-size:1.5rem;margin-top:6px;animation:fxPulse .3s .4s ease-in-out 5 alternate both}
+.fxWin{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;animation:fxWinIn .55s 1.45s cubic-bezier(.2,.9,.3,1.3) forwards;pointer-events:none}
+.fxWin .wn{position:relative;z-index:2;background:linear-gradient(135deg,#7c3aed,#c026d3);color:#fff;font-weight:900;font-size:clamp(2rem,10vw,2.8rem);padding:14px 30px;border-radius:24px;box-shadow:0 0 0 6px rgba(255,231,168,.6),0 18px 40px rgba(0,0,0,.4)}
+.fxWin .wl{color:#ffe7a8;font-weight:800;font-size:1.2rem;margin-bottom:10px}
+.fxL.drum .fxStage.hide{animation:fxHide .18s 1.35s forwards}
+@keyframes fxShake{0%{transform:translate(0,0) rotate(0)}25%{transform:translate(-3px,1px) rotate(-1.5deg)}50%{transform:translate(2px,-1px) rotate(1deg)}75%{transform:translate(3px,1px) rotate(1.5deg)}100%{transform:none}}
+@keyframes fxSweep{0%{transform:translateX(-50%) rotate(26deg);opacity:0}15%{opacity:1}45%{transform:translateX(-50%) rotate(-20deg)}75%{transform:translateX(-50%) rotate(9deg)}100%{transform:translateX(-50%) rotate(0)}}
+@keyframes fxPulse{from{opacity:.55;transform:scale(.96)}to{opacity:1;transform:scale(1.06)}}
+@keyframes fxHide{to{opacity:0;transform:scale(.8)}}
+@keyframes fxWinIn{0%{opacity:0;transform:scale(.4)}100%{opacity:1;transform:none}}
+
+.fxPic.sm{width:min(48vw,190px)}.fxPic.wide{width:min(78vw,300px)}
+.fxName{display:inline-flex;align-items:center;gap:6px;background:var(--c);color:#1b1226;font-weight:900;font-size:1.15rem;border-radius:99px;padding:3px 14px 3px 4px;margin-top:-10px;position:relative;z-index:2;box-shadow:0 6px 16px rgba(0,0,0,.25);animation:fxBub .4s .3s cubic-bezier(.2,.9,.3,1.4) both}
+.fxName img{width:30px;height:30px;border-radius:50%;background:#fff}
+.fxWin .wps{display:flex;justify-content:center;gap:4px;margin-bottom:6px}.fxWin .wps img{height:min(38vw,170px);filter:drop-shadow(0 10px 18px rgba(0,0,0,.4));animation:fxPop .6s 1.45s cubic-bezier(.2,.9,.3,1.25) both}
+/* VS */
+.fxL.vs{background:linear-gradient(115deg,rgba(124,58,237,.9) 0 49.6%,rgba(255,255,255,.9) 49.6% 50.4%,rgba(190,24,93,.9) 50.4%)}
+.vsWrap{display:flex;align-items:flex-end;justify-content:center;width:100%;max-width:440px;position:relative}
+.vsA,.vsB{flex:1;display:flex;flex-direction:column;align-items:center;min-width:0}
+.vsA>img,.vsB>img{width:min(42vw,190px);filter:drop-shadow(0 12px 18px rgba(0,0,0,.35))}
+.vsA{animation:vsInA .5s cubic-bezier(.2,.9,.3,1.2) both}.vsB{animation:vsInB .5s .1s cubic-bezier(.2,.9,.3,1.2) both}
+.vsB>img{transform:scaleX(-1)}
+.vsWrap .fxName{max-width:44vw;font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vsX{position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);font-family:"Secular One",Heebo,sans-serif;font-size:4.2rem;color:#ffe7a8;text-shadow:0 4px 0 #5b21b6,0 0 24px rgba(255,231,168,.8);animation:vsX .5s .45s cubic-bezier(.2,.9,.3,1.6) both;z-index:3}
+.vsT{margin-top:14px}.vsBub{margin-top:12px;animation-delay:.7s}
+.vsBub:after{display:none}
+@keyframes vsInA{from{transform:translateX(120%) scale(.6);opacity:0}to{transform:none;opacity:1}}
+@keyframes vsInB{from{transform:translateX(-120%) scale(.6);opacity:0}to{transform:none;opacity:1}}
+@keyframes vsX{0%{transform:translate(-50%,-50%) scale(3) rotate(-20deg);opacity:0}100%{transform:translate(-50%,-50%) scale(1) rotate(-6deg);opacity:1}}
+/* touch: pair leaning in */
+.tPair{display:flex;justify-content:center;align-items:flex-end}.tPair img{width:min(40vw,170px);filter:drop-shadow(0 10px 16px rgba(0,0,0,.3))}
+.tPair img:first-child{animation:leanA 1s .1s ease-out both}.tPair img:last-child{transform:scaleX(-1);animation:leanB 1s .1s ease-out both}
+@keyframes leanA{from{transform:translateX(30%);opacity:0}to{transform:translateX(-6%) rotate(4deg);opacity:1}}
+@keyframes leanB{from{transform:scaleX(-1) translateX(30%);opacity:0}to{transform:scaleX(-1) translateX(-6%) rotate(4deg);opacity:1}}
+/* hero */
+.gateLogo{font-size:2.9rem;margin:var(--s3) 0 var(--s2)}
+.hero{position:relative;height:clamp(140px,27vh,240px);display:flex;justify-content:center;align-items:flex-end;margin:0 auto;max-width:360px;transition:opacity .25s,transform .25s}
+.hero.swap{opacity:0;transform:scale(.92)}
+.hero:before{content:"";position:absolute;bottom:0;left:10%;right:10%;height:20px;border-radius:50%;background:radial-gradient(closest-side,rgba(91,33,182,.16),transparent)}
+.hero img{height:100%;width:auto;max-width:50%;object-fit:contain;transform-origin:50% 100%;position:relative;filter:drop-shadow(0 8px 10px rgba(60,30,90,.18))}
+.hero .hb{transform:scaleX(-1)}
+.hero.anim .ha{animation:fxPop .8s cubic-bezier(.2,.9,.3,1.25) both,heroSway 3.2s 1s ease-in-out infinite}
+.hero.anim .hb{animation:heroPopB .8s .18s cubic-bezier(.2,.9,.3,1.25) both,heroHop 2.6s 1.2s ease-in-out infinite}
+.hero .hh{position:absolute;font-size:1.3rem;top:35%;left:50%;opacity:0;pointer-events:none}
+.hero.anim .hh{animation:heroHeart 2.6s ease-out infinite}
+.hero .hh:nth-of-type(2){animation-delay:.9s;left:44%}.hero .hh:nth-of-type(3){animation-delay:1.7s;left:56%}
+.hero .hbub{position:absolute;z-index:3;background:#fff;border:1.5px solid #e7def2;border-radius:16px;padding:4px 10px;font-weight:800;font-size:.9rem;color:#2b1d3a;box-shadow:0 4px 12px rgba(60,30,90,.12);white-space:nowrap;opacity:0}
+.hero .hbub.a{right:0;top:4%}.hero .hbub.b{left:0;top:14%}
+.hero.anim .hbub{animation:heroBub 6.5s infinite}.hero.anim .hbub.a{animation-delay:1s}.hero.anim .hbub.b{animation-delay:3.6s}
+@keyframes heroPopB{0%{transform:scaleX(-1) translateY(60%) scale(.3);opacity:0}35%{transform:scaleX(-1) scale(1.14,.86);opacity:1}55%{transform:scaleX(-1) scale(.93,1.08)}75%{transform:scaleX(-1) scale(1.03,.98)}100%{transform:scaleX(-1)}}
+@keyframes heroSway{0%,100%{transform:rotate(0) scale(1,1)}25%{transform:rotate(-1.6deg) scale(1.01,.99)}50%{transform:rotate(0) scale(.99,1.015)}75%{transform:rotate(1.4deg)}}
+@keyframes heroHop{0%,62%,100%{transform:scaleX(-1)}70%{transform:scaleX(-1) scale(1.06,.92)}78%{transform:scaleX(-1) translateY(-8%) scale(.96,1.05)}86%{transform:scaleX(-1) scale(1.04,.96)}92%{transform:scaleX(-1)}}
+@keyframes heroHeart{0%{transform:translate(-50%,0) scale(.4);opacity:0}20%{opacity:1}100%{transform:translate(-50%,-90px) scale(1.1) rotate(12deg);opacity:0}}
+@keyframes heroBub{0%{opacity:0;transform:scale(.4) translateY(8px)}6%,40%{opacity:1;transform:none}48%,100%{opacity:0;transform:translateY(-6px)}}
+@media (max-height:700px){.gateLogo{font-size:2.4rem;margin:var(--s2) 0 var(--s1)}.gateBox{padding:var(--s3);margin:var(--s2) 0}.hero{height:clamp(130px,25vh,200px)}}
+@media (prefers-reduced-motion:reduce){.fxL,.fxL *{animation-duration:.01s!important;animation-iteration-count:1!important;animation-delay:0s!important}.hero *{animation:none!important}.hero .hh,.hero .hbub{display:none}}
+body.noanim .hero *{animation:none!important}body.noanim .hero .hh,body.noanim .hero .hbub{display:none}
+/* avatars */
+.avi{width:1.9em;height:1.9em;border-radius:50%;flex:0 0 auto;background:#fff;border:2.5px solid var(--rc,#fff);box-shadow:0 2px 6px rgba(43,29,58,.18);object-fit:cover}
+.avi.ph{display:inline-flex;align-items:center;justify-content:center;background:var(--soft);color:var(--mut);font-weight:900}
+.pchip .avi{width:2.1em;height:2.1em}
+.pchip[data-i],.pl[data-i]{cursor:pointer}
+.nt .nav{width:1.3em;height:1.3em;border-radius:50%;vertical-align:-.28em;margin-inline-end:.22em;background:#fff;border:1.5px solid #fff}
+.tok{overflow:hidden;padding:0}.tok img{width:100%;height:100%;border-radius:50%;object-fit:cover;background:#fff}
+.rlb{display:inline-block;margin-top:3px;font-size:.82rem;font-weight:800;color:#831843;background:#fdf2f8;border:1px solid #fbcfe8;border-radius:99px;padding:1px 8px;white-space:nowrap}
+.pl .rlb{margin-top:2px}
+/* setup character rows */
+.chList{display:grid;gap:var(--s2);margin-top:var(--s2)}
+.chRow{display:flex;align-items:center;gap:var(--s3);width:100%;min-height:56px;background:#fff;color:var(--ink);border:1.5px solid #d8cbe9;border-radius:16px;padding:6px var(--s3);text-align:right;box-shadow:none;font-size:1.05rem}
+.chRow .avi{width:44px;height:44px}
+.chRow .cn{flex:1;min-width:0;font-weight:900;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.chRow .cn small{display:block;font-weight:600;font-size:.9rem;color:var(--mut)}
+.chRow .cs{font-size:.92rem;font-weight:800;color:#6d28d9;flex:0 0 auto}
+.chRow.remote{border-style:dashed;opacity:1}.chRow.remote .cs{color:var(--mut)}
+.charBox{border-inline-start:4px solid #7c3aed}
+.myChar{display:flex;align-items:center;gap:var(--s2);flex-wrap:wrap;font-size:1.1rem;margin-top:var(--s2)}.myChar .avi{width:52px;height:52px}
+/* picker */
+.chBody{overflow:auto}
+.chHero{display:flex;align-items:center;gap:var(--s3);background:linear-gradient(135deg,#faf5ff,#fdf2f8);border-radius:18px;padding:var(--s2) var(--s3);margin-bottom:var(--s2)}
+.chHero img{width:96px;height:96px;object-fit:contain;flex:0 0 auto;animation:fxPop .5s cubic-bezier(.2,.9,.3,1.25) both}
+.chHero b{font-size:1.3rem;font-weight:900;margin-inline-end:var(--s2)}.chHero p{margin:4px 0 0;font-size:.95rem;font-weight:600;line-height:1.35;color:#3f3150}
+.kb{display:inline-block;color:#fff;font-size:.8rem;font-weight:800;border-radius:99px;padding:1px 9px;vertical-align:2px}
+.chGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:6px}
+.chOpt{display:flex;flex-direction:column;align-items:center;gap:2px;background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:14px;padding:6px 2px;min-height:44px;font-size:.82rem;font-weight:800;box-shadow:none}
+.chOpt img{width:48px;height:48px;border-radius:50%;background:var(--soft)}
+.chOpt span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.chOpt.sel,.rlOpt.sel,.topt.sel{border-color:var(--acc);background:#f6f0ff;box-shadow:0 0 0 3px rgba(124,58,237,.18)}
+.rlGrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:var(--s2)}
+.rlOpt{background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:14px;min-height:44px;padding:6px 8px;font-size:.95rem;font-weight:800;box-shadow:none;text-align:right}
+.rlLine{margin:var(--s2) 0;font-weight:700;color:#831843;background:#fdf2f8;border-radius:12px;padding:var(--s2) var(--s3);font-size:.98rem}
+.rlShow{font-size:.98rem}.rlShow.dis{opacity:.6}
+/* touch selector */
+.tsel{display:grid;gap:var(--s2);margin:var(--s2) 0}
+.topt{display:flex;align-items:center;gap:var(--s3);width:100%;text-align:right;background:#fff;color:var(--ink);border:2px solid var(--line);border-radius:16px;padding:var(--s2) var(--s3);min-height:56px;box-shadow:none;font-size:1.05rem}
+.topt .ti{font-size:1.6rem;flex:0 0 auto}.topt b{display:block}.topt small{display:block;font-weight:500;font-size:.95rem;color:var(--mut)}
+.tline{font-size:.95rem;font-weight:700;color:#701a75;background:#fdf4ff;border-radius:12px;padding:var(--s2) var(--s3)}
+.setRow{justify-content:center}.setRow>*{flex:0 0 auto;min-width:64px}
+.ctext.noav .nav{display:none}.anb{min-width:46px}
+
+</style>
 </head>
 <body>
 <div class="roomBar" id="roomBar" onclick="roomInfo()"></div>
@@ -311,8 +432,9 @@ body.paused:has(#sParty.on) .pauseOv{display:flex}
 
 <!-- age gate -->
 <section class="screen on" id="sGate">
-  <div class="logo">טופ<br><small>או</small><br>בוטום</div><div class="pride"></div>
-  <div class="box center"><div class="h2">🔞 תוכן למבוגרים בלבד</div>משחק מיני ומפורש לגברים בגירים, שכולם רוצים לשחק.<br>כניסה רק אם כל המשתתפים בני 18 ומעלה.</div>
+  <div class="logo gateLogo">טופ <small>או</small> בוטום</div><div class="pride"></div>
+  <div class="hero" id="hero" role="img" aria-label="שתי דמויות מפלרטטות"></div>
+  <div class="box center gateBox"><div class="h2">🔞 תוכן למבוגרים בלבד</div>משחק מיני ומפורש לגברים בגירים, שכולם רוצים לשחק.<br>כניסה רק אם כל המשתתפים בני 18 ומעלה.</div>
   <div class="row"><button class="btn" onclick="gateOk()">כולנו בני 18+ וזה בהסכמה</button><button class="btn2" style="flex:0 0 32%" onclick="location.href='https://www.google.com'">יציאה</button></div>
 </section>
 
@@ -323,7 +445,7 @@ body.paused:has(#sParty.on) .pauseOv{display:flex}
     <div class="onbTrack" id="onbTrack">
       <div class="onbS" aria-label="1 מתוך 3"><div class="oic">🃏</div><div class="otx"><b>שולפים, מבצעים, צוחקים</b><p>בתורך שולפים קלף: שאלה, אתגר, הצבעה או דו־קרב. כל קלף שבוצע נספר לפרסים של סוף הערב.</p></div></div>
       <div class="onbS" aria-label="2 מתוך 3"><div class="oic">💚</div><div class="otx"><b>תמיד אפשר לסרב</b><p>3 פאסים לכל אחד, ואחר כך עונש לבחירה. הכל אופציונלי. 🛑 ״אדום״ עוצר הכל, בלי שאלות.</p></div></div>
-      <div class="onbS" aria-label="3 מתוך 3"><div class="oic">✨</div><div class="otx"><b>חדש הערב</b><p>🔥 מגע מיני בהסכמה, שכל אחד בוחר בפרטיות · 🌡️ חום שעולה במהלך הערב · ⚙️ פאנל ניהול למארח · 📸 שיתוף הפרסים</p></div></div>
+      <div class="onbS" aria-label="3 מתוך 3"><div class="oic">✨</div><div class="otx"><b>חדש הערב</b><p>🎭 13 דמויות לבחירה, ופרופיל ״בחיים האמיתיים״ (רק אם בא לך) · 🎬 רגעים מונפשים: דו־קרב, תופים ועונשים · 🔥 מגע בהסכמה, כל אחד בוחר בסוד</p></div></div>
     </div>
     <div class="onbNav"><button class="btn3" id="onbSkip" onclick="onbDone()">דלג</button><div class="dots" id="onbDots"><i class="on"></i><i></i><i></i></div><button class="btn" id="onbNext" onclick="onbNext()">הבא</button></div>
   </div>
@@ -336,6 +458,7 @@ body.paused:has(#sParty.on) .pauseOv{display:flex}
   <button class="mbtn" style="--mc:#2563eb" onclick="partySetup('regular')"><span class="mi">🎉</span><span class="mt2">מסיבה<small>פלרטטני ומצחיק, 3–10 חברים</small></span></button>
   <button class="mbtn prideB" style="--mc:#9333ea" onclick="partySetup('bold')"><span class="mi">🔥</span><span class="mt2">מסיבה נועזת<small>חצוף ונועז במיוחד, 3–12 חברים</small></span></button>
   <button class="btn2 full mt" id="installBtn" hidden onclick="pwaInstall()">📲 להוסיף למסך הבית</button>
+  <div class="row mt setRow"><button class="btn2 fxb" onclick="toggleFx()">🔊</button><button class="btn2 anb" onclick="toggleAnim()">✨</button></div>
 </section>
 
 <!-- host room -->
@@ -387,6 +510,7 @@ body.paused:has(#sParty.on) .pauseOv{display:flex}
   <div class="logo" style="font-size:2.3rem">✅ אתה בחדר</div><div class="pride"></div>
   <div class="box center"><div class="small">חדר</div><div class="codeBig" id="wCode">----</div><div id="wType" class="small"></div></div>
   <div class="box"><div class="h2">👥 מי בחדר</div><div class="plist" id="wList"></div></div>
+  <div class="box charBox"><div class="h2">🎭 הדמות שלי</div><div class="myChar" id="wChar"></div><button class="btn2 full mt" onclick="clientChar()">🎭 לבחור דמות ופרופיל</button></div>
   <div class="box consBox"><div class="h2">🔒 הגבולות שלי</div><div class="small">אם המארח יפעיל ״מגע מיני״ במסיבה, קלף מגע יגיע רק לשניים שבחרו בזה. אף אחד לא רואה מה בחרת, ואפשר לשנות בכל רגע.</div><div class="myCons" id="wCons"></div><button class="btn2 full mt" onclick="consMine()">🔒 לבחור בפרטיות</button></div>
   <div class="box center" style="font-size:1.15rem">⏳ מחכים שהמארח יבחר מצב ויתחיל…</div>
   <button class="btn2 full" onclick="leaveRoom()">✖ יציאה מהחדר</button>
@@ -399,12 +523,18 @@ body.paused:has(#sParty.on) .pauseOv{display:flex}
   <textarea id="pNames" rows="6" placeholder="שם בכל שורה"></textarea>
   <div id="spiceWrap"><label for="pSpice">רמת פלפל</label><select id="pSpice"><option value="2">הכל: 🌶️ + 🌶️🌶️</option><option value="1">רק 🌶️ פיקנטי (חימום)</option><option value="3">רק 🌶️🌶️ נועז + מיני־משחקים, חוקים ועונשים</option></select></div>
   <label class="chk" style="align-items:flex-start;margin-top:var(--s4)"><input type="checkbox" id="pNoAlc" style="margin-top:3px"> <span><b>🚫🥃 מצב בלי אלכוהול</b><br><span class="small">במקום שוט: צ׳ייסר חריף, לימון או משקה מגעיל שהקבוצה מרכיבה</span></span></label></div>
+  <div class="box charBox"><div class="h2">🎭 מי אתה הערב?</div><div class="small">כל שחקן בוחר דמות, ואם בא לו, גם מה הוא בחיים האמיתיים. לא בוחרים? נגריל לכם 🎲</div><div class="chList" id="pChList"></div></div>
   <div class="box touchBox">
-    <label class="chk tchk"><input type="checkbox" id="pTouch" onchange="touchSetupUI()"> <span><b>🔥 מגע מיני בין המשתתפים</b><br><span class="small">כבוי כברירת מחדל. כל אחד בוחר לבד ובפרטיות, וקלף מגע מצוות רק שניים ששניהם אמרו כן.</span></span></label>
+    <div class="h2" id="tSelLbl">🔥 מגע בין השחקנים?</div>
+    <div class="tsel" id="tSel" role="radiogroup" aria-labelledby="tSelLbl">
+      <button type="button" class="topt sel" data-t="0" role="radio" aria-checked="true" onclick="tSel(0)"><span class="ti">🙅</span><span><b>בלי מגע</b><small>רק צחוק, פלירטוט ודרמה</small></span></button>
+      <button type="button" class="topt" data-t="1" role="radio" aria-checked="false" onclick="tSel(1)"><span class="ti">💋</span><span><b>עד נשיקות ומגע קל</b><small>נשיקות, חיבוקים, עיסוי</small></span></button>
+      <button type="button" class="topt" data-t="2" role="radio" aria-checked="false" onclick="tSel(2)"><span class="ti">🔥</span><span><b>עד מגע מיני מלא</b><small>גם מגע מיני, רק למי שרוצה</small></span></button>
+    </div>
+    <div class="tline">🤫 כל אחד בוחר בסוד את הגבול שלו, ומגע קורה רק בין מי ששניהם רוצים.</div>
+    <input type="checkbox" id="pTouch" hidden onchange="touchSetupUI()" aria-hidden="true" tabindex="-1"><select id="pTouchMax" hidden aria-hidden="true" tabindex="-1" onchange="touchSetupUI()"><option value="1">💋 עד נשיקות ומגע קל</option><option value="2" selected>🔥 עד מגע מיני מלא</option></select>
     <div id="touchMore" hidden>
-      <label for="pTouchMax">עד איפה הערב יכול להגיע?</label>
-      <select id="pTouchMax" onchange="touchSetupUI()"><option value="1">💋 נשיקות ומגע קל</option><option value="2" selected>🔥 עד מגע מיני מלא</option></select>
-      <div class="h3">🔒 כל אחד בוחר לבד</div>
+      <div class="h3">🔒 עכשיו כל אחד בוחר בסוד</div>
       <div class="small" id="pConsHint">כל שחקן לוחץ על השם שלו כשאף אחד לא מסתכל, ובוחר. ברירת המחדל היא ״בלי מגע״.</div>
       <div class="consList" id="pConsList"></div>
       <div class="small mt">💚 קלפי המגע מתחממים עם הערב: נשיקות קודם, ומגע מלא רק כשהחום עולה. ״לא״ תמיד בסדר, וכל קלף מגע אפשר לדלג בלי עונש.</div>
@@ -433,7 +563,7 @@ body.paused:has(#sParty.on) .pauseOv{display:flex}
   <div data-mir><button class="btn" id="pDraw" onclick="partyDraw()">שלוף קלף 🃏</button></div>
   <div class="log" id="pLog"></div>
   <button class="consBtn" id="pConsBtn" onclick="consMine()" style="display:none">🔒 הגבולות שלי במגע <small>פרטי · אפשר לשנות בכל רגע</small></button>
-  <div class="bar"><button class="btn2" data-mir id="pPenBtn" onclick="openPen(P.turn,null)">🎯 עונשים</button><button class="btn2" onclick="openPRules()">📜 חוקים</button><button class="btn2 fxb" onclick="toggleFx()">🔊</button><button class="btn2 hostonly" id="pCtlBtn" onclick="openCtl()">⚙️ ניהול</button></div>
+  <div class="bar"><button class="btn2" data-mir id="pPenBtn" onclick="openPen(P.turn,null)">🎯 עונשים</button><button class="btn2" onclick="openPRules()">📜 חוקים</button><button class="btn2 fxb" onclick="toggleFx()">🔊</button><button class="btn2 anb" onclick="toggleAnim()">✨</button><button class="btn2 hostonly" id="pCtlBtn" onclick="openCtl()">⚙️ ניהול</button></div>
 </section>
 <section class="screen win" id="sPEnd">
   <div class="logo" style="font-size:2.6rem">👑 סוף הערב</div>
@@ -446,6 +576,7 @@ body.paused:has(#sParty.on) .pauseOv{display:flex}
 </section>
 <div class="modal" id="pRulesModal" onclick="if(event.target===this)this.classList.remove('on')"><div class="rulesBox rules"><div class="prulesBody"></div><button class="btn full mt" onclick="document.getElementById('pRulesModal').classList.remove('on')">סגור</button></div></div>
 <div class="pauseOv" id="pauseOv" role="dialog" aria-label="הפסקה"><div class="pauseBox"><div class="pic">⏸</div><div class="h2">הפסקה קטנה</div><div>ממלאים כוסות, שותים מים, נושמים. ממשיכים עוד רגע.</div><button class="btn full mt hostonly" onclick="pPause(false)">▶ ממשיכים</button></div></div>
+<div class="modal" id="chModal" onclick="if(event.target===this)chClose()"><div class="card" id="chEl" style="max-width:480px"></div></div>
 <div class="modal" id="consModal" onclick="if(event.target===this)consClose()"><div class="card" id="consEl" style="max-width:440px"></div></div>
 <div class="modal" id="ctlModal" onclick="if(event.target===this)this.classList.remove('on')"><div class="card" id="ctlEl" style="max-width:480px"></div></div>
 <div class="modal" id="penModal"><div class="card" id="penEl" data-mir style="max-width:440px"></div></div>
@@ -512,7 +643,8 @@ body.paused:has(#sParty.on) .pauseOv{display:flex}
   <div class="box">
     <div class="row"><div><label for="n1">שחקן 1 (מתחיל)</label><input id="n1" placeholder="שם" maxlength="14"></div>
     <div><label for="n2">שחקן 2</label><input id="n2" placeholder="שם" maxlength="14"></div></div>
-    <label for="firstTop">מי הטופ בהתחלה?</label>
+    <div class="h3 mt">🎭 הדמויות שלכם <span class="small">(לחיצה לשינוי)</span></div><div class="chList" id="sChList"></div>
+    <label for="firstTop">מי הטופ בהתחלה? <span class="small">(במשחק, לא בחיים 😉)</span></label>
     <select id="firstTop"><option value="0">שחקן 1</option><option value="1">שחקן 2</option></select>
     <label for="startZone">רמת התחלה</label>
     <select id="startZone"><option value="0">מההתחלה: חימום 🔥</option><option value="12">ישר ללוהט 🔥🔥</option></select>
@@ -583,7 +715,7 @@ body.paused:has(#sParty.on) .pauseOv{display:flex}
     <button class="btn" id="rollBtn" onclick="roll()">זרוק קובייה</button>
   </div>
   <div class="log" id="log"></div>
-  <div class="bar"><button class="btn2" onclick="openRules()">📜 חוקים</button><button class="btn2 fxb" onclick="toggleFx()">🔊</button><button class="btn2 hostonly" onclick="if(confirm('להתחיל משחק חדש?'))newGame()">↺ משחק חדש</button></div>
+  <div class="bar"><button class="btn2" onclick="openRules()">📜 חוקים</button><button class="btn2 fxb" onclick="toggleFx()">🔊</button><button class="btn2 anb" onclick="toggleAnim()">✨</button><button class="btn2 hostonly" onclick="if(confirm('להתחיל משחק חדש?'))newGame()">↺ משחק חדש</button></div>
 </section>
 
 <!-- win -->
@@ -704,7 +836,7 @@ function startGame(){
   S={exp:COUPLE_EXP,names:[n1,n2],pos:[sp,sp],pass:[3,3],top:+$('firstTop').value,turn:0,skip:[0,0],
      decks:{1:shuffle(idxs(c=>c.z===1)),2:shuffle(idxs(c=>c.z===2)),3:shuffle(idxs(c=>c.z===3)),0:shuffle(idxs(c=>c.z===0))},
      last:null,rules:[],st:{done:[0,0],pass:[0,0],sync:0,syncTry:0,swaps:0,t0:Date.now(),cards:0},log:'🥃 מוזגים 2 צ׳ייסרים (או מתנשקים), ו'+esc(n1)+' זורק ראשון.',over:false};
-  save();resetTok();show('sGame');render();mpAssign();
+  S.ch=chArr([n1,n2]);S.rl=rlArr([n1,n2]);save();resetTok();show('sGame');render();mpAssign();
 }
 function draw(z){if(!S.decks[z].length)S.decks[z]=shuffle(idxs(c=>c.z===z));return S.decks[z].shift()}
 
@@ -726,7 +858,7 @@ function layoutTok(){
   const area=$('bArea');const sq1=area.querySelector('.sq');if(!sq1)return;const sz=sq1.offsetWidth;
   for(const p of [0,1]){
     const pos=shown[p]===null?S.pos[p]:shown[p];const t=tokEl(p);
-    t.style.background=PC[p];t.innerHTML=initial(S.names[p]);t.title=S.names[p];
+    t.style.background=PC[p];const tid=(S.ch&&S.ch[p])||'topi';if(t.dataset.ch!==tid){t.innerHTML=`<img src="${avSrc(tid)}" alt="">`;t.dataset.ch=tid}t.title=S.names[p];
     t.style.setProperty('--ts',Math.round(Math.max(26,sz*.5))+'px');
     const el=pos<=0?$('startPad'):area.querySelector(`.sq[data-i="${pos}"]`);if(!el)continue;
     const other=shown[1-p]===null?S.pos[1-p]:shown[1-p];const same=other===pos;
@@ -751,11 +883,11 @@ function placeTokens(){
   layoutTok();
 }
 window.addEventListener('resize',()=>{layoutTok();fitAll(true)});
-function ensureS(){if(!S.rules)S.rules=[];if(!S.st)S.st={done:[0,0],pass:[0,0],sync:0,syncTry:0,swaps:0,t0:Date.now(),cards:0}}
+function ensureS(){v5Ensure(S);if(!S.rules)S.rules=[];if(!S.st)S.st={done:[0,0],pass:[0,0],sync:0,syncTry:0,swaps:0,t0:Date.now(),cards:0}}
 function render(){
   buildBoard();ensureS();
   $('gRules').innerHTML=S.rules.map(r=>`<div class="rchip"><span class="rt">⏳ ${withNames(esc(r.x))}</span><span class="rl">עוד ${r.left} ${r.left===1?'תור':'תורות'}</span></div>`).join('');
-  $('hud').innerHTML=[0,1].map(i=>{const top=S.top===i;return `<div class="pl ${S.turn===i?'turn':''}" style="--pc:${PC[i]}">${S.turn===i?'<span class="turnTag">🎲 התור</span>':''}<div class="nm"><span class="av" style="background:${PC[i]}">${initial(S.names[i])}</span>${esc(S.names[i])}</div>
+  $('hud').innerHTML=[0,1].map(i=>{const top=S.top===i;return `<div class="pl ${S.turn===i?'turn':''}" data-i="${i}" style="--pc:${PC[i]}">${S.turn===i?'<span class="turnTag">🎲 התור</span>':''}<div class="nm">${avImg(S.ch[i],PC[i])}${esc(S.names[i])}</div>${rlBadge(S.rl[i])}
    <span class="role ${top?'top':''}">${top?'👑 טופ':'🫦 בוטום'}</span>
    <div class="meta">✋ ${S.pass[i]} פאסים · 📍 ${S.pos[i]||'התחלה'}${S.skip[i]?' · ⏸ מדלג':''}</div></div>`}).join('');
   $('rollBtn').innerHTML='🎲 זרוק: '+esc(S.names[S.turn]);
@@ -778,6 +910,7 @@ function land(p,to,from){
   if(k==='F'){return win(p)}
   if(from<13&&to>=13&&k!=='G'&&to<25||from<25&&to>=25&&k!=='G'){return gatePassed(p,to)}
   if(k==='C')return showCard(p,draw(zoneOf(to)));
+  if(k==='G'){fxPlay('heat',{t:'🚪 '+ZN[zoneOf(to)]+' '+FL[zoneOf(to)]})}
   if(k==='G')return info('🚪 שער! אזור '+ZN[zoneOf(to)]+' '+FL[zoneOf(to)],'נכנסתם לאזור חם יותר. '+nt(S.names[0],PC[0])+' ו־'+nt(S.names[1],PC[1])+' מורידים פריט לבוש, ואז שולפים קלף.','לשלוף קלף',()=>showCard(p,draw(zoneOf(to))));
   if(k==='S'){S.top=1-S.top;S.st.swaps++;render();return info('🔄 החלפה!','מעכשיו '+nt(S.names[S.top],PC[S.top])+' הטופ 👑<br>ו־'+nt(S.names[1-S.top],PC[1-S.top])+' הבוטום 🫦','לשלוף קלף',()=>showCard(p,draw(zoneOf(to))))}
   if(k==='L')return showCard(p,draw(0));
@@ -786,7 +919,7 @@ function land(p,to,from){
   if(k==='D'){const t=Math.max(0,to-3);S.pos[p]=t;render();return info('⬇️ ירידה!',nt(S.names[p],PC[p])+' יורד 3 משבצות אחורה, למשבצת '+t+'.','לשלוף קלף',()=>showCard(p,draw(zoneOf(Math.max(t,1)))))}
   showCard(p,draw(zoneOf(to)));
 }
-function gatePassed(p,to){const z=zoneOf(to);info('🚪 עברתם שער: '+ZN[z]+' '+FL[z],nt(S.names[0],PC[0])+' ו־'+nt(S.names[1],PC[1])+' מורידים פריט לבוש.','המשך',()=>{const k=DATA.board[to];S.pos[p]=to;
+function gatePassed(p,to){const z=zoneOf(to);fxPlay('heat',{t:'🚪 '+ZN[z]+' '+FL[z]});info('🚪 עברתם שער: '+ZN[z]+' '+FL[z],nt(S.names[0],PC[0])+' ו־'+nt(S.names[1],PC[1])+' מורידים פריט לבוש.','המשך',()=>{const k=DATA.board[to];S.pos[p]=to;
   if(k==='S'){S.top=1-S.top;S.st.swaps++;render()} if(k==='L')return showCard(p,draw(0)); if(k==='H')return info('🥃 צ׳ייסר!',nt(S.names[0],PC[0])+' ו־'+nt(S.names[1],PC[1])+' שותים, או נשיקה של 10 שניות.','סיימנו ✔',endTurn);
   if(k==='U'||k==='D'){const t=Math.max(0,Math.min(36,to+(k==='U'?3:-3)));S.pos[p]=t;render();if(t>=36)return win(p)}
   showCard(p,draw(zoneOf(S.pos[p])))})}
@@ -833,8 +966,8 @@ function showCard(p,ci){
     endTurn()};
   if(c.t==='sy')$('mBtn').onclick=()=>{close();S.st.syncTry++;S.st.cards++;S.log=`❌ לא התאמתם: ${SYMISS[z]||SYMISS[1]}`;endTurn(true)};
   if(passBtn){
-    $('pBtn').onclick=()=>{if(!S.pass[p])return;S.pass[p]--;S.st.pass[p]++;close();S.log=`✋ ${esc(S.names[p])} השתמש בפאס. בלי שאלות.`;endTurn(true)};
-    if($('rBtn'))$('rBtn').onclick=()=>{close();S.pos[p]=Math.max(0,S.pos[p]-2);S.log=`🙅 ${esc(S.names[p])} ויתר וחזר 2 משבצות. זה בסדר גמור.`;endTurn(true)};
+    $('pBtn').onclick=()=>{if(!S.pass[p])return;S.pass[p]--;S.st.pass[p]++;close();S.log=`✋ ${esc(S.names[p])} השתמש בפאס. בלי שאלות.`;endTurn(true);fxPlay('skip',{w:fxWho(p)})};
+    if($('rBtn'))$('rBtn').onclick=()=>{close();S.pos[p]=Math.max(0,S.pos[p]-2);S.log=`🙅 ${esc(S.names[p])} ויתר וחזר 2 משבצות. זה בסדר גמור.`;endTurn(true);fxPlay('skip',{w:fxWho(p),line:'2 משבצות אחורה, אבל עם סטייל 💅'})};
   }
 }
 function applyLuck(p,ci){
@@ -864,7 +997,7 @@ function win(p){
   $('fants').innerHTML=f.map(i=>`<div class="fant" onclick="document.querySelectorAll('.fant').forEach(e=>e.classList.remove('sel'));this.classList.add('sel')">👑 ${esc(CARDS[i].x)}</div>`).join('')+
    `<div class="small" style="margin:8px 0">${esc(S.names[1-p])} מגשים את מה שנבחר. גבולות הערב עדיין בתוקף.</div>`;
   $('wSum').innerHTML=coupleSummary(p);
-  show('sWin');
+  show('sWin');fxPlay('cheers',{t:'👑 '+S.names[p]+' ניצח!'});
 }
 function coupleSummary(w){ensureS();const st=S.st,n=S.names;const mins=Math.max(1,Math.round((Date.now()-st.t0)/60000));
   const aw=[];
@@ -883,7 +1016,7 @@ function safeWord(){
 let COUPLE_EXP=false;
 function coupleSetup(exp){COUPLE_EXP=exp;CARDS=exp?DATA.cards.concat(EXP):DATA.cards;
   if(MP.role==='host'){const n=mpNames();$('n1').value=n[0]||'';$('n2').value=n[1]||'';if(n.length>2)toast('במצב זוגי משחקים רק 2 הראשונים')}
-  show('sSetup')}
+  show('sSetup');coupleCharUI()}
 
 /* ---------- auto-fit text ---------- */
 function fitText(el,force){
@@ -915,7 +1048,7 @@ function openPRules(){fillPRules(P?P.kind:PKIND);$('pRulesModal').classList.add(
 function partySetup(kind){PKIND=kind;$('pTitle').textContent=PTITLE[kind];$('spiceWrap').style.display=kind==='bold'?'block':'none';
   $('pNamesLbl').textContent=`שמות השחקנים (3–${PMAX[kind]}), אחד בכל שורה`;
   if(MP.role==='host')$('pNames').value=mpNames().join('\n');
-  fillPRules(kind);show('sPSetup');touchSetupUI()}
+  fillPRules(kind);show('sPSetup');touchSetupUI();partyCharUI()}
 function partyStart(){
   const PD=PDECKS[PKIND];
   const names=$('pNames').value.split(/\n|,/).map(s=>s.trim()).filter(Boolean).slice(0,PMAX[PKIND]);
@@ -923,7 +1056,7 @@ function partyStart(){
   const sp=PKIND==='bold'?+$('pSpice').value:2;
   const ids=PD.cards.map((c,i)=>[c,i]).filter(([c])=>sp===2||(sp===1?c.h===1:(c.h===2||['mg','ru','pen','vi','du'].includes(c.t)))).map(([,i])=>i);
   const tmax=$('pTouch').checked?+$('pTouchMax').value:0;
-  P=newP(PKIND,names,ids,{noAlc:$('pNoAlc').checked,sp,tmax,cons:names.map(n=>consFor(n))});
+  P=newP(PKIND,names,ids,{noAlc:$('pNoAlc').checked,sp,tmax,cons:names.map(n=>consFor(n))});P.ch=chArr(names);P.rl=rlArr(names);
   $('pGameTitle').textContent=PTITLE[PKIND]+(P.noAlc?' · 🚫🥃':'');
   show('sParty');pRender();mpAssign();
 }
@@ -932,13 +1065,13 @@ function pc(i){return PCOL[i%PCOL.length]}
 function pSave(){if(MP.role==='client')return;try{localStorage.setItem('tob_pstate',JSON.stringify(P))}catch(e){}}
 function ensureP(){const z=()=>P.names.map(()=>0);['streak','best','votes','duel','used','cons','tdone'].forEach(k=>{if(!P[k])P[k]=z()});if(!P.vir)P.vir=[];if(P.cur===undefined)P.cur=null;if(!P.t0)P.t0=Date.now();
   /* v4 defaults (older saved games load with touch off) */
-  if(!P.touch)P.touch={max:0};if(!P.tdeck)P.tdeck=[];if(P.heatAdj===undefined)P.heatAdj=0;if(P.played===undefined)P.played=Math.max(0,(P.total||0)-(P.deck?P.deck.length:0));if(P.tgap===undefined)P.tgap=0;if(P.paused===undefined)P.paused=false;if(!P.sp)P.sp=2}
+  if(!P.touch)P.touch={max:0};if(!P.tdeck)P.tdeck=[];if(P.heatAdj===undefined)P.heatAdj=0;if(P.played===undefined)P.played=Math.max(0,(P.total||0)-(P.deck?P.deck.length:0));if(P.tgap===undefined)P.tgap=0;if(P.paused===undefined)P.paused=false;if(!P.sp)P.sp=2;v5Ensure(P)}
 function newP(kind,names,ids,o){const z=()=>names.map(()=>0);
   return {v:4,kind,noAlc:!!o.noAlc,sp:o.sp||2,names:names.slice(),pass:names.map(()=>3),pens:z(),done:z(),turn:0,deck:heatSort(kind,ids,0),rule:null,log:'',total:ids.length,over:false,streak:z(),best:z(),votes:z(),duel:z(),used:z(),vir:[],cur:null,t0:Date.now(),
     touch:{max:o.tmax||0},cons:(o.cons||z()).slice(),tdeck:shuffle((PDECKS[kind].touch||[]).map((c,i)=>i)),tdone:z(),heatAdj:0,played:0,tgap:0,paused:false}}
 function pRender(){
   ensureP();
-  $('pPlayers').innerHTML=P.names.map((n,i)=>`<div class="pchip ${P.turn===i?'turn':''}"><div class="nm"><span class="av" style="background:${pc(i)};width:1.5em;height:1.5em">${initial(n)}</span> ${esc(n)}${P.streak[i]>=2?`<span class="stk" title="רצף">🔥${P.streak[i]}</span>`:''}</div><div class="st">✋ ${P.pass[i]} &nbsp;🎯 ${P.pens[i]} &nbsp;✔ ${P.done[i]}</div></div>`).join('');
+  $('pPlayers').innerHTML=P.names.map((n,i)=>`<div class="pchip ${P.turn===i?'turn':''}" data-i="${i}" title="לחיצה: דמות ופרופיל"><div class="nm">${avImg(P.ch[i],pc(i))} ${esc(n)}${P.streak[i]>=2?`<span class="stk" title="רצף">🔥${P.streak[i]}</span>`:''}</div><div class="st">✋ ${P.pass[i]} &nbsp;🎯 ${P.pens[i]} &nbsp;✔ ${P.done[i]}</div>${rlBadge(P.rl[i])}</div>`).join('');
   $('pVir').innerHTML=P.vir.map(v=>`<div class="rchip vi"><span class="rt">🪄 ${nt(P.names[v.p],pc(v.p))} ${pWithNames(esc(alc(v.x)),v.p)}</span><span class="rl">עוד ${Math.ceil(v.left/P.names.length)} ${Math.ceil(v.left/P.names.length)===1?'סיבוב':'סיבובים'}</span></div>`).join('');
   $('pTurn').innerHTML=`התור של ${nt(P.names[P.turn],pc(P.turn))}<div class="small" style="margin-top:4px">נשארו ${P.deck.length} מתוך ${P.total} קלפים</div>`;
   $('pRule').style.display=P.rule?'block':'none';if(P.rule)$('pRule').innerHTML='👑 <b>חוק פעיל:</b> '+esc(P.rule);
@@ -956,7 +1089,7 @@ function partyDraw(){
   ensureP();if(P.paused)return;
   if(!P.deck.length)return partyEnd();
   P.played++;P.tgap++;
-  const tp=touchMaybe();if(tp)return touchDraw(tp);
+  const tp=touchMaybe();if(tp)return touchDraw(tp);const ro=rlMaybe();if(ro)return rlDraw(ro);
   const PD=PDk();const ci=P.deck.shift();const c=PD.cards[ci];const p=P.turn;
   if(c.t==='ru')P.rule=c.x;
   const sp=P.kind==='bold'?' '+'🌶️'.repeat(c.h):'';
@@ -981,6 +1114,7 @@ function partyDraw(){
   $('cardEl').style.animation='none';void $('cardEl').offsetWidth;$('cardEl').style.animation='';
   $('modal').classList.add('on');pSave();buzz(15);
   if(c.s)bindTimer(c.s);
+  if(c.t==='du')fxPlay('duel',{a:fxWho(p),b:fxWho(o)});
   if(wheelBtn)$('wBtn').onclick=()=>openPen(p,null,c.x.startsWith('גלגל'));
   const close=()=>{clearInterval(timerI);$('modal').classList.remove('on')};
   const done=()=>{P.done[p]++;P.streak[p]++;if(P.streak[p]>P.best[p])P.best[p]=P.streak[p];
@@ -991,7 +1125,7 @@ function partyDraw(){
     done();
     if(c.t==='vi'){P.vir.push({x:c.x,p,left:(c.n||2)*n});P.log=`🪄 ${esc(P.names[p])} תחת כישוף!`}
     P.cur=null;pNext()};
-  if($('pBtn'))$('pBtn').onclick=()=>{if(!P.pass[p])return;P.pass[p]--;P.used[p]++;P.streak[p]=0;P.cur=null;close();P.log=`✋ ${esc(P.names[p])} השתמש בפאס.`;pNext()};
+  if($('pBtn'))$('pBtn').onclick=()=>{if(!P.pass[p])return;P.pass[p]--;P.used[p]++;P.streak[p]=0;P.cur=null;close();P.log=`✋ ${esc(P.names[p])} השתמש בפאס.`;pNext();fxPlay('skip',{w:fxWho(p)})};
   if($('sBtn'))$('sBtn').onclick=()=>{P.streak[p]=0;P.cur=null;close();openPen(p,()=>pNext())};
   if(c.t==='du')[0,1].forEach(k=>$('w'+k).onclick=()=>{const w=k?o:p,l=k?p:o;P.duel[w]++;P.cur=null;close();if(w===p)done();
     P.log=`⚔️ ${esc(P.names[w])} ניצח בדו־קרב!`;buzz([30,40,30]);beep(784,.15);openPen(l,()=>pNext())});
@@ -1012,7 +1146,7 @@ function voteKeyLocal(){/* single device or moderator: every tap = one finger; "
 function castVote(key,t){if(!P||!P.cur||P.cur.t!=='ml'||P.cur.rev)return;if(!(t>=0&&t<P.names.length))return;P.cur.v[key]=t;buzz(10);refreshVote()}
 function refreshVote(){const e=$('vPanel');if(!e)return;e.innerHTML=voteHTML();bindVote();pSave()}
 function bindVote(){document.querySelectorAll('#vPanel .vbtn').forEach(b=>b.onclick=()=>{if(MP.role==='client')return;castVote(voteKeyLocal(),+b.dataset.v)});
-  const r=$('vRev');if(r)r.onclick=()=>{voteTally();refreshVote();buzz([30,60,30]);beep(659,.12);setTimeout(()=>beep(880,.2),120)}}
+  const r=$('vRev');if(r)r.onclick=()=>{voteTally();refreshVote();fxVote();buzz([30,60,30]);beep(659,.12);setTimeout(()=>beep(880,.2),120)}}
 function voteTally(){if(!P.cur||P.cur.rev)return;const cnt=voteCounts();cnt.forEach((v,i)=>P.votes[i]+=v);P.cur.rev=true}
 function alc(s){if(!P||!P.noAlc)return s;return s.replace(/חצי כוס/g,'חצי כוס מיץ').replace(/שוטים/g,'צ׳ייסרים חריפים').replace(/שוט/g,'צ׳ייסר חריף')}
 function penMenu(){
@@ -1038,6 +1172,7 @@ function openPen(p,cb,direct){
   $('penClose').onclick=()=>{$('penModal').classList.remove('on');if(penCb){const f=penCb;penCb=null;f()}};
 }
 function penResult(title,txt){
+  fxPlay('pen',{w:fxWho(penP),t:title});
   $('penEl').innerHTML=penBand(title)+`<div class="body"><div class="who" style="margin-top:0">🎯 ${nt(P.names[penP],pc(penP))}</div><div class="ctext fit" data-max="40" style="height:34vh">${txt}</div><button class="btn" id="penOk" style="width:100%">בוצע ✔</button></div>`;
   $('penOk').onclick=()=>{$('penModal').classList.remove('on');P.pens[penP]++;P.log=`🎯 ${esc(P.names[penP])} לקח עונש: ${title}`;if(penCb){const f=penCb;penCb=null;f()}else pRender()};
 }
@@ -1074,7 +1209,7 @@ function showWheel(){
       if(r===2){const cs=PD.cards.filter(c=>c.t==='ch');txt+=': '+pWithNames(esc(alc(cs[Math.floor(Math.random()*cs.length)].x)),penP)}
       if(r===3)txt+='. רק תוכן שאתה בסדר שיראו, בלי אנשים אחרים ובלי לחשוף אף אחד. לא בא לך? בוחרים עונש אחר.';
       if(r===0&&na)txt+=' (טבסקו במים, לימון, או משקה מגעיל)';
-      $('wRes').innerHTML='🎯 '+nt(P.names[penP],pc(penP))+' · '+txt;$('spin').textContent='בוצע ✔';$('spin').disabled=false;
+      $('wRes').innerHTML='🎯 '+nt(P.names[penP],pc(penP))+' · '+txt;fxPlay('pen',{w:fxWho(penP),t:'🎡 '+seg[r]});$('spin').textContent='בוצע ✔';$('spin').disabled=false;
       $('spin').onclick=()=>{$('penModal').classList.remove('on');P.pens[penP]++;P.log=`🎡 ${esc(P.names[penP])}: ${esc(seg[r])}`;if(penCb){const f=penCb;penCb=null;f()}else pRender()};
     },3300);
   };
@@ -1087,7 +1222,7 @@ function partyEnd(){
   $('modal').classList.remove('on');$('penModal').classList.remove('on');P.over=true;pSave();
   ensureP();
   $('pStats').innerHTML=partyAwards();
-  show('sPEnd');
+  show('sPEnd');fxPlay('cheers',{t:'🏅 סוף הערב!'});
 }
 function openRules(){$('rulesModal').classList.add('on')}
 
@@ -1105,10 +1240,11 @@ function partyAwards(){
   const played=P.done.reduce((a,b)=>a+b,0);
   let h=`<div class="sumRow"><span>⏱ ${mins} דק׳</span><span>🃏 ${played} קלפים</span><span>👥 ${N.length} שחקנים</span></div>`;
   h+=A.map(([ic,t,arr,why])=>{const ix=tops(arr);return ix.length&&ix.length<N.length||ix.length===1?awardHTML(ic,t,who(ix),why(arr[ix[0]])):''}).join('');
+  h+=rlAwards().map(([ic,t,w,why])=>awardHTML(ic,t,who(w),why)).join('');
   h+=`<details class="stats"><summary>📊 כל הנתונים</summary>`+N.map((n,i)=>`<div class="srow">${nt(n,pc(i))}<span>✔ ${P.done[i]} · ✋ ${P.used[i]} · 🎯 ${P.pens[i]} · 🗳️ ${P.votes[i]}</span></div>`).join('')+`</details>`;
   return h}
 /* ---------- v4: consensual touch cards, heat, host panel, onboarding, share, replay, PWA ---------- */
-const TL={0:{ic:'🙅',n:'בלי מגע',d:'אף קלף מגע לא יגיע אליי'},1:{ic:'💋',n:'נשיקות ומגע קל',d:'נשיקות, חיבוקים, עיסוי, ישיבה על הברכיים'},2:{ic:'🔥',n:'מגע מיני מלא',d:'גם מגע מיני, מעל הבגדים ומתחתם'}};
+const TL={0:{ic:'🙅',n:'בלי מגע',d:'הערב אני נהנה מהדרמה מהצד, וזה מושלם'},1:{ic:'💋',n:'עד נשיקות ומגע קל',d:'נשיקות, חיבוקים, עיסוי, ישיבה על הברכיים'},2:{ic:'🔥',n:'עד מגע מיני מלא',d:'גם מגע מיני, מעל הבגדים ומתחתם'}};
 const TH1=8,TH2=40;           /* heat needed for touch level 1 / level 2 */
 let SETCONS={};               /* setup-time private choices of players on THIS device, by normalised name */
 function cl(v){v=+v;return v>=2?2:v>=1?1:0}
@@ -1133,6 +1269,7 @@ function heatAdjust(d){ensureP();P.heatAdj=Math.max(-40,Math.min(60,(P.heatAdj||
 /* ---- render hooks ---- */
 function v4Render(){if(!P)return;
   const h=$('pHeat');if(h)h.innerHTML=heatHTML(pHeat());
+  {const hv=pHeat(),st=heatStage(hv),si=['🧊','🙂','🔥','🌋'].indexOf(st[0]);if(P.hst===undefined||si<P.hst)P.hst=si;else if(si>P.hst){P.hst=si;if(MP.role!=='client'&&curScreen()==='sParty')setTimeout(()=>fxPlay('heat',{t:st[0]+' '+st[1]+'!'}),350)}}
   const cb=$('pConsBtn');if(cb){const on=!!(P.touch&&P.touch.max);const vis=on&&(MP.role!=='client'?localNames(P.names).length>0:MP.you>=0);cb.style.display=vis?'':'none'}
   document.body.classList.toggle('paused',!!P.paused);
   $('pDraw').disabled=!!P.paused}
@@ -1141,8 +1278,9 @@ function v4WaitUI(){const e=$('wCons');if(!e)return;const v=myCons();const L=TL[
 /* ---- setup screen (single device or host) ---- */
 function localNames(names){const r=remoteSet();return names.filter(n=>!r.has(norm(n)))}
 function setupNames(){return $('pNames').value.split(/\n|,/).map(s=>s.trim()).filter(Boolean).slice(0,PMAX[PKIND])}
+function tSel(v){v=cl(v);$('pTouch').checked=v>0;if(v)$('pTouchMax').value=String(v);buzz(10);touchSetupUI()}
 function touchSetupUI(){
-  const on=$('pTouch').checked;$('touchMore').hidden=!on;
+  const on=$('pTouch').checked;$('touchMore').hidden=!on;const tv=on?cl($('pTouchMax').value):0;document.querySelectorAll('#tSel .topt').forEach(b=>{const s=+b.dataset.t===tv;b.classList.toggle('sel',s);b.setAttribute('aria-checked',s)});
   $('pTouchRule').innerHTML=on?'<b>מגע מיני רק בין שניים שבחרו בזה, כל אחד בפרטיות.</b> ״לא״ תמיד בסדר, ואפשר לשנות בחירה בכל רגע.':'אין מגע מיני בין שחקנים בגלל קלף.';
   if(!on)return;
   const names=setupNames(),r=remoteSet();
@@ -1156,10 +1294,10 @@ document.addEventListener('input',e=>{if(e.target&&e.target.id==='pNames'&&$('pT
 /* ---- private chooser ---- */
 let consCb=null;
 function openCons(name,cur,cb){consCb=cb;const mx=P&&P.touch&&curScreen()==='sParty'?P.touch.max:2;
-  $('consEl').innerHTML=`<div class="band" style="background:#5b21b6">🔒 ${esc(name)}: רק אתה מסתכל</div><div class="body">
-   <div class="h2" style="margin:var(--s2) 0">מה מתאים לך הלילה?</div>
+  $('consEl').innerHTML=`<div class="band" style="background:#5b21b6">🤫 ${esc(name)}, רק אתה מסתכל 👀</div><div class="body">
+   <div class="h2" style="margin:var(--s2) 0">עד איפה בא לך הלילה?</div>
    ${[0,1,2].map(v=>`<button class="copt ${v===cur?'sel':''}" data-v="${v}" aria-pressed="${v===cur}"><span class="ci">${TL[v].ic}</span><span><b>${TL[v].n}</b><small>${TL[v].d}${v===2&&mx===1?' · הערב מוגבל כרגע לנשיקות':''}</small></span></button>`).join('')}
-   <div class="small" style="margin-top:var(--s2)">💚 אף אחד לא רואה מה בחרת. קלף מגע מצוות רק שניים ששניהם אמרו כן, ואפשר לשנות בכל רגע.</div>
+   <div class="small" style="margin-top:var(--s2)">🤫 הסוד שמור אצלך. מגע קורה רק בין שניים ששניהם בחרו בזה, ואפשר לשנות דעה בכל רגע, בלי הסברים. 💚</div>
    <button class="btn2 full mt" onclick="consClose()">ביטול</button></div>`;
   $('consEl').querySelectorAll('.copt').forEach(b=>b.onclick=()=>{const v=+b.dataset.v;const f=consCb;consClose();buzz(20);if(f)f(v)});
   $('consModal').classList.add('on')}
@@ -1212,7 +1350,7 @@ function touchDraw(t){
    <div class="cbtns tcb"><button class="btn" id="dBtn">🔥 בוצע</button><button class="btn2" id="nBtn">🙅 לא הפעם</button><button class="btn2" id="sBtn">🎯 עונש במקום</button></div>
    <div class="cnote tnote">💚 ״לא״ זה תמיד בסדר. כל אחד מכם יכול לדלג, בלי הסבר ובלי עונש.</div></div>`;
   $('cardEl').style.animation='none';void $('cardEl').offsetWidth;$('cardEl').style.animation='';
-  $('modal').classList.add('on');pSave();buzz([15,40,15]);
+  $('modal').classList.add('on');pSave();buzz([15,40,15]);fxPlay('touch',{a:fxWho(t.a),b:fxWho(t.b)});
   if(c.s)bindTimer(c.s);
   const close=()=>{clearInterval(timerI);$('modal').classList.remove('on')};
   $('dBtn').onclick=()=>{close();[t.a,t.b].forEach(i=>{P.done[i]++;P.tdone[i]++});P.cur=null;P.log=`🔥 ${esc(P.names[t.a])} ו־${esc(P.names[t.b])} עשו את זה!`;beep(784,.15);pNext()};
@@ -1246,8 +1384,8 @@ function openCtl(){if(!P||MP.role==='client')return;ensureP();const h=pHeat(),st
   $('cEnd').onclick=()=>{if(confirm('לסיים את הערב ולראות תוצאות?')){$('ctlModal').classList.remove('on');partyEnd()}};
   $('cClose').onclick=()=>$('ctlModal').classList.remove('on')}
 function pPause(on){if(!P)return;P.paused=!!on;if(on){clearInterval(timerI)}P.log=on?'⏸ הפסקה':'▶ ממשיכים!';buzz(20);pRender()}
-const PARR=['pass','pens','done','streak','best','votes','duel','used','cons','tdone'];
-function pAdd(n){ensureP();P.names.push(n);PARR.forEach(k=>P[k].push(k==='pass'?3:k==='cons'?consFor(n):0));P.log=`👋 ${esc(n)} הצטרף למשחק`;mpAssign();pRender()}
+const PARR=['pass','pens','done','streak','best','votes','duel','used','cons','tdone','ch','rl'];
+function pAdd(n){ensureP();P.names.push(n);PARR.forEach(k=>P[k].push(k==='pass'?3:k==='cons'?consFor(n):k==='ch'?chArr(P.names,P.ch.concat(null)).pop():k==='rl'?rlArr([n])[0]:0));P.log=`👋 ${esc(n)} הצטרף למשחק`;mpAssign();pRender()}
 function pRemove(i){ensureP();if(P.names.length<=3){toast('צריך לפחות 3 שחקנים');return}
   const n=P.names[i];
   if(P.cur&&((P.cur.t==='tc'&&(P.cur.a===i||P.cur.b===i))||(P.cur.t==='du'&&(P.cur.o===i||P.cur.p===i))||P.cur.p===i)){P.cur=null;clearInterval(timerI);$('modal').classList.remove('on')}
@@ -1262,7 +1400,7 @@ function pRemove(i){ensureP();if(P.names.length<=3){toast('צריך לפחות 3
 function partyReplay(){if(!P)return;const o=P;const PD=PDECKS[o.kind];
   const ids=PD.cards.map((c,i)=>[c,i]).filter(([c])=>o.sp===2||(o.sp===1?c.h===1:(c.h===2||NEU.includes(c.t)))).map(([,i])=>i);
   const seen=new Set(ids.filter(i=>!o.deck.includes(i)));
-  P=newP(o.kind,o.names,ids,{noAlc:o.noAlc,sp:o.sp,tmax:o.touch?o.touch.max:0,cons:o.cons});
+  P=newP(o.kind,o.names,ids,{noAlc:o.noAlc,sp:o.sp,tmax:o.touch?o.touch.max:0,cons:o.cons});P.ch=(o.ch||[]).slice();P.rl=(o.rl||[]).slice();
   P.deck=P.deck.filter(i=>!seen.has(i)).concat(P.deck.filter(i=>seen.has(i)));  /* unseen cards first */
   $('pGameTitle').textContent=PTITLE[P.kind]+(P.noAlc?' · 🚫🥃':'');show('sParty');pRender();mpAssign();
   toast(P.touch.max?'🔁 סיבוב חדש! הבחירות הפרטיות נשמרו, ואפשר לשנות בכל רגע':'🔁 סיבוב חדש, אותם שחקנים')}
@@ -1317,6 +1455,194 @@ function pwaInit(){
   if('serviceWorker' in navigator&&/^https?:$/.test(location.protocol)&&!/[?&]nosw\b/.test(location.search))navigator.serviceWorker.register('sw.js').catch(()=>{})}
 function v4Init(){try{onbInit()}catch(e){}try{pwaInit()}catch(e){}}
 setTimeout(v4Init,0);
+/* ---------- v5: characters (original 3D-style mascots) ---------- */
+const CH=[
+ {id:'topi',n:'טופי',k:'דוב',t:'דוב גדול, לב רך, רתמה צמודה. מחבק חזק ולא מתנצל.',c:'#7c4a1e'},
+ {id:'boti',n:'בוטי',k:'טוויסט',t:'קטן, ורוד ותמיד מוכן לקפוץ על ההזדמנות.',c:'#db2777'},
+ {id:'hunk',n:'חתיכי',k:'האנק',t:'אני לא מתאמן בשביל הבריאות, מותק. אני מתאמן בשבילך.',c:'#1f2937'},
+ {id:'otter',n:'לוטרי',k:'לוטרה',t:'שעיר בדיוק במידה, שובב בלי שום מידה.',c:'#0f766e'},
+ {id:'cub',n:'גורי',k:'גור',t:'דוב בהתהוות. מחפש מישהו גדול שיגדל אותי.',c:'#b45309'},
+ {id:'daddy',n:'דדי מוטי',k:'דדי',t:'תקרא לי דדי, ואני כבר אדאג לחשבון.',c:'#475569'},
+ {id:'jock',n:'ג׳וקי',k:'ספורטאי',t:'בא לשחק, ולא רק בכדור. מספר 69, לא במקרה.',c:'#b91c1c'},
+ {id:'leather',n:'עורי',k:'לות׳ר',t:'קשוח מבחוץ, קאפקייק מבפנים.',c:'#111827'},
+ {id:'drag',n:'מיס גליטרה',k:'דראג קווין',t:'אני לא דרמטית. אני כל הדרמה.',c:'#be185d'},
+ {id:'nerd',n:'חנוני',k:'גיק חמוד',t:'מכיר את כל התנוחות. תיאורטית. מחפש מתנדב לחלק המעשי.',c:'#047857'},
+ {id:'chub',n:'חיבוקי',k:'צ׳אב',t:'יותר לחבק, יותר לאהוב, יותר קוקטיילים.',c:'#c2410c'},
+ {id:'tattoo',n:'דיזל',k:'מקועקע',t:'יש לי קעקוע במקום שתצטרך להרוויח.',c:'#374151'},
+ {id:'pretty',n:'יפיוף',k:'פרטי בוי',t:'יפה מדי בשביל לסדר את המיטה. או לצאת ממנה.',c:'#7e22ce'}];
+const CHI={};CH.forEach((c,i)=>CHI[c.id]=i);
+/* ---------- v5: characters, real-life profile, mascot moments (fx), hero ---------- */
+const RL={top:['🍆','טופ','אוהב לחדור, להוביל ולהיות למעלה. גם במעלית.'],
+ vtop:['🍆','ורס טופ','בעיקר חודר, אבל עם הבחור הנכון מוכן להתגמש.'],
+ vers:['🔄','ורסטייל','חודר, נחדר, מה שבא. העיקר שיהיה כיף לשניים.'],
+ vbot:['🍑','ורס בוטום','בעיקר אוהב להיחדר, אבל לפעמים בא לו לנהוג.'],
+ bottom:['🍑','בוטום','אוהב להיחדר ולהתפנק. מנהל את העניינים מלמטה.'],
+ side:['🤲','סייד','בלי חדירות, עם המון כל השאר: ידיים, פה ודמיון.'],
+ und:['🤷','עוד לא החלטתי','עדיין בטסט דרייב. פתוח להצעות.'],
+ none:['🤐','לא מספר','ג׳נטלמן לא מספר. גם לא בוטום.'],
+ hide:['🤫','סוד','בחר, אבל שומר את זה לעצמו. מסתורי.']};
+const RLK=['top','vtop','vers','vbot','bottom','side','und','none'];
+function rlPub(r,sh){r=RL[r]?r:'none';if(r==='none'||r==='hide')return r;return sh===false?'hide':r}
+let PROF={};try{PROF=JSON.parse(localStorage.getItem('tob_prof')||'{}')||{}}catch(e){PROF={}}
+function profSave(){try{localStorage.setItem('tob_prof',JSON.stringify(PROF))}catch(e){}}
+const AUTOCH={};
+function chOk(id){return CHI[id]!==undefined}
+function profOf(n){const k=norm(n);if(typeof MP!=='undefined'&&MP.prof&&MP.prof[k])return MP.prof[k];return PROF[k]||null}
+function chArr(names,prev){const taken=new Set();const out=names.map((n,i)=>{const p=profOf(n);const c=p&&chOk(p.c)?p.c:(prev&&chOk(prev[i])?prev[i]:null);if(c)taken.add(c);return c});
+  return out.map((c,i)=>{if(c)return c;const k=norm(names[i]);let a=AUTOCH[k];if(!a||taken.has(a)){const free=CH.map(x=>x.id).filter(id=>!taken.has(id));a=free.length?free[Math.floor(Math.random()*free.length)]:CH[i%CH.length].id;AUTOCH[k]=a}taken.add(a);return a})}
+function rlArr(names,prev){return names.map((n,i)=>{const p=profOf(n);return p&&p.rl?rlPub(p.rl):(prev&&prev[i]?rlPub(prev[i]):'none')})}
+function v5Ensure(G){if(!G||!G.names)return;if(!Array.isArray(G.ch)||G.ch.length!==G.names.length)G.ch=chArr(G.names,G.ch);if(!Array.isArray(G.rl)||G.rl.length!==G.names.length)G.rl=rlArr(G.names,G.rl)}
+function curG(){const s=typeof curScreen==='function'?curScreen():'';if((s==='sGame'||s==='sWin')&&S)return S;if(P&&(s==='sParty'||s==='sPEnd'))return P;return P||S||null}
+function chOfName(n){const G=curG();if(!G||!G.ch)return null;const k=norm(String(n).replace(/[()]/g,''));const i=G.names.findIndex(x=>norm(x)===k);return i>=0?G.ch[i]:null}
+function avSrc(id){return `img/c/${chOk(id)?id:'topi'}-a.webp`}
+function avImg(id,col,cls){return `<img class="${cls||'avi'}" src="${avSrc(id)}" alt="" style="--rc:${col||'#fff'}">`}
+function rlBadge(r){if(!r||r==='none'||!RL[r])return '';return `<span class="rlb" title="בחיים: ${RL[r][1]}">${RL[r][0]} ${r==='hide'?'סוד':RL[r][1]}</span>`}
+/* name tag with avatar (parenthesised mentions inside card text stay plain) */
+function nt(name,color){const s=String(name);const id=s[0]==='('?null:chOfName(s);return `<span class="nt" style="--c:${color}">${id?`<img class="nav" src="${avSrc(id)}" alt="">`:''}${esc(s)}</span>`}
+
+/* ---- setup lists (party + couple) ---- */
+function charRows(names,remote){return names.map(n=>{const k=norm(n),rem=remote&&remote.has(k);const p=profOf(n);const id=(p&&chOk(p.c))?p.c:(AUTOCH[k]||null);const c=id?CH[CHI[id]]:null;
+  return `<button class="chRow ${rem?'remote':''}" data-n="${esc(n)}" ${rem?'disabled':''}>${id?avImg(id,c.c):'<span class="avi ph">?</span>'}<span class="cn">${esc(n)}<small>${c?esc(c.n)+' · '+esc(c.k):''}${p&&p.rl&&p.rl!=='none'?' · '+RL[p.rl][0]:''}</small></span><span class="cs">${rem?'📱 בוחר מהטלפון':p?'✏️ לשנות':'🎭 לבחור'}</span></button>`}).join('')}
+function partyCharUI(){const e=$('pChList');if(!e)return;const names=setupNames();chArr(names);const r=remoteSet();
+  e.innerHTML=names.length?charRows(names,r):'<div class="small">קודם כותבים שמות למעלה 👆</div>';
+  e.querySelectorAll('.chRow:not(.remote)').forEach(b=>b.onclick=()=>openChar(b.dataset.n))}
+function coupleNames(){return [$('n1').value.trim()||'שחקן 1',$('n2').value.trim()||'שחקן 2']}
+function coupleCharUI(){const e=$('sChList');if(!e)return;const names=coupleNames();chArr(names);const r=remoteSet();e.innerHTML=charRows(names,r);
+  e.querySelectorAll('.chRow:not(.remote)').forEach(b=>b.onclick=()=>openChar(b.dataset.n))}
+document.addEventListener('input',e=>{const id=e.target&&e.target.id;if(id==='pNames'){clearTimeout(partyCharUI.t);partyCharUI.t=setTimeout(partyCharUI,250)}if(id==='n1'||id==='n2'){clearTimeout(coupleCharUI.t);coupleCharUI.t=setTimeout(coupleCharUI,250)}});
+
+/* ---- the picker (character + real life) ---- */
+let chCb=null,chSel=null;
+function openChar(name,cb,cur){chCb=cb||((v,n)=>profSet(n,v));const p=cur||profOf(name)||{};const k=norm(name);
+  chSel={n:name,c:chOk(p.c)?p.c:(AUTOCH[k]||CH[0].id),rl:p.rl&&p.rl!=='hide'?p.rl:'none',sh:p.rl!=='hide',wasHide:p.rl==='hide'};chDraw();$('chModal').classList.add('on')}
+function chDraw(){const s=chSel,c=CH[CHI[s.c]],r=RL[s.rl];
+  $('chEl').innerHTML=`<div class="band" style="background:linear-gradient(135deg,#6d28d9,#be185d)">🎭 ${esc(s.n)}: מי אתה הערב?</div><div class="body chBody">
+   <div class="chHero"><img src="img/c/${c.id}.webp" alt=""><div><b>${esc(c.n)}</b><span class="kb" style="background:${c.c}">${esc(c.k)}</span><p>״${esc(c.t)}״</p></div></div>
+   <div class="chGrid" role="radiogroup" aria-label="בחירת דמות">${CH.map(x=>`<button class="chOpt ${x.id===s.c?'sel':''}" role="radio" aria-checked="${x.id===s.c}" data-c="${x.id}"><img src="${avSrc(x.id)}" alt=""><span>${esc(x.n)}</span></button>`).join('')}</div>
+   <div class="h3 mt">🍑 ובחיים האמיתיים? <span class="small">(רשות)</span></div>
+   <div class="small">זה לא קשור ל״הטופ״ ול״הבוטום״ של הקלפים. רק בשביל הצחוק, ורק אם בא לך.</div>
+   <div class="rlGrid" role="radiogroup" aria-label="בחיים האמיתיים">${RLK.map(x=>`<button class="rlOpt ${x===s.rl?'sel':''}" role="radio" aria-checked="${x===s.rl}" data-r="${x}">${RL[x][0]} ${RL[x][1]}</button>`).join('')}</div>
+   <div class="rlLine">${s.wasHide&&s.rl==='none'?'🤫 כרגע שמור אצלך בסוד. אפשר לבחור מחדש.':'״'+esc(r[2])+'״'}</div>
+   <label class="chk rlShow ${s.rl==='none'?'dis':''}"><input type="checkbox" id="rlSh" ${s.sh?'checked':''} ${s.rl==='none'?'disabled':''}> <span>👀 להציג את זה ליד השם שלי <span class="small">(אחרת: ״🤫 סוד״, ואף אחד לא יודע)</span></span></label>
+   <div class="cbtns"><button class="btn" id="chOk">שמור ✔</button><button class="btn2" id="chNo">ביטול</button></div></div>`;
+  const E=$('chEl');E.querySelectorAll('.chOpt').forEach(b=>b.onclick=()=>{chSel.c=b.dataset.c;buzz(10);chDraw()});
+  E.querySelectorAll('.rlOpt').forEach(b=>b.onclick=()=>{chSel.rl=b.dataset.r;chSel.wasHide=false;buzz(10);chDraw()});
+  $('rlSh').onchange=e=>{chSel.sh=e.target.checked};
+  $('chNo').onclick=chClose;
+  $('chOk').onclick=()=>{const s=chSel;const rl=s.wasHide&&s.rl==='none'?'hide':rlPub(s.rl,s.sh);const f=chCb;chClose();buzz(20);if(f)f({c:s.c,rl},s.n);else{PROF[norm(s.n)]={c:s.c,rl};profSave()}}}
+function chClose(){$('chModal').classList.remove('on');chCb=null}
+/* save into the device store + live game (single device / host) */
+function profSet(name,v){PROF[norm(name)]=v;profSave();profApply(name,v)}
+function profApply(name,v){const k=norm(name);[P,S].forEach(G=>{if(!G||!G.names)return;v5Ensure(G);const i=G.names.findIndex(n=>norm(n)===k);if(i>=0){G.ch[i]=v.c;G.rl[i]=v.rl}});
+  const s=curScreen();if(s==='sParty'&&P)pRender();if(s==='sGame'&&S){render();save()}if(s==='sPSetup')partyCharUI();if(s==='sSetup')coupleCharUI()}
+/* in-game: tap your own chip to change character */
+function myCharLocal(i){const G=curG();if(!G)return;v5Ensure(G);const n=G.names[i];openChar(n,(v,nm)=>profSet(nm,v),{c:G.ch[i],rl:G.rl[i]})}
+/* phone (client) */
+function myProf(){try{const j=JSON.parse(localStorage.getItem('tob_myprof')||'null');if(j&&chOk(j.c))return j}catch(e){}return null}
+function clientChar(){const cur=myProf();openChar(MP.name||'אני',(v)=>{try{localStorage.setItem('tob_myprof',JSON.stringify(v))}catch(e){};mpSend({t:'prof',c:v.c,rl:v.rl});v5WaitUI();toast('🎭 נשמר! כולם יראו את הדמות שלך')},cur||undefined)}
+function v5WaitUI(){const e=$('wChar');if(!e)return;const p=myProf();if(!p){e.innerHTML='<span class="small">עוד לא בחרת. אם לא תבחר, נגריל לך דמות 🎲</span>';return}const c=CH[CHI[p.c]];
+  e.innerHTML=`${avImg(c.id,c.c)} <b>${esc(c.n)}</b> <span class="small">${esc(c.k)}</span> ${rlBadge(p.rl)}`}
+function hostProf(c,d){if(!d||!chOk(d.c))return;const v={c:d.c,rl:rlPub(d.rl)};MP.prof=MP.prof||{};MP.prof[norm(c._name)]=v;profApply(c._name,v);broadcast(true)}
+
+/* ---- real-life cards (party) ---- */
+const RLC=[
+ {g:'top',x:'👑 {X} הטופ של החבורה בחיים. לסיבוב אחד הוא עושה כל מה שהשחקן מימינו אומר לו (בגבולות הטעם הטוב). נראה אותך מקבל הוראות, מלך.'},
+ {g:'top',x:'🍆 {X}, תדגים בידיים בלבד איך טופ אמיתי מתחיל את הערב. הקבוצה נותנת ציון מ־1 עד 10.'},
+ {g:'bot',x:'🍑 {X} בוטום גאה. לסיבוב אחד הוא הבוס: מי שפונה אליו חייב לקרוא לו ״אדוני״.'},
+ {g:'bot',x:'🍑 {X}, תן לקבוצה את שלושת הטיפים הכי חשובים שלך לבוטום מתחיל. מותר בפנטומימה.'},
+ {g:'vers',x:'🔄 {X} ורסטייל. כולם מצביעים על 3: הלילה הוא יותר טופ או יותר בוטום? הוא מחליט אם לאשר.'},
+ {g:'vers',x:'🔄 {X}, ספר מה מחליט אצלך מי למעלה: מצב רוח, גובה, או מי הביא את הקונדומים?'},
+ {g:'side',x:'🤲 {X} סייד. ספר לקבוצה מה הדבר הכי שווה שאפשר לעשות בלי חדירה. נקודות על פרטים.'},
+ {g:'und',x:'🤷 {X} עוד לא החליט. הקבוצה עושה לו ״מבחן התאמה״: 3 שאלות מצחיקות, ובסוף פסק דין.'},
+ {g:'hide',x:'🕵️ {X} שומר בסוד מה הוא בחיים. כולם מנחשים על 3: טופ, בוטום או ורסטייל? {X} מחליט אם לגלות. לא בא לו? שומר על המסתורין ומקבל מחיאות כפיים.'},
+ {g:'pair',x:'🔁 החלפת תפקידים: {X} (טופ בחיים) ו־{Y} (בוטום בחיים) מחקים אחד את השני עד התור הבא של {X}: הליכה, קול ומבט.'}];
+function rlGroup(r){return r==='top'||r==='vtop'?'top':r==='bottom'||r==='vbot'?'bot':r}
+function rlMaybe(){ensureP();v5Ensure(P);P.rlgap=(P.rlgap||0)+1;if(P.rlgap<6||Math.random()>.3)return null;
+  const used=P.rlused||[];const G=P.rl.map(rlGroup);
+  const opts=[];RLC.forEach((c,k)=>{if(used.includes(k))return;
+    if(c.g==='pair'){const t=G.map((g,i)=>[g,i]).filter(x=>x[0]==='top').map(x=>x[1]),b=G.map((g,i)=>[g,i]).filter(x=>x[0]==='bot').map(x=>x[1]);if(t.length&&b.length)opts.push({k,x:t[Math.floor(Math.random()*t.length)],y:b[Math.floor(Math.random()*b.length)]});return}
+    const who=G.map((g,i)=>[g,i]).filter(x=>x[0]===c.g).map(x=>x[1]);if(who.length)opts.push({k,x:who[Math.floor(Math.random()*who.length)]})});
+  if(!opts.length)return null;const o=opts[Math.floor(Math.random()*opts.length)];return o}
+function rlDraw(o){const c=RLC[o.k];P.rlgap=0;P.rlused=(P.rlused||[]).concat(o.k);const p=P.turn,X=o.x;
+  const txt=esc(c.x).replace(/\{X\}/g,nt(P.names[X],pc(X))).replace(/\{Y\}/g,o.y!==undefined?nt(P.names[o.y],pc(o.y)):'');
+  P.cur=null;
+  $('cardEl').innerHTML=`<div class="band" style="background:#9d174d">🎭 בחיים האמיתיים</div><div class="body">
+   <div class="who" style="margin-top:0">🎯 ${nt(P.names[X],pc(X))}${o.y!==undefined?' + '+nt(P.names[o.y],pc(o.y)):''} · רק בשביל הצחוק</div><div class="ctext fit">${txt}</div>
+   <div class="cbtns"><button class="btn" id="dBtn">בוצע ✔</button><button class="btn2" id="nBtn">🙅 לא מתאים לי</button></div>
+   <div class="cnote">💚 אף אחד לא חייב לספר כלום. ״לא מתאים לי״ = הלאה, בלי עונש.</div></div>`;
+  $('cardEl').style.animation='none';void $('cardEl').offsetWidth;$('cardEl').style.animation='';
+  $('modal').classList.add('on');pSave();buzz(15);
+  const close=()=>{$('modal').classList.remove('on')};
+  $('dBtn').onclick=()=>{close();P.done[X]++;if(o.y!==undefined)P.done[o.y]++;P.rlx=(P.rlx||P.names.map(()=>0));P.rlx[X]=(P.rlx[X]||0)+1;P.log=`🎭 ${esc(P.names[X])} הוכיח שהוא יודע מה הוא אוהב`;pNext()};
+  $('nBtn').onclick=()=>{close();P.log='🙅 דילגנו. הכל טוב 💚';pNext()}}
+
+/* ---- awards from the real-life profile ---- */
+function rlAwards(){if(!P||!P.rl)return [];const out=[];const best=(grp,ic,t,why)=>{const ix=P.names.map((n,i)=>i).filter(i=>rlGroup(P.rl[i])===grp&&P.done[i]>0);if(!ix.length)return;const m=Math.max(...ix.map(i=>P.done[i]));const w=ix.filter(i=>P.done[i]===m);out.push([ic,t,w,why(m)])};
+  best('bot','🍑','פאוור בוטום של הערב',v=>`בוטום שעשה ${v} קלפים. מנהל מלמטה, כמו שצריך`);
+  best('top','🍆','הטופ הכי נדיב',v=>`טופ שנתן הכל: ${v} קלפים`);
+  best('vers','🔄','גמיש של הערב',v=>`ורסטייל עם ${v} קלפים, לכל הכיוונים`);
+  return out}
+
+/* ---- mascot moments (fx) ---- */
+let ANIM=true;try{ANIM=localStorage.getItem('tob_anim')!=='0'}catch(e){}
+function animOK(){return ANIM&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)}
+function anbLabel(){document.body.classList.toggle('noanim',!ANIM);document.querySelectorAll('.anb').forEach(b=>{b.textContent=ANIM?'✨':'🚫✨';b.setAttribute('aria-label',ANIM?'אנימציות: פועל':'אנימציות: כבוי');b.title=b.getAttribute('aria-label')})}
+function toggleAnim(){ANIM=!ANIM;try{localStorage.setItem('tob_anim',ANIM?'1':'0')}catch(e){};anbLabel();heroInit();toast(ANIM?'✨ אנימציות פועלות':'🚫 אנימציות כבויות')}
+const FXL={
+ shachta:['אוי ואבוי, איזה סקנדל! 💅','שכטה? בבית של אמא שלי?! 😱','נשימה עמוקה, מלכה 💨'],
+ row:['שורה? לפחות משהו פה ישר 🏳️‍🌈','מותק, ראיתי דברים. שורה זה כלום 💅','קדימה, שורה ישרה כמו שאתה לא 😏'],
+ pen:['העונש הגיע, מאמי 😈','אף אחד לא בורח מהעונש 💅','יאללה, תעשה את זה שווה 🔥','ככה זה כשמשחקים עם הגדולים 😏'],
+ skip:['פאס? בסדר גמור. אבל כולם ראו 👀','שמרנו לך את זה לפעם הבאה 😏','מותר לברוח, חמוד. הפעם 💅','ביישן? זה דווקא חמוד 🙈'],
+ heat:['נהיה פה חם, הא? 🍆🍑','מישהו פתח מזגן? כי אני נמס 🥵','מכאן זה רק עולה, מותקים 🔥'],
+ touch:['שניכם אמרתם כן 🙈','רגע פרטי… לכולם 😏','אוי, אני מסמיק בשבילכם 💋'],
+ cheers:['לחיים, קווינז! 🥂','איזה ערב! מי מארח בפעם הבאה? 💅','אתם מושלמים. כמעט כמוני 💖'],
+ vote:['🥁 ו… הזוכה הוא…','🥁 הקהל החליט…'],duel:['מי ייצא מפה טופ? 😈','רק אחד יישאר עומד 💪']};
+function pick(a){return a[Math.floor(Math.random()*a.length)]}
+function burst(em,n,delay){return '<div class="fxBurst" aria-hidden="true">'+Array.from({length:n},(_,i)=>{const a=i/n*6.283+(i%2?.3:0),d=130+(i*37%90);return `<i style="--x:${Math.round(Math.cos(a)*d)}px;--y:${Math.round(Math.sin(a)*d-40)}px;--r:${(i*53%80)-40}deg;--d:${((delay||0)+.15+(i%4)*.06).toFixed(2)}s">${em[i%em.length]}</i>`}).join('')+'</div>'}
+function fxTag(o){return o&&o.n?`<span class="fxName" style="--c:${o.col||'#fff'}"><img src="${avSrc(o.c)}" alt="">${esc(o.n)}</span>`:''}
+function fxPlay(k,d){if(MP.role==='client')return;if(!animOK())return;
+  if(MP.role==='host'){MP.fxEv={id:Date.now()+'-'+Math.random().toString(36).slice(2,6),k,d};broadcast(true)}
+  fxShow(k,d)}
+function fxWho(i){const G=curG();if(!G)return null;v5Ensure(G);const col=G===P?pc(i):PC[i];return {n:G.names[i],c:G.ch[i],col}}
+let fxT=null;
+function fxClose(){clearTimeout(fxT);const e=document.querySelector('.fxL');if(!e)return;e.classList.add('out');setTimeout(()=>e.remove(),220)}
+function fxShow(k,d){if(!animOK())return;d=d||{};const W0={n:'',c:'topi'};if((k==='pen'||k==='skip')&&!d.w)d.w=W0;if((k==='duel'||k==='touch')&&(!d.a||!d.b))return;const old=document.querySelector('.fxL');if(old)old.remove();clearTimeout(fxT);
+  let h='',dur=2200,cls='',lbl='';
+  if(k==='pen'){const L=/שכטה/.test(d.t)?FXL.shachta:/שורה/.test(d.t)?FXL.row:FXL.pen;lbl=d.t;
+    h=`<div class="fxStage">${burst(/שכטה/.test(d.t)?['💨','😱','💅','🍑','✨','💨']:/שורה/.test(d.t)?['📏','👃','😱','💅','✨']:['😈','🔥','💅','🍑','✨'],12)}<div class="fxBub">${esc(d.line||pick(L))}</div><img class="fxPic" src="img/c/${d.w.c}-r.webp" alt="">${fxTag(d.w)}<div class="fxTitle">${esc(d.t)}</div></div>`}
+  else if(k==='skip'){dur=1700;lbl='פאס';h=`<div class="fxStage">${burst(['👀','🙈','💨','😏'],8)}<div class="fxBub">${esc(d.line||pick(FXL.skip))}</div><img class="fxPic sm" src="img/c/${d.w.c}-r.webp" alt="">${fxTag(d.w)}<div class="fxTitle">✋ פאס!</div></div>`}
+  else if(k==='vote'){dur=2600;cls='drum';lbl='תוצאות ההצבעה';const ws=d.w||[];
+    h=`<div class="fxSpot"></div><div class="fxStage hide"><img class="fxPic" src="img/drum.webp" alt=""><div class="fxDr">${esc(pick(FXL.vote))}</div></div>
+     <div class="fxWin">${ws.length?`<div class="wps">${ws.slice(0,3).map(w=>`<img src="img/c/${w.c}.webp" alt="">`).join('')}</div><div class="wl">🏆 ${d.v} ${d.v===1?'קול':'קולות'}</div><div class="wn">${ws.map(w=>esc(w.n)).join(' · ')}</div>`:'<div class="wn">אף אחד 🤷</div>'}${burst(['🎉','💜','✨','🍆','🍑'],14,1.5)}</div>`}
+  else if(k==='duel'){dur=2100;cls='vs';lbl='דו־קרב';h=`<div class="vsWrap"><div class="vsA"><img src="img/c/${d.a.c}.webp" alt="">${fxTag(d.a)}</div><div class="vsX">VS</div><div class="vsB"><img src="img/c/${d.b.c}.webp" alt="">${fxTag(d.b)}</div></div><div class="fxTitle vsT">⚔️ דו־קרב!</div><div class="fxBub vsBub">${esc(pick(FXL.duel))}</div>`}
+  else if(k==='heat'){dur=1900;lbl='חום הערב עלה';h=`<div class="fxStage">${burst(['🔥','🍆','🍑','💦','🌶️'],12)}<div class="fxBub">${esc(pick(FXL.heat))}</div><img class="fxPic" src="img/peach.webp" alt=""><div class="fxTitle">${esc(d.t||'🔥 מתחמם!')}</div></div>`}
+  else if(k==='touch'){dur=1900;cls='touch';lbl='קלף מגע';h=`<div class="fxStage">${burst(['💋','💗','💞','✨'],12)}<div class="fxBub">${esc(pick(FXL.touch))}</div><div class="tPair"><img src="img/c/${d.a.c}.webp" alt=""><img src="img/c/${d.b.c}.webp" alt=""></div><div class="fxTitle">💋 ${esc(d.a.n)} + ${esc(d.b.n)}</div></div>`}
+  else if(k==='cheers'){dur=2300;lbl='לחיים';h=`<div class="fxStage">${burst(['🥂','🎉','🏳️‍🌈','💖','✨'],14)}<div class="fxBub">${esc(pick(FXL.cheers))}</div><img class="fxPic wide" src="img/cheers.webp" alt=""><div class="fxTitle">${esc(d.t||'🏅 סוף הערב!')}</div></div>`}
+  else return;
+  const L=document.createElement('div');L.className='fxL '+cls;L.setAttribute('role','status');L.setAttribute('aria-label',lbl);L.innerHTML=h+'<div class="fxSkip">הקש כדי להמשיך</div>';
+  L.addEventListener('click',e=>{e.stopPropagation();fxClose()},true);document.body.appendChild(L);fxT=setTimeout(fxClose,dur)}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')fxClose()});
+
+/* ---- opening hero: two characters flirting, pair rotates ---- */
+const HB=['היי חמוד 😉','אוי, הוא קרץ לי 🙈','טופ או בוטום? 😏','בוא נשחק 🍑','מישהו אמר רתמה? ⛓️','נו, תציע כבר 💋','אני מסמיק 🙊','רק אם אתה מבטיח 😇'];
+let heroI=0,heroT=null;
+function heroPairs(){const ids=CH.map(c=>c.id).filter(x=>x!=='topi'&&x!=='boti');const a=shuffle(ids);const out=[['topi','boti']];for(let i=0;i+1<a.length;i+=2)out.push([a[i],a[i+1]]);return out}
+let HP=null;
+function heroSet(pair,anim){const e=$('hero');if(!e)return;const b=shuffle(HB);
+  e.innerHTML=`<span class="hbub a">${b[0]}</span><span class="hbub b">${b[1]}</span><img class="ha" src="img/c/${pair[0]}.webp" alt=""><img class="hb" src="img/c/${pair[1]}.webp" alt=""><span class="hh">💜</span><span class="hh">🍑</span><span class="hh">💋</span>`;
+  e.setAttribute('aria-label',`${CH[CHI[pair[0]]].n} ו${CH[CHI[pair[1]]].n} מפלרטטים`);e.classList.toggle('anim',!!anim)}
+function heroInit(){clearInterval(heroT);const e=$('hero');if(!e)return;HP=HP||heroPairs();heroI=0;heroSet(HP[0],animOK());
+  if(!animOK())return;heroT=setInterval(()=>{if(!$('sGate').classList.contains('on')||document.hidden)return;heroI=(heroI+1)%HP.length;const nx=HP[heroI];
+    const pre=nx.map(id=>{const i=new Image();i.src=`img/c/${id}.webp`;return i});setTimeout(()=>{const el=$('hero');if(!el)return;el.classList.add('swap');setTimeout(()=>{heroSet(nx,true);el.classList.remove('swap')},260)},120)},6500)}
+function v5Init(){try{anbLabel()}catch(e){}try{heroInit()}catch(e){}}
+setTimeout(v5Init,0);
+function fxVote(){const cnt=voteCounts(),mx=Math.max(...cnt);const w=mx>0?P.names.map((n,i)=>i).filter(i=>cnt[i]===mx).map(fxWho):[];fxPlay('vote',{w,v:mx})}
+document.addEventListener('click',e=>{const ch=e.target.closest&&e.target.closest('.pchip[data-i],.pl[data-i]');if(!ch)return;const i=+ch.dataset.i;
+  if(MP.role==='client'){if(i===MP.you)clientChar();return}
+  const G=curG();if(!G)return;if(remoteSet().has(norm(G.names[i]))){toast('📱 '+G.names[i]+' בוחר דמות מהטלפון שלו');return}myCharLocal(i)});
+// v5: avatars in card text are decorative; if the text can't fit at min size, drop them and refit
+(function(){const of=fitText;fitText=function(el,force){if(!el)return;const had=el.classList.contains('noav');if(had&&force)el.classList.remove('noav');of(el,force||had);
+  const fi=el.firstElementChild;if(!fi||!el.offsetParent)return;if(fi.offsetHeight>el.clientHeight+1&&!el.classList.contains('noav')&&fi.querySelector('.nav')){el.classList.add('noav');el.dataset.key='';of(el,true)}}})();
 /* ---------- multiplayer (PeerJS, host = source of truth) ---------- */
 const MP={role:null,peer:null,code:null,type:'host',conns:[],name:'',plays:true,hostConn:null,lastMsg:0,you:-1,joined:false,retryT:null,hbT:null,snapT:null,lastSent:'',players:[],cons:{}};
 const PFX='tob-gay-v1-';
@@ -1382,7 +1708,8 @@ function hostConn(c){
     if(d.t==='hello'){c._name=String(d.name||'אורח').slice(0,14);c._id=String(d.cid||'');
       MP.conns=MP.conns.filter(x=>{if(x!==c&&x._id===c._id){try{x.close()}catch(e){};return false}return true});
       if(!MP.conns.includes(c))MP.conns.push(c);
-      toast(d.re?`🔄 ${c._name} חזר`:`👋 ${c._name} הצטרף`);hostLobby();mpAssign();if(d.cons!==undefined)hostSetCons(c,d.cons,true);sendSnap(c,true);return}
+      toast(d.re?`🔄 ${c._name} חזר`:`👋 ${c._name} הצטרף`);hostLobby();mpAssign();if(d.cons!==undefined)hostSetCons(c,d.cons,true);if(d.prof)hostProf(c,d.prof);sendSnap(c,true);return}
+    if(d.t==='prof')return hostProf(c,d);
     if(d.t==='cons')return hostSetCons(c,d.v,false);
     if(d.t==='click')return hostClick(c,String(d.sel||''));
     if(d.t==='vote'){if(typeof c._idx==='number'&&c._idx>=0&&$('modal').classList.contains('on')&&curScreen()==='sParty')castVote('p'+c._idx,+d.v);return}
@@ -1432,11 +1759,11 @@ function snap(){const s=curScreen();const game=['sGame','sParty','sWin','sPEnd']
   return {t:'snap',scr:s,code:MP.code,type:MP.type,players:mpNames(),hostName:MP.name,
    S:(s==='sGame'||s==='sWin')?S:null,P:(s==='sParty'||s==='sPEnd')?pubP():null,kind:P?P.kind:PKIND,
    modal:game&&$('modal').classList.contains('on'),card:$('cardEl').innerHTML,pen:game&&$('penModal').classList.contains('on'),penH:$('penEl').innerHTML,
-   die:$('die').textContent,win:$('winName').textContent,fants:$('fants').innerHTML,wsum:$('wSum').innerHTML,pStats:$('pStats').innerHTML,ptitle:$('pGameTitle').textContent,allowed:allowedIdx()}}
+   die:$('die').textContent,win:$('winName').textContent,fants:$('fants').innerHTML,wsum:$('wSum').innerHTML,pStats:$('pStats').innerHTML,ptitle:$('pGameTitle').textContent,allowed:allowedIdx(),fx:MP.fxEv||null}}
 function sendSnap(c,force){if(!c.open)return;const s=snap();s.you=c._idx===undefined?-1:c._idx;s.yourName=c._name;try{c.send(s)}catch(e){}}
 function broadcast(now){if(MP.role!=='host')return;clearTimeout(MP.snapT);const go=()=>MP.conns.forEach(c=>sendSnap(c));if(now)go();else MP.snapT=setTimeout(go,70)}
 new MutationObserver(ms=>{if(MP.role!=='host'||!MP.conns.length)return;
-  if(ms.every(m=>{const t=m.target.nodeType===1?m.target:m.target.parentElement;return t&&(t.closest('#tokens')||t.closest('.toast')||t.closest('#roomBar')||t.closest('.confetti'))}))return;
+  if(ms.every(m=>{const t=m.target.nodeType===1?m.target:m.target.parentElement;return t&&(t.closest('#tokens')||t.closest('.toast')||t.closest('#roomBar')||t.closest('.confetti')||t.closest('.fxL')||t.closest('#hero'))}))return;
   broadcast()}).observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:['class','style','disabled']});
 
 /* client */
@@ -1463,7 +1790,7 @@ function clientConnect(){
     if(MP.hostConn){try{MP.hostConn.close()}catch(e){}}
     const c=MP.peer.connect(PFX+MP.code,{reliable:true});MP.hostConn=c;
     const to=setTimeout(()=>{if(!c.open)clientRetry()},9000);
-    c.on('open',()=>{clearTimeout(to);const h={t:'hello',name:MP.name,cid:cid(),re:MP.everJoined};const mc=myCons();if(mc!==null)h.cons=mc;c.send(h);MP.lastMsg=Date.now()});
+    c.on('open',()=>{clearTimeout(to);const h={t:'hello',name:MP.name,cid:cid(),re:MP.everJoined};const mc=myCons();if(mc!==null)h.cons=mc;const mp=myProf();if(mp)h.prof=mp;c.send(h);MP.lastMsg=Date.now()});
     c.on('data',d=>{MP.lastMsg=Date.now();if(!d||typeof d!=='object')return;
       if(d.t==='snap'){if(!MP.joined){MP.joined=true;if(MP.everJoined)toast('🟢 חזרת לחדר');MP.everJoined=true;$('jBtn').disabled=false}clientApply(d)}
       else if(d.t==='deny')toast('⏳ זה לא התור שלך');
@@ -1509,7 +1836,8 @@ function clientApply(s){
   if(s.scr==='sParty'&&P){pRender();$('pGameTitle').textContent=s.ptitle}
   if(s.scr==='sWin'){$('winName').textContent=s.win;setHTML('fants',s.fants);setHTML('wSum',s.wsum||'')}
   if(s.scr==='sPEnd')setHTML('pStats',s.pStats);
-  v4WaitUI();
+  v4WaitUI();v5WaitUI();
+  {const id=s.fx?s.fx.id:null;if(MP.fxSeen===undefined)MP.fxSeen=id;else if(id&&id!==MP.fxSeen){MP.fxSeen=id;const f=s.fx;setTimeout(()=>fxShow(f.k,f.d),60)}}
   if($('die').textContent!==s.die){$('die').textContent=s.die;const d=$('die');d.classList.remove('roll');void d.offsetWidth;d.classList.add('roll')}
   const wasOn=$('modal').classList.contains('on'),oldTT=($('tt')||{}).textContent;
   setHTML('cardEl',s.card);$('modal').classList.toggle('on',!!s.modal);
