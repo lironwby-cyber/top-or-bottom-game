@@ -750,6 +750,36 @@ body.tv #pTurn{font-size:36px}
 body.tv #sParty .bar{display:none}body.tv #sParty .bar.tvOpen{display:flex;flex-wrap:wrap}
 .tvGear{display:none}body.tv .tvGear{display:block;justify-self:end;font-size:28px}
 .fxL{pointer-events:none!important}
+/* home hero: soft fade at the cropped bottom edge so the characters don't end in a hard cut (both themes) */
+.hero img{-webkit-mask-image:linear-gradient(to bottom,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,#000 82%,transparent 100%)}
+/* critic S3: inside card text a name is a compact coloured highlight (no photo, same size); avatars stay in the "who" header */
+.ctext .nt .nav{display:none}
+.ctext .nt{padding:0 .18em;border-radius:.3em;font-size:1em;line-height:inherit;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+/* home hero: cartoon THOUGHT BALLOONS in a band above the heads (never over faces) */
+#hero{--bh:50px;box-sizing:border-box;padding-top:var(--bh);height:calc(clamp(140px,27vh,240px) + var(--bh))}
+@media (max-height:700px){#hero{height:calc(clamp(130px,25vh,200px) + var(--bh))}}
+#hero .hbub{--bb:#fff;--bo:#d9cdea;top:2px;bottom:auto;border:0;background:var(--bb);border-radius:999px;padding:5px 12px 6px;max-width:49%;
+  font-size:clamp(.72rem,3.3vw,.9rem);line-height:1.15;white-space:nowrap;box-shadow:none;
+  filter:drop-shadow(0 1.5px 0 var(--bo)) drop-shadow(0 -1.5px 0 var(--bo)) drop-shadow(1.5px 0 0 var(--bo)) drop-shadow(-1.5px 0 0 var(--bo)) drop-shadow(0 5px 8px rgba(60,30,90,.18))}
+#hero .hbub b{position:relative;z-index:2;font-weight:800}
+/* cloud puffs on the top edge */
+#hero .hbub:before,#hero .hbub:after{content:"";position:absolute;background:var(--bb);border-radius:50%;z-index:1}
+#hero .hbub:before{width:22px;height:22px;top:-8px;left:18%}
+#hero .hbub:after{width:28px;height:28px;top:-11px;right:20%}
+/* trailing circles down toward the thinker's head */
+#hero .hbub i{position:absolute;background:var(--bb);border-radius:50%;z-index:1}
+#hero .hbub .t1{width:11px;height:11px;bottom:-9px}
+#hero .hbub .t2{width:7px;height:7px;bottom:-18px}
+#hero .hbub .t3{width:4px;height:4px;bottom:-25px}
+/* .ha = right character (RTL), .hb = left character */
+#hero .hbub.a{right:3%;left:auto}#hero .hbub.a .t1{right:30%}#hero .hbub.a .t2{right:26%}#hero .hbub.a .t3{right:23%}
+#hero .hbub.b{left:3%;right:auto}#hero .hbub.b .t1{left:30%}#hero .hbub.b .t2{left:26%}#hero .hbub.b .t3{left:23%}
+@keyframes heroThink{0%{opacity:0;transform:scale(.3) translateY(14px)}5%{opacity:1;transform:scale(1.08)}9%,40%{opacity:1;transform:none}46%,100%{opacity:0;transform:translateY(-4px) scale(.96)}}
+#hero.anim .hbub{animation-name:heroThink;transform-origin:50% 100%}
+html[data-theme=dark] #hero .hbub{--bb:#2f2540;--bo:#6b5a8a;color:#f3eefb;background:var(--bb)}
+body.tv #hero{--bh:64px}body.tv #hero .hbub{font-size:1.1rem}
+#hero .hbub{max-width:47%;white-space:normal;text-wrap:balance;text-align:center;padding:4px 10px 5px}
+#hero{--bh:54px}
 
 </style>
 </head>
@@ -1982,7 +2012,7 @@ let heroI=0,heroT=null;
 function heroPairs(){const ids=CH.map(c=>c.id).filter(x=>x!=='topi'&&x!=='boti');const a=shuffle(ids);const out=[['topi','boti']];for(let i=0;i+1<a.length;i+=2)out.push([a[i],a[i+1]]);return out}
 let HP=null;
 function heroSet(pair,anim){const e=$('hero');if(!e)return;const b=shuffle(HB);
-  e.innerHTML=`<span class="hbub a">${b[0]}</span><span class="hbub b">${b[1]}</span><img class="ha" src="img/c/${pair[0]}.webp" alt=""><img class="hb" src="img/c/${pair[1]}.webp" alt=""><span class="hh">💜</span><span class="hh">🍑</span><span class="hh">💋</span>`;
+  e.innerHTML=`<span class="hbub a"><b>${b[0]}</b><i class="t1"></i><i class="t2"></i><i class="t3"></i></span><span class="hbub b"><b>${b[1]}</b><i class="t1"></i><i class="t2"></i><i class="t3"></i></span><img class="ha" src="img/c/${pair[0]}.webp" alt=""><img class="hb" src="img/c/${pair[1]}.webp" alt=""><span class="hh">💜</span><span class="hh">🍑</span><span class="hh">💋</span>`;
   e.setAttribute('aria-label',`${CH[CHI[pair[0]]].n} ו${CH[CHI[pair[1]]].n} מפלרטטים`);e.classList.toggle('anim',!!anim)}
 function heroInit(){clearInterval(heroT);const e=$('hero');if(!e)return;HP=HP||heroPairs();heroI=0;heroSet(HP[0],animOK());
   if(!animOK())return;heroT=setInterval(()=>{if(!$('sGate').classList.contains('on')||document.hidden)return;heroI=(heroI+1)%HP.length;const nx=HP[heroI];
