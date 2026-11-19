@@ -1,5 +1,5 @@
 /* טופ או בוטום: offline support. Network first, so a new version on the site always wins; cache = fallback when offline. */
-const C='tob-v7';
+const C='tob-v8';
 const AV=['topi','boti','hunk','otter','cub','daddy','jock','leather','drag','nerd','chub','tattoo','pretty'];
 const CORE=['./','./index.html','./manifest.webmanifest','./icon-192.png','./icon-512.png','./icon-180.png','./icon-maskable-512.png','./favicon.ico','./favicon-32.png'].concat(AV.map(a=>'./img/c/'+a+'-a.webp'));
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>Promise.all(CORE.map(u=>c.add(u).catch(()=>{})))));self.skipWaiting()});
